@@ -454,7 +454,7 @@ h3 {
   min-height: 373px;
   display: flex;
   align-items: center;
-  background: url("../../assets/img/hero__tournaments.png") center center/contain;
+  background: url("./../assets/img/hero__tournaments.png") center center/contain;
 }
 
 .hero__content {

@@ -548,7 +548,7 @@ h3 {
 }
 
 .conf {
-  background-color: #316696;
+  background-color: #f24944;
   padding-top: 88px;
   padding-bottom: 79px;
 }
@@ -626,6 +626,10 @@ h3 {
   display: block;
   object-fit: contain;
   opacity: 0.5;
+}
+
+.conf__img--active {
+  opacity: 1;
 }
 
 .conf__btn {

@@ -1,5 +1,5 @@
 .conf {
-  background-color: #316696;
+  background-color: #f24944;
   padding-top: 88px;
   padding-bottom: 79px;
 
@@ -73,6 +73,10 @@
     display: block;
     object-fit: contain;
     opacity: 0.5;
+
+    &--active {
+      opacity: 1;
+    }
   }
 
   &__btn {

@@ -1,0 +1,106 @@
+.conf {
+  background-color: #316696;
+  padding-top: 88px;
+  padding-bottom: 79px;
+
+  &__title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 96px;
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 100px;
+      height: 3px;
+      background-color: #ffffff;
+      right: 0;
+      top: 48px;
+      transform: translate(60%, -50%);
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 100px;
+      height: 3px;
+      background-color: #ffffff;
+      left: 0;
+      top: 48px;
+      transform: translate(-60%, -50%);
+    }
+  }
+  &__name {
+    font-size: 22px;
+    font-weight: 500;
+  }
+  &__date {
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 70px;
+  }
+
+  &__logo {
+    width: 200px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 32px;
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    display: block;
+    object-fit: contain;
+    opacity: 0.5;
+  }
+
+  &__btn {
+    font-size: 16px;
+    letter-spacing: 1.6px;
+    padding: 12px 10px;
+    opacity: 0.5;
+    background-color: #ffffff;
+
+    &--hr:hover {
+      background-color: #080808;
+      color: #ffffff;
+    }
+    &--py:hover {
+      background-color: #fff000;
+      color: #010812;
+    }
+    &--ost:hover {
+      background-color: #cb5b9e;
+      color: #ffffff;
+    }
+    &--go:hover {
+      background-color: #010812;
+      color: #ffffff;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

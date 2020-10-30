@@ -35,7 +35,9 @@ body{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;    
 }
-
+section {
+    padding: 0 60px;
+}
 
 .wrapper  {
     width: 1280px;

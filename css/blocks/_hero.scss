@@ -1,54 +1,54 @@
 .hero {
+  padding: 0;
+  &__item {
+    position: relative;
+    width: 100%;
+    min-height: 373px;
+    display: flex;
+    align-items: center;
 
+    background: url("./../assets/img/hero__tournaments.png") center center /
+      contain;
+  }
 
-    &__item {
-        position: relative;
-        width: 100%;
-        min-height: 373px;
-        display: flex;
-        align-items: center;
+  // &__img {
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     right: 0;
+  //     bottom: 0;
+  //     z-index: -10;
+  // }
 
-        background: url('./../assets/img/hero__tournaments.png') center center / contain;
-    }
+  &__content {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 323px;
+  }
 
-    // &__img {
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     right: 0;
-    //     bottom: 0;
-    //     z-index: -10;
-    // }
-
-    &__content {
-        color: #ffffff;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 0 323px;
-    }
-
-    &__title {
-        text-transform: uppercase;
-        font-size: 43.5px;
-        margin-bottom: 9px;
-    }
-    &__subtitle {
-        margin-bottom: 24px;
-        letter-spacing: 0.1rem;
-    }
-
+  &__title {
+    text-transform: uppercase;
+    font-size: 43.5px;
+    margin-bottom: 9px;
+  }
+  &__subtitle {
+    margin-bottom: 24px;
+    letter-spacing: 0.1rem;
+  }
 }
 
 .btn {
-    padding: 14px 28px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 0.18rem;
-    color: #010812;
-    background-color: #f0f0f0;
+  padding: 14px 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.18rem;
+  color: #010812;
+  background-color: #f0f0f0;
 
-    &:hover {
-        background-color: #fff000;
-    }
+  &:hover,
+  &:active {
+    background-color: #fff000;
+  }
 }

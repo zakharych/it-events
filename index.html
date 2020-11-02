@@ -1,106 +1,254 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IT-events</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/main.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <div class="wrapper">
-        <header class="header">
-            <nav class="menu">
-                <div class="logo">
-                    <a class="logo__link" href="/"><img src="./assets/img/logo.png" alt="logo" class="logo__img"></a>
-                </div>
-                <ul class="menu__list">
+      <header class="header">
+        <nav class="menu">
+          <div class="logo">
+            <a class="logo__link" href="/"
+              ><img src="./assets/img/logo.png" alt="logo" class="logo__img"
+            /></a>
+          </div>
+          <ul class="menu__list">
+            <li class="menu__item menu__item--active">
+              <a href="#" class="menu__link">Наши проекты</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">О НАС в цифрах</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">НАШи клиенты</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">НАША КОМАНДА</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <section class="hero">
+        <ul class="hero__slider">
+          <li class="hero__item">
+            <!-- <img src="./assets/img/hero__tournaments.png" alt="футбольная команда" class="hero__img"> -->
+            <div class="hero__content">
+              <h1 class="hero__title">КОРПОРАТИВНЫЕ ТУРНИРЫ</h1>
+              <span class="hero__subtitle"
+                >Корпоративные турниры “под ключ”</span
+              >
+              <a href="#" class="hero__btn btn">ПЕРЕЙТИ</a>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="projects">
+        <h2 class="projects__title">НАШИ ПРОЕКТЫ</h2>
+        <ul class="projects__list">
+          <li class="projects__item">конференции</li>
+          <li class="projects__item">IT HR School</li>
+          <li class="projects__item">IT-CHALLENGE CUP</li>
+          <li class="projects__item">Team Challenge</li>
+          <li class="projects__item">Агрегатор IT-событий</li>
+        </ul>
+      </section>
+      <section class="conf">
+        <h2 class="conf__title">КОНФЕРЕНЦИИ</h2>
+        <ul class="conf__list">
+          <li class="conf__item">
+            <span class="conf__name">HR API</span>
+            <span class="conf__date">est 2009</span>
+            <div class="conf__logo">
+              <img
+                src="./assets/img/HRAPI.png"
+                alt="HR API logo"
+                class="conf__img conf__img--active"
+              />
+            </div>
+            <a href="#" class="conf__btn conf__btn--hr btn">сентябрь 2020</a>
+          </li>
+          <li class="conf__item">
+            <span class="conf__name">PiterPy</span>
+            <span class="conf__date">est 2014</span>
+            <div class="conf__logo">
+              <img
+                src="./assets/img/PiterPy _ active.png"
+                alt="Piter Py logo"
+                class="conf__img"
+              />
+            </div>
+            <a href="#" class="conf__btn conf__btn--py btn">ноябрь 2020</a>
+          </li>
+          <li class="conf__item">
+            <span class="conf__name">OST</span>
+            <span class="conf__date">est 2015</span>
+            <div class="conf__logo">
+              <img
+                src="./assets/img/OST _ active.png"
+                alt="HR API logo"
+                class="conf__img"
+              />
+            </div>
+            <a href="#" class="conf__btn conf__btn--ost btn">август 2020</a>
+          </li>
+          <li class="conf__item">
+            <span class="conf__name">Golang Piter</span>
+            <span class="conf__date">est 2019</span>
+            <div class="conf__logo">
+              <img
+                src="./assets/img/Golang.png"
+                alt="HR API logo"
+                class="conf__img"
+              />
+            </div>
+            <a href="#" class="conf__btn conf__btn--go btn">октябрь 2019</a>
+          </li>
+        </ul>
+      </section>
+      <section class="school project">
+        <div class="project__img">
+          <img src="" alt="" class="project__pic" />
+        </div>
+        <div class="project__content school__content">
+          <div class="project__title">
+            <div class="school__title">
+              IT HR School <span class="school__title--sub">est 2013</span>
+            </div>
+          </div>
+          <div class="project__inner">
+            <span class="project__subtitle school__subtitle">
+              <span class="project__subtitle--title">Тренинги и семинары </span>
+              В рамках нашей школы мы проводим: <br />
+              одно- и двух-дневные тренинги для рекрутеров и HR-ов IT-компаний
+              на такие темы как: сорсинг, IT-ликбез, управление льготами и
+              компенсациями и управление личной эффективностью.
+            </span>
+            <span class="project__subtitle school__subtitle">
+              <span class="project__subtitle--title">Курсы </span>
+              Полноценное обучение для начинающих рекрутеров или с опытом, но
+              желающих освоить мир IT. На курсе мы обучаем ориентироваться в
+              современном рынке труда IT-специалистов, учитывать его специфику и
+              тренды при подборе. <br />
+              У нас очень много практики и только необходимая теория. <br />
+              После курса вы начнете понимать процесс разработки ПО и структуру
+              IT-компаний и сможете искать и находить разработчиков разных
+              уровней и профилей.
+            </span>
+          </div>
+          <a href="#" class="school__btn btn">Перейти</a>
+        </div>
+      </section>
+      <section class="challenge project">
+        <div class="project__img">
+          <img src="" alt="" class="project__pic" />
+        </div>
+        <div class="project__content">
+          <div class="project__title challenge__title">IT-CHALLENGE CUP</div>
+          <div class="challenge__info">
+            <div class="challenge__info-block">
+              <div class="challenge__info-img">
+                <img src="" alt="" class="challenge__info-pic" />
+              </div>
+              <div class="challenge__info-text">
+                <span>САНКТ-ПЕТЕРБУРГ</span>
+                <span>МОСКВА</span>
+              </div>
+            </div>
+            <div class="challenge__info-block">
+              <div class="challenge__info-img">
+                <img src="" alt="" class="challenge__info-pic" />
+              </div>
+              <div class="challenge__info-text">
+                <span>ПРОВОДИМ</span>
+                <span>С 2013 ГОДА</span>
+              </div>
+            </div>
+            <div class="challenge__info-block">
+              <div class="challenge__info-img">
+                <img src="" alt="" class="challenge__info-pic" />
+              </div>
+              <div class="challenge__info-text">
+                <span>командные</span>
+                <span>соревнования</span>
+              </div>
+            </div>
+          </div>
+          <div class="project__inner">
+            <span class="project__subtitle">
+              Cпортивное первенство среди ИТ компаний, участие в котором
+              ежегодно принимают более 50 компаний.
+            </span>
+            <span class="project__subtitle challenge__subtitle--tin">
+              В турнире принимают участие большие и маленькие компании,
+              международные и локальные, концерны и стартапы, любители и
+              профессионалы.
+            </span>
+            <span class="project__subtitle challenge__subtitle--tin">
+              Дисциплины: слалом, волейбол, шахматы, настольный теннис, картинг,
+              кикер, парусная регата, велотурнир, бег, мини-футбол, боулинг,
+              баскетбол, плавание, пейнтбол и другие.
+            </span>
+          </div>
+          <a href="#" class="btn">Перейти</a>
+        </div>
+      </section>
 
-                    <li class="menu__item menu__item--active">
-                        <a href="#" class="menu__link">Наши проекты</a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="#" class="menu__link">О НАС в цифрах</a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="#" class="menu__link">НАШи клиенты</a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="#" class="menu__link">НАША КОМАНДА</a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="#" class="menu__link">Контакты</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <section class="hero">
-            <ul class="hero__slider">
-                <li class="hero__item">
-                    <!-- <img src="./assets/img/hero__tournaments.png" alt="футбольная команда" class="hero__img"> -->
-                    <div class="hero__content">
-                        <h1 class="hero__title">КОРПОРАТИВНЫЕ ТУРНИРЫ</h1>
-                        <span class="hero__subtitle">Корпоративные турниры “под ключ”</span>
-                        <a href="#" class="hero__btn btn">ПЕРЕЙТИ</a>
-                    </div>
-                </li>
-            </ul>
-        </section>
-        <section class="projects">
-            <h2 class="projects__title">НАШИ ПРОЕКТЫ</h2>
-            <ul class="projects__list">
-                <li class="projects__item">конференции</li>
-                <li class="projects__item">IT HR School</li>
-                <li class="projects__item">IT-CHALLENGE CUP</li>
-                <li class="projects__item">Team Challenge</li>
-                <li class="projects__item">Агрегатор IT-событий</li>
-            </ul>
-        </section>
-        <section class="conf">
-            <h2 class="conf__title">
-                КОНФЕРЕНЦИИ
-            </h2>
-            <ul class="conf__list">
-                <li class="conf__item">
-                    <span class="conf__name">HR API</span>
-                    <span class="conf__date">est 2009</span>
-                    <div class="conf__logo">
-                        <img src="./assets/img/HRAPI.png" alt="HR API logo" class="conf__img conf__img--active">
-                    </div>
-                    <a href="#" class="conf__btn conf__btn--hr btn">сентябрь 2020</a>
-                </li>
-                <li class="conf__item">
-                    <span class="conf__name">PiterPy</span>
-                    <span class="conf__date">est 2014</span>
-                    <div class="conf__logo">
-                        <img src="./assets/img/PiterPy _ active.png" alt="Piter Py logo" class="conf__img">
-                    </div>
-                    <a href="#" class="conf__btn conf__btn--py btn">ноябрь 2020</a>
-                </li>
-                <li class="conf__item">
-                    <span class="conf__name">OST</span>
-                    <span class="conf__date">est 2015</span>
-                    <div class="conf__logo">
-                        <img src="./assets/img/OST _ active.png" alt="HR API logo" class="conf__img">
-                    </div>
-                    <a href="#" class="conf__btn  conf__btn--ost btn">август 2020</a>
-                </li>
-                <li class="conf__item">
-                    <span class="conf__name">Golang Piter</span>
-                    <span class="conf__date">est 2019</span>
-                    <div class="conf__logo">
-                        <img src="./assets/img/Golang.png" alt="HR API logo" class="conf__img">
-                    </div>
-                    <a href="#" class="conf__btn  conf__btn--go btn">октябрь 2019</a>
-                </li>
-            </ul>
-        </section>
+      <section class="teamchallenge project">
+        <div class="project__img">
+          <img src="" alt="" class="project__pic" />
+        </div>
+        <div class="project__content school__content">
+          <div class="project__title">КОРПОРАТИВНЫЕ СПОРТИВНЫЕ ТУРНИРЫ</div>
+          <div class="project__inner">
+            <div class="project__block">
+              <div class="project__block--icon">
+                  <img src="" alt="" class="project__block--pic">
+              </div>
+              <span class="project__subtitle">
+                <span class="project__subtitle--title">Оффлайн турниры. </span>
+                Организация и проведение внутренних спортивных турниров любой
+                сложности. Мы можем провести небольшой внутренний турнир по
+                шахмата, настольному теннису или кикеру в офисе вашей компании.
+                Организовать выездной однодневный турнир по футболу, волейболу,
+                пейнтболу или картингу. Устроить большую многодневную парусную
+                регату.
+              </span>
+            </div>
+            <div class="project__block">
+                <div class="project__block--icon">
+                    <img src="" alt="" class="project__block--pic">
+                </div>
+              <span class="project__subtitle project__subtitle--tin">
+                <span class="project__subtitle--title">Онлайн турниры.</span>
+                Проведение кибертурниров (CS:GO, DOTA 2, LoL, Quake 3) или
+                онлайн шахмат (3+2 или 5+0) в сопровождении профессиональной
+                судейской бригады и опытных комментаторов (стримеров).
+              </span>
+            </div>
+
+            <span class="project__subtitle  project__subtitle--tin">
+              Мы провели более 60 спортивных турниров и обладаем большой
+              экспертизой проведения массовых спортивных мероприятий. С нашей
+              экспертизой вы гарантированно получите настоящий спортивный
+              праздник.
+            </span>
+          </div>
+          <a href="#" class="btn">ПОСМОТРЕТЬ ПРЕЗЕНТАЦИЮ</a>
+        </div>
+      </section>
     </div>
     <script src="./scrips.js"></script>
-</body>
-
+  </body>
 </html>

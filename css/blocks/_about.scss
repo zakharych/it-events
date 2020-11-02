@@ -15,12 +15,13 @@
     justify-content: flex-start;
     padding-left: 108px;
     margin-bottom: -68px;
+    text-transform: uppercase;
   }
 
   &__item {
       min-width: 224px;
     text-align: left;
-    margin-right: 168px;
+    margin-right: 146px;
     margin-bottom: 68px;
     &:nth-child(3n) {
         margin-right: 0;

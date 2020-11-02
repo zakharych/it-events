@@ -1,0 +1,26 @@
+.school {
+  background-color: #bed2d6;
+  &__title {
+    font-size: 36.5px;
+    font-weight: bold;
+    color: #c83131;
+    &--sub {
+      font-size: 14.5px;
+      color: #4a4a4a;
+    }
+  }
+
+  &__subtitle {
+    color: #4a4a4a;
+  }
+
+  &__content {
+    max-width: 896px;
+  }
+
+  &__btn {
+    background-color: #c83131;
+    color: #ffffff;
+    padding: 12px 28px;
+  }
+}

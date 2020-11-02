@@ -485,7 +485,8 @@ h3 {
 }
 
 .btn {
-  padding: 14px 28px;
+  display: block;
+  padding: 12px 28px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.18rem;
@@ -550,7 +551,7 @@ h3 {
 .conf {
   background-color: #f24944;
   padding-top: 88px;
-  padding-bottom: 79px;
+  padding-bottom: 170px;
 }
 
 .conf__title {
@@ -662,4 +663,376 @@ h3 {
 
 .conf__btn:hover {
   opacity: 1;
+}
+
+.project {
+  padding: 100px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project__img {
+  display: block;
+  height: 200px;
+  width: 202px;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin-right: 64px;
+}
+
+.project__pic {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.project__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.project__title {
+  font-size: 36.5px;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.project__inner {
+  margin-bottom: 38px;
+}
+
+.project__block {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 26px;
+  width: 93%;
+}
+
+.project__block--icon {
+  display: block;
+  width: 58px;
+  height: 58px;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin-right: 16px;
+}
+
+.project__block--pic {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project__subtitle {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.66;
+  letter-spacing: 0.08rem;
+  text-align: left;
+  color: #ffffff;
+  margin-bottom: 26px;
+}
+
+.project__subtitle--title {
+  font-size: 18.5px;
+  font-weight: bold;
+  letter-spacing: 0.08rem;
+  display: block;
+}
+
+.project__subtitle--tin {
+  width: 580px;
+}
+
+.project__subtitle--bold {
+  font-weight: bold;
+}
+
+.project__subtitle:last-child {
+  margin-bottom: 0;
+}
+
+.school {
+  background-color: #bed2d6;
+}
+
+.school__title {
+  font-size: 36.5px;
+  font-weight: bold;
+  color: #c83131;
+}
+
+.school__title--sub {
+  font-size: 14.5px;
+  color: #4a4a4a;
+}
+
+.school__subtitle {
+  color: #4a4a4a;
+}
+
+.school__content {
+  max-width: 896px;
+}
+
+.school__btn {
+  background-color: #c83131;
+  color: #ffffff;
+  padding: 12px 28px;
+}
+
+.challenge {
+  background-color: #15a96a;
+}
+
+.challenge__title {
+  margin-bottom: 24px;
+}
+
+.challenge .subtitle--tin {
+  max-width: 600px;
+}
+
+.challenge__info {
+  display: flex;
+  margin-bottom: 24px;
+  width: 750px;
+  justify-content: space-between;
+}
+
+.challenge__info-block {
+  display: flex;
+  align-items: center;
+}
+
+.challenge__info-img {
+  display: block;
+  width: 68px;
+  height: 62px;
+  overflow: hidden;
+  margin-right: 12px;
+}
+
+.challenge__info-pic {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.challenge__info-text {
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 1.66;
+  letter-spacing: 1.44px;
+  color: #ffffff;
+}
+
+.challenge__info-text span {
+  display: block;
+}
+
+.teamchallenge {
+  background-color: #2b4c9a;
+}
+
+.aggregator {
+  background-color: #d7d7d7;
+}
+
+.aggregator__title {
+  color: #ed4963;
+}
+
+.aggregator__subtitle {
+  color: #241d3a;
+}
+
+.aggregator__socials {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 82%;
+  flex-wrap: wrap;
+}
+
+.aggregator__text-socials {
+  font-size: 15px;
+  line-height: 1.67;
+  letter-spacing: 1.35px;
+  color: #241d3a;
+  flex: 1;
+  text-align: right;
+}
+
+.socials__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.socials__item {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url(https://ostconf.com/i/blocks/social/twitter.svg);
+  background-color: #ed4963;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  margin-right: 13px;
+}
+
+.socials__item:last-child {
+  margin-right: 0;
+}
+
+.socials__item:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.socials__link {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.socials .social__item-vk {
+  background-image: url(https://ostconf.com/i/blocks/social/vk.svg);
+}
+
+.socials .social__item-fb {
+  background-image: url(https://ostconf.com/i/blocks/social/facebook.svg);
+}
+
+.socials .social__item-yb {
+  background-image: url(https://ostconf.com/i/blocks/social/youtube.svg);
+}
+
+.socials .social__item-tg {
+  background-image: url(https://ostconf.com/i/blocks/social/telegram.svg);
+}
+
+.info-sections {
+  padding: 60px;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.about {
+  background-color: #ed4963;
+}
+
+.about__title {
+  color: #ffffff;
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-bottom: 70px;
+}
+
+.about__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding-left: 108px;
+  margin-bottom: -68px;
+  text-transform: uppercase;
+}
+
+.about__item {
+  min-width: 224px;
+  text-align: left;
+  margin-right: 146px;
+  margin-bottom: 68px;
+}
+
+.about__item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.about__pretitle {
+  display: block;
+  font-size: 24px;
+  color: #ffffff;
+  line-height: 1;
+  margin-bottom: -11px;
+}
+
+.about__text {
+  display: block;
+  font-size: 103px;
+  font-weight: bold;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.about__subtitle {
+  display: block;
+  font-size: 27px;
+  font-weight: 500;
+  color: #2f2f2f;
+}
+
+.activity {
+  background-color: #fde985;
+}
+
+.activity__title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #664e4b;
+  text-align: center;
+  margin-bottom: 62px;
+  text-transform: uppercase;
+}
+
+.activity__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.activity__item {
+  width: 28%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.activity__img {
+  display: block;
+  width: 147px;
+  height: 173px;
+  overflow: hidden;
+  margin-bottom: 28px;
+}
+
+.activity__pic {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.activity__textcontent {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.66;
+  letter-spacing: 1.44px;
+  color: #664e4b;
+  margin-bottom: 42px;
+}
+
+.activity__textcontent--bold {
+  font-weight: bold;
+}
+
+.activity__btn {
+  color: #ffffff;
+  background-color: #664e4b;
 }

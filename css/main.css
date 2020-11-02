@@ -917,3 +917,63 @@ h3 {
 .socials .social__item-tg {
   background-image: url(https://ostconf.com/i/blocks/social/telegram.svg);
 }
+
+.info-sections {
+  padding: 60px;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.about {
+  background-color: #ed4963;
+}
+
+.about__title {
+  color: #ffffff;
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-bottom: 70px;
+}
+
+.about__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding-left: 108px;
+  margin-bottom: -68px;
+}
+
+.about__item {
+  min-width: 224px;
+  text-align: left;
+  margin-right: 168px;
+  margin-bottom: 68px;
+}
+
+.about__item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.about__pretitle {
+  display: block;
+  font-size: 24px;
+  color: #ffffff;
+  line-height: 1;
+  margin-bottom: -11px;
+}
+
+.about__text {
+  display: block;
+  font-size: 103px;
+  font-weight: bold;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.about__subtitle {
+  display: block;
+  font-size: 27px;
+  font-weight: 500;
+  color: #2f2f2f;
+}

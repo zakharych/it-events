@@ -1,0 +1,78 @@
+.aggregator {
+    background-color: #d7d7d7;
+    &__title {
+        color: #ed4963;
+    }
+
+    &__subtitle {
+        color: #241d3a;
+    }
+
+
+    &__socials {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 82%;
+        flex-wrap: wrap;
+    }
+
+    &__text-socials {
+        font-size: 15px;
+        line-height: 1.67;
+        letter-spacing: 1.35px;
+        color: #241d3a;
+        flex: 1;
+        text-align: right;
+    }
+    
+}
+
+.socials {
+    &__list {
+        display: flex;
+        justify-content: space-between;
+      }
+      
+      &__item {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-image: url(https://ostconf.com/i/blocks/social/twitter.svg);
+        background-color: #ed4963;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        margin-right: 13px;
+      }
+      
+      &__item:last-child {
+        margin-right: 0;
+      }
+      
+      &__item:hover {
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+      
+      &__link {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+      
+      .social__item-vk {
+        background-image: url(https://ostconf.com/i/blocks/social/vk.svg);
+      }
+      
+      .social__item-fb {
+        background-image: url(https://ostconf.com/i/blocks/social/facebook.svg);
+      }
+      
+      .social__item-yb {
+        background-image: url(https://ostconf.com/i/blocks/social/youtube.svg);
+      }
+      
+      .social__item-tg {
+        background-image: url(https://ostconf.com/i/blocks/social/telegram.svg);
+      }
+      
+}

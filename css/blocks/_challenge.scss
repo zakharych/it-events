@@ -3,8 +3,10 @@
   &__title {
     margin-bottom: 24px;
   }
-  &__subtitle--tin {
-    max-width: 600px;
+  .subtitle {
+    &--tin {
+      max-width: 600px;
+    }
   }
 
   &__info {

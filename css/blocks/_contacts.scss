@@ -1,0 +1,28 @@
+.contacts {
+  color: #ffffff;
+  background-color: #070b11;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+    margin-bottom: 32px;
+    text-align: left;
+  }
+  &__content {
+    display: flex;
+  }
+  &__col {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: 500;
+    margin-right: 58px;
+  }
+
+  &__social {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+}

@@ -407,6 +407,7 @@ h3 {
   padding: 0 60px;
   display: flex;
   align-items: center;
+  background-color: #ffffff;
 }
 
 .logo {
@@ -510,6 +511,7 @@ h3 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: #ffffff;
 }
 
 .projects__title {
@@ -1048,4 +1050,139 @@ h3 {
 
 .clients__title {
   margin-bottom: 80px;
+}
+
+.sponsors__slider {
+  display: flex;
+  position: relative;
+  right: 0;
+  transition: right 0.3s;
+  align-items: center;
+}
+
+.slider {
+  display: flex;
+  width: 1044px;
+  overflow: hidden;
+  margin: 0 40px;
+}
+
+.slider__list {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  margin-right: -50px;
+}
+
+.slider__item {
+  width: 168px;
+  height: 50px;
+  margin-right: 50px;
+  filter: grayscale(50);
+}
+
+.slider__item:hover {
+  filter: grayscale(0);
+}
+
+.sponsor__logo {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.team {
+  background-color: #f4c302;
+  color: #464646;
+}
+
+.team__title {
+  margin-bottom: 32px;
+}
+
+.team__subtitle {
+  margin-bottom: 50px;
+  font-weight: 500;
+  line-height: 1.66;
+  letter-spacing: 1.44px;
+  text-align: center;
+  color: #464646;
+}
+
+.galery {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.side-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.side-column:last-child {
+  margin-right: 0;
+}
+
+.side-column__item {
+  width: 258px;
+  height: 177px;
+  border: solid 3px #ffffff;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+
+.side-column__item:last-child {
+  margin-bottom: 0;
+}
+
+.side-column__pic {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.center-column__row {
+  margin-bottom: 10px;
+}
+
+.center-column__row:last-child {
+  margin-bottom: 0;
+}
+
+.center-column__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.center-column__item {
+  width: 312px;
+  height: 210px;
+  border: solid 3px #ffffff;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.center-column__item:last-child {
+  margin-right: 0;
+}
+
+.center-column__item--wide {
+  width: 633px;
+  height: 301px;
+  border: solid 3px #ffffff;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.center-column__pic {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }

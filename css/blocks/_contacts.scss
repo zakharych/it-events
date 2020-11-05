@@ -23,6 +23,17 @@
   &__social {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: space-around;
+
+      .socials__item {
+        margin-right: 0;
+        
+        background-color: #373735;
+
+        &:hover {
+          background-color: #37373550;
+
+        }
+      }
   }
 }

@@ -909,20 +909,25 @@ h3 {
   display: block;
 }
 
-.socials .social__item-vk {
+.socials__item-vk {
   background-image: url(https://ostconf.com/i/blocks/social/vk.svg);
 }
 
-.socials .social__item-fb {
+.socials__item-fb {
   background-image: url(https://ostconf.com/i/blocks/social/facebook.svg);
 }
 
-.socials .social__item-yb {
+.socials__item-yb {
   background-image: url(https://ostconf.com/i/blocks/social/youtube.svg);
 }
 
-.socials .social__item-tg {
+.socials__item-tg {
   background-image: url(https://ostconf.com/i/blocks/social/telegram.svg);
+}
+
+.socials__item-in {
+  background-image: url(../../assets/img/icon_Instagram.png);
+  background-size: 20px 20px;
 }
 
 .info-sections {
@@ -1217,5 +1222,38 @@ h3 {
 .contacts__social {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+}
+
+.contacts__social .socials__item {
+  margin-right: 0;
+  background-color: #373735;
+}
+
+.contacts__social .socials__item:hover {
+  background-color: #37373550;
+}
+
+.footer-menu {
+  background-color: #8e8e8e;
+  color: #ffffff;
+  display: flex;
   justify-content: space-between;
+}
+
+.footer-menu__list {
+  display: flex;
+}
+
+.footer-menu__item {
+  padding: 24px 0;
+  margin-right: 33px;
+}
+
+.footer-menu__item:last-child {
+  margin-right: 0;
+}
+
+.footer-menu__copy {
+  padding: 24px 0;
 }

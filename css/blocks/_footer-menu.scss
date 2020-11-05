@@ -1,0 +1,21 @@
+.footer-menu {
+    background-color: #8e8e8e;
+    color: #ffffff;
+
+    display: flex;
+    justify-content: space-between;
+    &__list {
+        display: flex;
+    }
+    &__item {
+        padding: 24px 0;
+        margin-right: 33px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__copy {
+        padding: 24px 0;
+    }
+}

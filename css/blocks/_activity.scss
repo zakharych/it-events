@@ -51,5 +51,9 @@
   &__btn {
     color: #ffffff;
     background-color: #664e4b;
+
+    &:hover {
+      background-color: #ff0000;
+    }
   }
 }

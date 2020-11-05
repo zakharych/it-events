@@ -524,11 +524,13 @@ h3 {
 
 .projects__list {
   display: flex;
-  justify-content: space-between;
   width: 100%;
 }
 
 .projects__item {
+  padding: 4px 12px;
+  margin-right: 45px;
+  white-space: nowrap;
   font-size: 17.5px;
   font-weight: bold;
   letter-spacing: 1.58px;
@@ -536,6 +538,12 @@ h3 {
   letter-spacing: 0.08rem;
   text-transform: uppercase;
   position: relative;
+}
+
+.projects__item:hover {
+  background-color: #ed4963;
+  color: #ffffff;
+  border-radius: 25px;
 }
 
 .projects__item:last-child::before {
@@ -548,15 +556,15 @@ h3 {
   content: "";
   display: block;
   width: 27px;
-  height: 4px;
+  height: 3px;
   background-color: #ed4963;
-  right: -21px;
+  right: -8px;
   top: 50%;
   transform: translate(100%, -50%);
 }
 
 .conf {
-  background-color: #f24944;
+  background-color: #2f2f2f;
   padding-top: 88px;
   padding-bottom: 170px;
 }
@@ -679,6 +687,12 @@ h3 {
   justify-content: space-between;
 }
 
+.project__title--sub {
+  font-size: 14.5px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
 .project__img {
   display: block;
   height: 200px;
@@ -766,6 +780,33 @@ h3 {
   margin-bottom: 0;
 }
 
+.project__socials {
+  display: flex;
+  align-items: center;
+}
+
+.project__socials .socials__item {
+  background-color: #019455;
+}
+
+.project__socials .socials__item:hover {
+  background-color: #00653a;
+}
+
+.project__link {
+  margin-right: 11px;
+}
+
+.project__link:hover {
+  background-color: #00653a;
+  color: #ffffff;
+}
+
+.project__btn:hover {
+  background-color: #2496d4;
+  color: #ffffff;
+}
+
 .school {
   background-color: #bed2d6;
 }
@@ -790,13 +831,33 @@ h3 {
 }
 
 .school__btn {
+  margin-right: 11px;
+}
+
+.school__btn:hover {
   background-color: #c83131;
   color: #ffffff;
-  padding: 12px 28px;
+}
+
+.school__links {
+  display: flex;
+  align-items: center;
+}
+
+.school__links .socials__item {
+  background-color: #4a4a4a;
+}
+
+.school__social {
+  height: 40px;
 }
 
 .challenge {
   background-color: #15a96a;
+  background-image: url("../../assets/img/Elements.png");
+  background-repeat: no-repeat;
+  background-position: right 54px bottom 101px;
+  background-size: 406px 255px;
 }
 
 .challenge__title {
@@ -848,6 +909,10 @@ h3 {
 
 .teamchallenge {
   background-color: #2b4c9a;
+  background-image: url("../../assets/img/bg_teamchallenge.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 520px 450px;
 }
 
 .aggregator {
@@ -877,6 +942,31 @@ h3 {
   color: #241d3a;
   flex: 1;
   text-align: right;
+}
+
+.aggregator__links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 44px;
+}
+
+.aggregator__link {
+  margin-bottom: 12px;
+  border-bottom: 2px dashed #e63d5b;
+  font-weight: bold;
+  line-height: 1.66;
+  letter-spacing: 1.44px;
+  color: #e63d5b;
+}
+
+.aggregator__link:last-child {
+  margin-bottom: 0;
+}
+
+.aggregator__btn:hover {
+  background-color: #ed4963;
+  color: #ffffff;
 }
 
 .socials__list {
@@ -909,20 +999,25 @@ h3 {
   display: block;
 }
 
-.socials .social__item-vk {
+.socials__item-vk {
   background-image: url(https://ostconf.com/i/blocks/social/vk.svg);
 }
 
-.socials .social__item-fb {
+.socials__item-fb {
   background-image: url(https://ostconf.com/i/blocks/social/facebook.svg);
 }
 
-.socials .social__item-yb {
+.socials__item-yb {
   background-image: url(https://ostconf.com/i/blocks/social/youtube.svg);
 }
 
-.socials .social__item-tg {
+.socials__item-tg {
   background-image: url(https://ostconf.com/i/blocks/social/telegram.svg);
+}
+
+.socials__item-in {
+  background-image: url(../../assets/img/icon_Instagram.png);
+  background-size: 20px 20px;
 }
 
 .info-sections {
@@ -1042,6 +1137,10 @@ h3 {
 .activity__btn {
   color: #ffffff;
   background-color: #664e4b;
+}
+
+.activity__btn:hover {
+  background-color: #ff0000;
 }
 
 .clients {
@@ -1185,4 +1284,71 @@ h3 {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+.contacts {
+  padding-bottom: 60px;
+  color: #ffffff;
+  background-color: #070b11;
+}
+
+.contacts__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts__title {
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+.contacts__content {
+  display: flex;
+}
+
+.contacts__col {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  font-weight: 500;
+  margin-right: 58px;
+}
+
+.contacts__social {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.contacts__social .socials__item {
+  margin-right: 0;
+  background-color: #373735;
+}
+
+.contacts__social .socials__item:hover {
+  background-color: #37373550;
+}
+
+.footer-menu {
+  background-color: #8e8e8e;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-menu__list {
+  display: flex;
+}
+
+.footer-menu__item {
+  padding: 24px 0;
+  margin-right: 33px;
+}
+
+.footer-menu__item:last-child {
+  margin-right: 0;
+}
+
+.footer-menu__copy {
+  padding: 24px 0;
 }

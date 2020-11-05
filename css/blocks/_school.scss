@@ -19,8 +19,22 @@
   }
 
   &__btn {
-    background-color: #c83131;
-    color: #ffffff;
-    padding: 12px 28px;
+    margin-right: 11px;
+    &:hover {
+      background-color: #c83131;
+      color: #ffffff;
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    .socials__item {
+      background-color: #4a4a4a;
+    }
+  }
+
+  &__social {
+    height: 40px;
   }
 }

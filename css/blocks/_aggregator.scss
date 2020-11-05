@@ -25,7 +25,28 @@
         flex: 1;
         text-align: right;
     }
-    
+    &__links {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;margin-bottom: 44px;
+    }
+    &__link {
+      // display: inline-block;
+      margin-bottom: 12px;
+      border-bottom: 2px dashed #e63d5b;
+      font-weight: bold;    
+      line-height: 1.66;    
+      letter-spacing: 1.44px;
+      color: #e63d5b;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__btn {&:hover {
+      background-color: #ed4963;
+      color: #ffffff;
+    }}
 }
 
 .socials {
@@ -59,20 +80,24 @@
         display: block;
       }
       
-      .social__item-vk {
+      &__item-vk {
         background-image: url(https://ostconf.com/i/blocks/social/vk.svg);
       }
       
-      .social__item-fb {
+      &__item-fb {
         background-image: url(https://ostconf.com/i/blocks/social/facebook.svg);
       }
       
-      .social__item-yb {
+      &__item-yb {
         background-image: url(https://ostconf.com/i/blocks/social/youtube.svg);
       }
       
-      .social__item-tg {
+      &__item-tg {
         background-image: url(https://ostconf.com/i/blocks/social/telegram.svg);
+      }
+      &__item-in {
+        background-image: url(../../assets/img/icon_Instagram.png);
+        background-size: 20px 20px;
       }
       
 }

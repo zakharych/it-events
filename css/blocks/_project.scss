@@ -3,6 +3,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  &__title--sub {
+    font-size: 14.5px;
+    font-weight: bold;
+    color: #ffffff;
+  }
 
   &__img {
     display: block;
@@ -75,12 +80,40 @@
     &--tin {
       width: 580px;
     }
-    
+
     &--bold {
       font-weight: bold;
     }
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+
+    .socials__item {
+      background-color: #019455;
+
+      &:hover {
+        background-color: #00653a;
+      }
+    }
+  }
+
+  &__link {
+    margin-right: 11px;
+    &:hover {
+      background-color: #00653a;
+      color: #ffffff;
+    }
+  }
+
+  &__btn {
+    &:hover {
+      background-color: #2496d4;
+      color: #ffffff;
     }
   }
 }

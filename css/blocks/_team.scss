@@ -1,11 +1,15 @@
 .team {
-  background-color: #f4c302;
-  color: #464646;
-&__title {
+  
+  padding-bottom: 50px;
+  &-section {
+    background-color: #f4c302;
+    color: #464646;
+  }
+  &__title {
     margin-bottom: 32px;
-}
+  }
   &__subtitle {
-      margin-bottom: 50px;
+    margin-bottom: 50px;
     font-weight: 500;
     line-height: 1.66;
     letter-spacing: 1.44px;
@@ -21,7 +25,7 @@
 .side-column {
   display: flex;
   flex-direction: column;
-  
+
   &:last-child {
     margin-right: 0;
   }
@@ -46,14 +50,11 @@
 }
 
 .center-column {
-  
-
   &__row {
     margin-bottom: 10px;
     &:last-child {
-        margin-bottom: 0;
+      margin-bottom: 0;
     }
-
   }
   &__list {
     display: flex;
@@ -68,15 +69,15 @@
     overflow: hidden;
     margin-right: 10px;
     &:last-child {
-        margin-right: 0;
+      margin-right: 0;
     }
 
     &--wide {
-        width: 633px;
-        height: 301px;
-        border: solid 3px #ffffff;
-        border-radius: 3px;
-        overflow: hidden;
+      width: 633px;
+      height: 301px;
+      border: solid 3px #ffffff;
+      border-radius: 3px;
+      overflow: hidden;
     }
   }
   &__pic {

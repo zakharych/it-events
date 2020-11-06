@@ -1,7 +1,9 @@
 .contacts {
+  &-section {
+    color: #ffffff;
+    background-color: #070b11;
+  }
   padding-bottom: 60px;
-  color: #ffffff;
-  background-color: #070b11;
   &__container {
     display: flex;
     justify-content: space-between;
@@ -22,19 +24,18 @@
   }
 
   &__social {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 
-      .socials__item {
-        margin-right: 0;
-        
-        background-color: #373735;
+    .socials__item {
+      margin-right: 0;
 
-        &:hover {
-          background-color: #37373550;
+      background-color: #373735;
 
-        }
+      &:hover {
+        background-color: #37373550;
       }
+    }
   }
 }

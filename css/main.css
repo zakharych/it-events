@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -407,6 +408,9 @@ h3 {
   padding: 0 60px;
   display: flex;
   align-items: center;
+}
+
+.header-section {
   background-color: #ffffff;
 }
 
@@ -415,7 +419,6 @@ h3 {
   height: 44px;
   overflow: hidden;
   flex-shrink: 0;
-  margin-right: 93px;
 }
 
 .logo__img {
@@ -442,7 +445,6 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex: 1;
   height: 100%;
 }
 
@@ -451,11 +453,24 @@ h3 {
   display: flex;
   align-items: center;
   border-bottom: 5px solid transparent;
+  margin-right: 50px;
+}
+
+.menu__item:last-child {
+  margin-right: 0;
 }
 
 .menu__item:hover, .menu__item--active {
   color: #ed4963;
   border-bottom: 5px solid #ed4963;
+}
+
+.language {
+  font-weight: bold;
+  line-height: 5.16;
+  letter-spacing: 1.44px;
+  color: #ed4963;
+  margin-bottom: 5px;
 }
 
 .hero {
@@ -465,10 +480,47 @@ h3 {
 .hero__item {
   position: relative;
   width: 100%;
-  min-height: 373px;
+  min-height: 480px;
   display: flex;
   align-items: center;
-  background: url("./../assets/img/hero__tournaments.png") center center/contain;
+}
+
+.hero__inner {
+  position: relative;
+}
+
+.hero__slider {
+  max-height: 480px;
+  overflow: hidden;
+}
+
+.hero__slider--controls {
+  position: absolute;
+  top: 50%;
+  right: 26px;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.hero__slider--control {
+  display: block;
+  height: 42px;
+  width: 3px;
+  cursor: pointer;
+  background-color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.hero__slider--active {
+  background-color: #ff0000;
+}
+
+.hero__item {
+  background: url("./../assets/img/hero__tournaments.png") center center/cover;
+}
+
+.hero__item-chalange {
+  background: url("./../assets/img/IT_Cyber_Games.png") center center/cover;
 }
 
 .hero__content {
@@ -511,6 +563,9 @@ h3 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.projects-section {
   background-color: #ffffff;
 }
 
@@ -524,6 +579,7 @@ h3 {
 
 .projects__list {
   display: flex;
+  justify-content: center;
   width: 100%;
 }
 
@@ -564,9 +620,13 @@ h3 {
 }
 
 .conf {
-  background-color: #2f2f2f;
+  padding: 0 60px;
   padding-top: 88px;
   padding-bottom: 170px;
+}
+
+.conf-section {
+  background-color: #2f2f2f;
 }
 
 .conf__title {
@@ -807,7 +867,7 @@ h3 {
   color: #ffffff;
 }
 
-.school {
+.school-section {
   background-color: #bed2d6;
 }
 
@@ -853,11 +913,14 @@ h3 {
 }
 
 .challenge {
-  background-color: #15a96a;
-  background-image: url("../../assets/img/Elements.png");
+  background-image: url("../assets/img/Elements.png");
   background-repeat: no-repeat;
   background-position: right 54px bottom 101px;
   background-size: 406px 255px;
+}
+
+.challenge-section {
+  background-color: #15a96a;
 }
 
 .challenge__title {
@@ -908,14 +971,17 @@ h3 {
 }
 
 .teamchallenge {
-  background-color: #2b4c9a;
-  background-image: url("../../assets/img/bg_teamchallenge.png");
+  background-image: url("../assets/img/bg_teamchallenge.png");
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: 520px 450px;
 }
 
-.aggregator {
+.teamchallenge-section {
+  background-color: #2b4c9a;
+}
+
+.aggregator-section {
   background-color: #d7d7d7;
 }
 
@@ -951,22 +1017,53 @@ h3 {
   margin-bottom: 44px;
 }
 
-.aggregator__link {
+.aggregator__spoiler {
   margin-bottom: 12px;
-  border-bottom: 2px dashed #e63d5b;
+}
+
+.aggregator__spoiler:last-child {
+  margin-bottom: 0;
+}
+
+.aggregator__spoiler--inner {
+  overflow: hidden;
+  padding: 1em 1em 0;
+}
+
+.aggregator__spoiler[open] .aggregator__spoiler--inner {
+  animation: raz11 1.5s;
+}
+
+.aggregator__btn:hover {
+  background-color: #ed4963;
+  color: #ffffff;
+}
+
+.aggregator__summary {
+  display: inline-block;
+  /* у summary по умолчанию свойство display в значении list-item, потому поддерживается свойство list-style */
+  width: fit-content;
+  border-bottom: 2px dashed;
+  /* подводка точками или тире часто используется для элементов, с которыми пользователю предлагается взаимодействовать, можно заменить на text-decoration */
+  cursor: pointer;
   font-weight: bold;
   line-height: 1.66;
   letter-spacing: 1.44px;
   color: #e63d5b;
 }
 
-.aggregator__link:last-child {
-  margin-bottom: 0;
+@keyframes raz11 {
+  0% {
+    max-height: 0;
+  }
+  100% {
+    max-height: 300px;
+  }
 }
 
-.aggregator__btn:hover {
-  background-color: #ed4963;
-  color: #ffffff;
+details summary::-webkit-details-marker {
+  /* нестандартный псевдоэлемент Google Chrome */
+  display: none;
 }
 
 .socials__list {
@@ -1020,13 +1117,13 @@ h3 {
   background-size: 20px 20px;
 }
 
-.info-sections {
+.info-block {
   padding: 60px;
   padding-top: 50px;
   padding-bottom: 100px;
 }
 
-.about {
+.about-section {
   background-color: #ed4963;
 }
 
@@ -1081,7 +1178,7 @@ h3 {
   color: #2f2f2f;
 }
 
-.activity {
+.activity-section {
   background-color: #fde985;
 }
 
@@ -1143,7 +1240,7 @@ h3 {
   background-color: #ff0000;
 }
 
-.clients {
+.clients-section {
   background-color: #ffffff;
 }
 
@@ -1192,6 +1289,10 @@ h3 {
 }
 
 .team {
+  padding-bottom: 50px;
+}
+
+.team-section {
   background-color: #f4c302;
   color: #464646;
 }
@@ -1288,6 +1389,9 @@ h3 {
 
 .contacts {
   padding-bottom: 60px;
+}
+
+.contacts-section {
   color: #ffffff;
   background-color: #070b11;
 }
@@ -1330,10 +1434,14 @@ h3 {
 }
 
 .footer-menu {
-  background-color: #8e8e8e;
-  color: #ffffff;
+  padding: 0 60px;
   display: flex;
   justify-content: space-between;
+}
+
+.footer-menu-section {
+  background-color: #8e8e8e;
+  color: #ffffff;
 }
 
 .footer-menu__list {

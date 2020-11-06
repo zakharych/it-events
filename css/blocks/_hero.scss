@@ -3,22 +3,49 @@
   &__item {
     position: relative;
     width: 100%;
-    min-height: 373px;
+    min-height: 480px;
     display: flex;
     align-items: center;
 
-    background: url("./../assets/img/hero__tournaments.png") center center /
-      contain;
+ 
   }
 
-  // &__img {
-  //     position: absolute;
-  //     top: 0;
-  //     left: 0;
-  //     right: 0;
-  //     bottom: 0;
-  //     z-index: -10;
-  // }
+  &__inner {
+    position: relative;
+  }
+
+  &__slider {
+    max-height: 480px;
+    overflow: hidden;
+    &--controls {
+      position: absolute;
+      top: 50%;
+      right: 26px;
+      transform: translateY(-50%);      
+      z-index: 10;
+    }
+    &--control {
+      display: block;
+      height: 42px;
+      width: 3px;
+      cursor: pointer;
+      background-color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    &--active{
+      background-color: #ff0000;
+    }
+  }
+&__item {
+  background: url("./../assets/img/hero__tournaments.png") center center /
+  cover;
+}
+&__item-chalange {
+  background: url("./../assets/img/IT_Cyber_Games.png") center center /
+  cover;
+}
+
 
   &__content {
     color: #ffffff;

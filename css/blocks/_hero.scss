@@ -1,13 +1,13 @@
 .hero {
-  padding: 0;
+  &-section {
+    padding: 0;
+  }
   &__item {
     position: relative;
     width: 100%;
     min-height: 480px;
     display: flex;
     align-items: center;
-
- 
   }
 
   &__inner {
@@ -21,7 +21,7 @@
       position: absolute;
       top: 50%;
       right: 26px;
-      transform: translateY(-50%);      
+      transform: translateY(-50%);
       z-index: 10;
     }
     &--control {
@@ -33,19 +33,17 @@
       margin-bottom: 10px;
     }
 
-    &--active{
+    &--active {
       background-color: #ff0000;
     }
   }
-&__item {
-  background: url("./../assets/img/hero__tournaments.png") center center /
-  cover;
-}
-&__item-chalange {
-  background: url("./../assets/img/IT_Cyber_Games.png") center center /
-  cover;
-}
-
+  &__item {
+    background: url("./../assets/img/hero__tournaments.png") center center /
+      cover;
+  }
+  &__item-chalange {
+    background: url("./../assets/img/IT_Cyber_Games.png") center center / cover;
+  }
 
   &__content {
     color: #ffffff;

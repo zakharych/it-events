@@ -1,7 +1,10 @@
 .challenge {
-  background-color: #15a96a;
+  &-section{
+    background-color: #15a96a;
+
+  }
   
-  background-image: url("../../assets/img/Elements.png");
+  background-image: url("../assets/img/Elements.png");
   background-repeat: no-repeat;
   background-position: right 54px bottom 101px;
   background-size: 406px 255px;

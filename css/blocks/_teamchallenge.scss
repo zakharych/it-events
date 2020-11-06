@@ -1,9 +1,10 @@
 .teamchallenge {
+  &-section {
     background-color: #2b4c9a;
+  }
 
-    
-  background-image: url("../../assets/img/bg_teamchallenge.png");
+  background-image: url("../assets/img/bg_teamchallenge.png");
   background-repeat: no-repeat;
-  background-position: right bottom ;
+  background-position: right bottom;
   background-size: 520px 450px;
 }

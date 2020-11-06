@@ -1,21 +1,6 @@
 const logo = document.querySelectorAll(".conf__logo"),
-  background = document.querySelector(".conf");
-// console.log(logo[0]);
+  background = document.querySelector(".conf-section");
 
-// logo.addEventListener("mouseover", () => {
-//   if (condition) {
-//   }
-//   background.style.backgroundColor = "#f24944";
-// });
-
-// function mouselog(event) {
-
-//     console.log(event.target);
-//   text.value += `${
-//     event.type
-//   } [target: ${event.target.id}]\n`.replace(/(:|^)(\d\D)/, "$10$2");
-//   text.scrollTop = text.scrollHeight;
-// }
 
 logo.forEach((element) => {
   element.onmouseover = function (event) {
@@ -71,8 +56,6 @@ logo.forEach((element) => {
   };
 });
 
-
-
 ////slider
 
 const left = document.querySelector("#left");
@@ -83,9 +66,16 @@ const loop = (direction, e) => {
   e.preventDefault();
 
   if (direction === "right") {
-    itemsList.appendChild(itemsList.firstElementChild);
+    for (let i = 0; i < 5; i++) {
+      itemsList.appendChild(itemsList.firstElementChild);
+    }
   } else {
-    itemsList.insertBefore(itemsList.lastElementChild, items.firstElementChild);
+    for (let i = 0; i < 5; i++) {
+      itemsList.insertBefore(
+        itemsList.lastElementChild,
+        items.firstElementChild
+      );
+    }
   }
 };
 
@@ -95,4 +85,40 @@ right.addEventListener("click", (e) => {
 
 left.addEventListener("click", (e) => {
   loop("left", e);
+});
+
+///////////////////////              hero slider            /////////////////////
+
+const prev = document.querySelector("#prev");
+const next = document.querySelector("#next");
+const slider = document.querySelector("#hero__slider");
+
+const slide = (direction) => {
+  
+  next.classList.toggle('hero__slider--active');
+  prev.classList.toggle('hero__slider--active');
+  if (direction === "right") {
+    slider.appendChild(slider.firstElementChild);
+  } else {
+    slider.insertBefore(slider.lastElementChild, slider.firstElementChild);
+  }
+};
+
+function nextSlide() {
+  slide("right");
+  setTimeout(function () {
+    nextSlide();
+  }, 5000);
+}
+
+nextSlide();
+prev.addEventListener("click", (e) => {
+  e.preventDefault();
+  slide("right");
+
+});
+
+next.addEventListener("click", (e) => {
+  e.preventDefault();
+  slide("left");
 });

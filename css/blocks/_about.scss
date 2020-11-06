@@ -1,5 +1,7 @@
 .about {
-  background-color: #ed4963;
+  &-section {
+    background-color: #ed4963;
+  }
 
   &__title {
     color: #ffffff;
@@ -19,12 +21,12 @@
   }
 
   &__item {
-      min-width: 224px;
+    min-width: 224px;
     text-align: left;
     margin-right: 146px;
     margin-bottom: 68px;
     &:nth-child(3n) {
-        margin-right: 0;
+      margin-right: 0;
     }
   }
 

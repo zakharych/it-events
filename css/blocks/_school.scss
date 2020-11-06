@@ -1,5 +1,9 @@
 .school {
-  background-color: #bed2d6;
+
+  &-section {
+
+    background-color: #bed2d6;
+  }
   &__title {
     font-size: 36.5px;
     font-weight: bold;

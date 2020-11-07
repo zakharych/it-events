@@ -18,36 +18,44 @@
     display: flex;
     justify-content: space-between;
   }
+&__item {
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: #ffffff;
+    right: 0;
+    top: 48px;
+    transform: translate(60%, -50%);
 
-  &__item {
+    opacity: 1;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: #ffffff;
+    left: 0;
+    top: 48px;
+    transform: translate(-60%, -50%);
+
+    opacity: 1;
+  }
+}
+  &__item-elem {
     display: flex;
     flex-direction: column;
     align-items: center;
     color: #ffffff;
     position: relative;
+    opacity: 0.5;
 
-    &::before {
-      position: absolute;
-      content: "";
-      display: block;
-      width: 100px;
-      height: 3px;
-      background-color: #ffffff;
-      right: 0;
-      top: 48px;
-      transform: translate(60%, -50%);
-    }
-    &::after {
-      position: absolute;
-      content: "";
-      display: block;
-      width: 100px;
-      height: 3px;
-      background-color: #ffffff;
-      left: 0;
-      top: 48px;
-      transform: translate(-60%, -50%);
-    }
+   
   }
   &__name {
     font-size: 22px;
@@ -75,39 +83,34 @@
     width: 100%;
     display: block;
     object-fit: contain;
-    opacity: 0.5;
-
-    &--active {
-      opacity: 1;
-    }
   }
 
   &__btn {
+    // display: block;
     font-size: 16px;
     letter-spacing: 1.6px;
     padding: 12px 10px;
-    opacity: 0.5;
     background-color: #ffffff;
 
-    &--hr:hover {
+    &-hr:hover, 
+    &-hr--active {
       background-color: #080808;
       color: #ffffff;
     }
-    &--py:hover {
+    &-py:hover, 
+    &-py--active {
       background-color: #fff000;
       color: #010812;
     }
-    &--ost:hover {
+    &-ost:hover, 
+    &-ost--active {
       background-color: #cb5b9e;
       color: #ffffff;
     }
-    &--go:hover {
+    &-go:hover, 
+    &-go--active {
       background-color: #010812;
       color: #ffffff;
-    }
-
-    &:hover {
-      opacity: 1;
     }
   }
 }

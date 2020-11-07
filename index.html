@@ -2,7 +2,8 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <meta name="viewport" content="width=1280px />
     <title>IT-events</title>
 
     <link
@@ -15,11 +16,14 @@
   <body>
     <header class="header-section">
       <div class="wrapper">
-      <div class="header">
+        <div class="header">
           <nav class="menu">
             <div class="logo">
               <a class="logo__link" href="/"
-                ><img src="./assets/img/it-events.svg" alt="logo" class="logo__img"
+                ><img
+                  src="./assets/img/it-events.svg"
+                  alt="logo"
+                  class="logo__img"
               /></a>
             </div>
             <ul class="menu__list">
@@ -39,11 +43,9 @@
                 <a href="#" class="menu__link">Контакты</a>
               </li>
             </ul>
-            <a href="#" class="language">
-              EN
-            </a>
+            <a href="#" class="language"> EN </a>
           </nav>
-      </div>
+        </div>
       </div>
     </header>
     <section class="hero-section">
@@ -98,59 +100,78 @@
     </section>
     <section class="conf-section">
       <div class="wrapper">
-       <div class="conf">
+        <div class="conf">
           <h2 class="conf__title">КОНФЕРЕНЦИИ</h2>
           <ul class="conf__list">
             <li class="conf__item">
-              <span class="conf__name">HR API</span>
-              <span class="conf__date">est 2009</span>
-              <div class="conf__logo">
-                <img
-                  src="./assets/img/HRAPI.png"
-                  alt="HR API logo"
-                  class="conf__img conf__img--active"
-                />
-              </div>
-              <a href="#" class="conf__btn conf__btn--hr btn">сентябрь 2020</a>
+              <a class="conf__item-elem" id="hr">
+                <span class="conf__name">HR API</span>
+                <span class="conf__date">est 2009</span>
+                <div class="conf__logo">
+                  <img
+                    src="./assets/img/HRAPI.png"
+                    alt="HR API logo"
+                    class="conf__img conf__img--active"
+                  />
+                </div>
+                <div href="#" class="conf__btn conf__btn-hr btn">
+                  сентябрь 2020
+                </div>
+              </a>
             </li>
             <li class="conf__item">
-              <span class="conf__name">PiterPy</span>
-              <span class="conf__date">est 2014</span>
-              <div class="conf__logo">
-                <img
-                  src="./assets/img/PiterPy _ active.png"
-                  alt="Piter Py logo"
-                  class="conf__img"
-                />
-              </div>
-              <a href="#" class="conf__btn conf__btn--py btn">ноябрь 2020</a>
+              <a class="conf__item-elem" id="py">
+                <span class="conf__name">PiterPy</span>
+                <span class="conf__date">est 2014</span>
+                <div class="conf__logo">
+                  <img
+                    src="./assets/img/PiterPy _ active.png"
+                    alt="Piter Py logo"
+                    class="conf__img"
+                  />
+                </div>
+                <div
+                  href="#"
+                  class="conf__btn conf__btn-py conf__btn-py--active btn"
+                >
+                  ноябрь 2020
+                </div>
+              </a>
             </li>
             <li class="conf__item">
-              <span class="conf__name">Open Source Tech</span>
-              <span class="conf__date">est 2015</span>
-              <div class="conf__logo">
-                <img
-                  src="./assets/img/OST _ active.png"
-                  alt="HR API logo"
-                  class="conf__img"
-                />
-              </div>
-              <a href="#" class="conf__btn conf__btn--ost btn">август 2020</a>
+              <a class="conf__item-elem" id="ost">
+                <span class="conf__name">Open Source Tech</span>
+                <span class="conf__date">est 2015</span>
+                <div class="conf__logo">
+                  <img
+                    src="./assets/img/OST _ active.png"
+                    alt="HR API logo"
+                    class="conf__img"
+                  />
+                </div>
+                <div href="#" class="conf__btn conf__btn-ost btn">
+                  август 2020
+                </div>
+              </a>
             </li>
             <li class="conf__item">
-              <span class="conf__name">Golang Piter</span>
-              <span class="conf__date">est 2019</span>
-              <div class="conf__logo">
-                <img
-                  src="./assets/img/Golang.png"
-                  alt="HR API logo"
-                  class="conf__img"
-                />
-              </div>
-              <a href="#" class="conf__btn conf__btn--go btn">октябрь 2019</a>
+              <a href="" class="conf__item-elem" id="go">
+                <span class="conf__name">Golang Piter</span>
+                <span class="conf__date">est 2019</span>
+                <div class="conf__logo">
+                  <img
+                    src="./assets/img/Golang.png"
+                    alt="HR API logo"
+                    class="conf__img"
+                  />
+                </div>
+                <div href="#" class="conf__btn conf__btn-go btn">
+                  октябрь 2019
+                </div>
+              </a>
             </li>
           </ul>
-       </div>
+        </div>
       </div>
     </section>
     <section class="school-section">
@@ -171,7 +192,9 @@
             </div>
             <div class="project__inner">
               <span class="project__subtitle school__subtitle">
-                <span class="project__subtitle--title">Тренинги и семинары </span>
+                <span class="project__subtitle--title"
+                  >Тренинги и семинары
+                </span>
                 В рамках нашей школы мы проводим: <br />
                 одно- и двух-дневные тренинги для рекрутеров и HR-ов IT-компаний
                 на такие темы как: сорсинг, IT-ликбез, управление льготами и
@@ -181,12 +204,12 @@
                 <span class="project__subtitle--title">Курсы </span>
                 Полноценное обучение для начинающих рекрутеров или с опытом, но
                 желающих освоить мир IT. На курсе мы обучаем ориентироваться в
-                современном рынке труда IT-специалистов, учитывать его специфику и
-                тренды при подборе. <br />
+                современном рынке труда IT-специалистов, учитывать его специфику
+                и тренды при подборе. <br />
                 У нас очень много практики и только необходимая теория. <br />
-                После курса вы начнете понимать процесс разработки ПО и структуру
-                IT-компаний и сможете искать и находить разработчиков разных
-                уровней и профилей.
+                После курса вы начнете понимать процесс разработки ПО и
+                структуру IT-компаний и сможете искать и находить разработчиков
+                разных уровней и профилей.
               </span>
             </div>
             <div class="school__links">
@@ -206,7 +229,7 @@
     </section>
     <section class="challenge-section">
       <div class="wrapper">
-      <div class="challenge project">
+        <div class="challenge project">
           <div class="project__img">
             <img
               src="./assets/img/ITC_logo.png"
@@ -257,9 +280,9 @@
                 профессионалы.
               </span>
               <span class="project__subtitle project__subtitle--tin">
-                Дисциплины: слалом, волейбол, шахматы, настольный теннис, картинг,
-                кикер, парусная регата, велотурнир, бег, мини-футбол, боулинг,
-                баскетбол, плавание, пейнтбол и другие.
+                Дисциплины: слалом, волейбол, шахматы, настольный теннис,
+                картинг, кикер, парусная регата, велотурнир, бег, мини-футбол,
+                боулинг, баскетбол, плавание, пейнтбол и другие.
               </span>
             </div>
             <div class="project__socials">
@@ -288,7 +311,7 @@
               </div>
             </div>
           </div>
-      </div>
+        </div>
       </div>
     </section>
 
@@ -314,13 +337,15 @@
                   />
                 </div>
                 <span class="project__subtitle">
-                  <span class="project__subtitle--title">Оффлайн турниры. </span>
+                  <span class="project__subtitle--title"
+                    >Оффлайн турниры.
+                  </span>
                   Организация и проведение внутренних спортивных турниров любой
                   сложности. Мы можем провести небольшой внутренний турнир по
-                  шахмата, настольному теннису или кикеру в офисе вашей компании.
-                  Организовать выездной однодневный турнир по футболу, волейболу,
-                  пейнтболу или картингу. Устроить большую многодневную парусную
-                  регату.
+                  шахмата, настольному теннису или кикеру в офисе вашей
+                  компании. Организовать выездной однодневный турнир по футболу,
+                  волейболу, пейнтболу или картингу. Устроить большую
+                  многодневную парусную регату.
                 </span>
               </div>
               <div class="project__block">
@@ -338,7 +363,7 @@
                   судейской бригады и опытных комментаторов (стримеров).
                 </span>
               </div>
-  
+
               <span class="project__subtitle project__subtitle--tin">
                 Мы провели более 60 спортивных турниров и обладаем большой
                 экспертизой проведения массовых спортивных мероприятий. С нашей
@@ -353,7 +378,7 @@
     </section>
     <section class="aggregator-section">
       <div class="wrapper">
-       <div class="aggregator project">
+        <div class="aggregator project">
           <div class="project__img">
             <img
               src="./assets/img/logo_it_events.png"
@@ -384,14 +409,14 @@
                     Как добавить событие на сайт?
                   </summary>
                   <div class="aggregator__spoiler--inner">
-                    Добавьте событие к нам на сайт IT-Events.com (для этого нужно
-                    залогиниться / зарегистрироваться на сайте и в личном кабинете
-                    справа вы увидите ссылку "+добавить событие"). Размещение на
-                    сайте бесплатное. Добавьте наш логотип и ссылку на сайт
-                    события (на ваш сайт). Тут лого: IT-Events.com/logo и ссылка:
-                    IT-Events.com Пришлите нам ссылку на ваше событие, где
-                    размещен наш логотип и ссылку на ваше событие на нашем сайте
-                    (или его ID)
+                    Добавьте событие к нам на сайт IT-Events.com (для этого
+                    нужно залогиниться / зарегистрироваться на сайте и в личном
+                    кабинете справа вы увидите ссылку "+добавить событие").
+                    Размещение на сайте бесплатное. Добавьте наш логотип и
+                    ссылку на сайт события (на ваш сайт). Тут лого:
+                    IT-Events.com/logo и ссылка: IT-Events.com Пришлите нам
+                    ссылку на ваше событие, где размещен наш логотип и ссылку на
+                    ваше событие на нашем сайте (или его ID)
                   </div>
                 </details>
                 <details class="aggregator__spoiler">
@@ -399,14 +424,14 @@
                     Как попасть в новостную ленту в социальных сетяз IT-Events ?
                   </summary>
                   <div class="aggregator__spoiler--inner">
-                    Добавьте событие к нам на сайт IT-Events.com (для этого нужно
-                    залогиниться / зарегистрироваться на сайте и в личном кабинете
-                    справа вы увидите ссылку "+добавить событие"). Размещение на
-                    сайте бесплатное. Добавьте наш логотип и ссылку на сайт
-                    события (на ваш сайт). Тут лого: IT-Events.com/logo и ссылка:
-                    IT-Events.com Пришлите нам ссылку на ваше событие, где
-                    размещен наш логотип и ссылку на ваше событие на нашем сайте
-                    (или его ID)
+                    Добавьте событие к нам на сайт IT-Events.com (для этого
+                    нужно залогиниться / зарегистрироваться на сайте и в личном
+                    кабинете справа вы увидите ссылку "+добавить событие").
+                    Размещение на сайте бесплатное. Добавьте наш логотип и
+                    ссылку на сайт события (на ваш сайт). Тут лого:
+                    IT-Events.com/logo и ссылка: IT-Events.com Пришлите нам
+                    ссылку на ваше событие, где размещен наш логотип и ссылку на
+                    ваше событие на нашем сайте (или его ID)
                   </div>
                 </details>
                 <details class="aggregator__spoiler">
@@ -414,14 +439,14 @@
                     Как удалить мое событие?
                   </summary>
                   <div class="aggregator__spoiler--inner">
-                    Добавьте событие к нам на сайт IT-Events.com (для этого нужно
-                    залогиниться / зарегистрироваться на сайте и в личном кабинете
-                    справа вы увидите ссылку "+добавить событие"). Размещение на
-                    сайте бесплатное. Добавьте наш логотип и ссылку на сайт
-                    события (на ваш сайт). Тут лого: IT-Events.com/logo и ссылка:
-                    IT-Events.com Пришлите нам ссылку на ваше событие, где
-                    размещен наш логотип и ссылку на ваше событие на нашем сайте
-                    (или его ID)
+                    Добавьте событие к нам на сайт IT-Events.com (для этого
+                    нужно залогиниться / зарегистрироваться на сайте и в личном
+                    кабинете справа вы увидите ссылку "+добавить событие").
+                    Размещение на сайте бесплатное. Добавьте наш логотип и
+                    ссылку на сайт события (на ваш сайт). Тут лого:
+                    IT-Events.com/logo и ссылка: IT-Events.com Пришлите нам
+                    ссылку на ваше событие, где размещен наш логотип и ссылку на
+                    ваше событие на нашем сайте (или его ID)
                   </div>
                 </details>
               </div>
@@ -429,7 +454,7 @@
                 <a href="#" class="aggregator__btn btn"
                   >Перейти на портал IT-Events.com</a
                 >
-  
+
                 <div class="socials">
                   <ul class="socials__list">
                     <li class="socials__item socials__item-vk">
@@ -449,19 +474,19 @@
                     </li>
                   </ul>
                 </div>
-  
+
                 <span class="aggregator__text-socials"
                   >Следить за анонсами событий
                 </span>
               </div>
             </div>
           </div>
-       </div>
+        </div>
       </div>
     </section>
     <section class="about-section">
       <div class="wrapper">
-       <div class="info-block about">
+        <div class="info-block about">
           <h2 class="about__title">О нас в цифрах</h2>
           <ul class="about__content">
             <li class="about__item">
@@ -522,7 +547,9 @@
               </div>
               <p class="activity__textcontent">
                 Активный член
-                <span class="activity__textcontent--bold">IT HR сообщества.</span>
+                <span class="activity__textcontent--bold"
+                  >IT HR сообщества.</span
+                >
                 Организатор и участник регулярных IT HR митапов в
                 Санкт-Петербурге, Москве и Минске.
               </p>

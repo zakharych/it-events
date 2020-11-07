@@ -376,7 +376,6 @@ body {
 }
 
 section {
-  padding: 0 60px;
   min-width: 1280px;
 }
 
@@ -384,8 +383,6 @@ section {
   width: 1280px;
   margin: 0 auto;
   overflow: hidden;
-  flex-direction: column;
-  align-items: center;
 }
 
 h1 {
@@ -644,10 +641,6 @@ h3 {
 }
 
 .conf__item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #ffffff;
   position: relative;
 }
 
@@ -661,6 +654,7 @@ h3 {
   right: 0;
   top: 48px;
   transform: translate(60%, -50%);
+  opacity: 1;
 }
 
 .conf__item::after {
@@ -673,6 +667,16 @@ h3 {
   left: 0;
   top: 48px;
   transform: translate(-60%, -50%);
+  opacity: 1;
+}
+
+.conf__item-elem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+  position: relative;
+  opacity: 0.5;
 }
 
 .conf__name {
@@ -702,43 +706,33 @@ h3 {
   width: 100%;
   display: block;
   object-fit: contain;
-  opacity: 0.5;
-}
-
-.conf__img--active {
-  opacity: 1;
 }
 
 .conf__btn {
   font-size: 16px;
   letter-spacing: 1.6px;
   padding: 12px 10px;
-  opacity: 0.5;
   background-color: #ffffff;
 }
 
-.conf__btn--hr:hover {
+.conf__btn-hr:hover, .conf__btn-hr--active {
   background-color: #080808;
   color: #ffffff;
 }
 
-.conf__btn--py:hover {
+.conf__btn-py:hover, .conf__btn-py--active {
   background-color: #fff000;
   color: #010812;
 }
 
-.conf__btn--ost:hover {
+.conf__btn-ost:hover, .conf__btn-ost--active {
   background-color: #cb5b9e;
   color: #ffffff;
 }
 
-.conf__btn--go:hover {
+.conf__btn-go:hover, .conf__btn-go--active {
   background-color: #010812;
   color: #ffffff;
-}
-
-.conf__btn:hover {
-  opacity: 1;
 }
 
 .project {

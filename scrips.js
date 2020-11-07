@@ -1,13 +1,28 @@
 const logo = document.querySelectorAll(".conf__logo"),
   background = document.querySelector(".conf-section"),
-  item = document.querySelectorAll(".conf__item");
+  item = document.querySelectorAll(".conf__item-elem");
 
 item.forEach((element) => {
   element.onmouseover = function (event) {
     let target = event.target;
-    console.log(target);
+    // console.log(target);
+    // console.log(element.id);
 
-    
+    element.style.opacity = 1;
+    if (element.id === "hr") {
+      background.style.backgroundColor = "#f24944";
+      element.lastElementChild.classList.toggle("conf__btn-hr--active");
+    } else if (element.id === "py") {
+      background.style.backgroundColor = "#316696";
+      element.lastElementChild.classList.toggle("conf__btn-py--active");
+    } else if (element.id === "ost") {
+      background.style.backgroundColor = "#36a9e1";
+      element.lastElementChild.classList.toggle("conf__btn-ost--active");
+    } else if (element.id === "go") {
+      background.style.backgroundColor = "#2d396b";
+      element.lastElementChild.classList.toggle("conf__btn-go--active");
+    }
+
     //   target.style.opacity = "1";
     //   if (element.lastElementChild === logo[0].lastElementChild) {
     //     background.style.backgroundColor = "#f24944";
@@ -45,9 +60,16 @@ item.forEach((element) => {
   };
 });
 
-logo.forEach((element) => {
+item.forEach((element) => {
   element.onmouseout = function (event) {
     let target = event.target;
+    
+    // console.log(element.id);
+    background.style.backgroundColor = "#2f2f2f";
+    element.style.opacity = 0.5;    
+    let togledClass = `conf__btn-${element.id}--active`;
+    // console.log(togledClass);
+    element.lastElementChild.classList.toggle(togledClass);
   };
 });
 

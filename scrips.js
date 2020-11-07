@@ -1,74 +1,78 @@
 const logo = document.querySelectorAll(".conf__logo"),
   background = document.querySelector(".conf-section"),
-  item = document.querySelectorAll(".conf__item-elem");
+  itemElem = document.querySelectorAll(".conf__item-elem"),
+  item = document.querySelectorAll(".conf__item"),
+  btn = document.querySelectorAll(".conf__btn");
+tempButtonText = "";
+tempButtonBg = "";
+tempButtoColor = "";
+tempButtonWidth = 0;
 
-item.forEach((element) => {
-  element.onmouseover = function (event) {
-    let target = event.target;
-    // console.log(target);
-    // console.log(element.id);
-
-    element.style.opacity = 1;
-    if (element.id === "hr") {
-      background.style.backgroundColor = "#f24944";
-      element.lastElementChild.classList.toggle("conf__btn-hr--active");
-    } else if (element.id === "py") {
-      background.style.backgroundColor = "#316696";
-      element.lastElementChild.classList.toggle("conf__btn-py--active");
-    } else if (element.id === "ost") {
-      background.style.backgroundColor = "#36a9e1";
-      element.lastElementChild.classList.toggle("conf__btn-ost--active");
-    } else if (element.id === "go") {
-      background.style.backgroundColor = "#2d396b";
-      element.lastElementChild.classList.toggle("conf__btn-go--active");
-    }
-
-    //   target.style.opacity = "1";
-    //   if (element.lastElementChild === logo[0].lastElementChild) {
-    //     background.style.backgroundColor = "#f24944";
-    //     element.style.opacity = "1";
-    //     logo.forEach((element) => {
-    //       if (element.lastElementChild !== logo[0].lastElementChild) {
-    //         element.style.opacity = "0.5";
-    //       }
-    //     });
-    //   } else if (element.lastElementChild === logo[1].lastElementChild) {
-    //     background.style.backgroundColor = "#316696";
-    //     logo.forEach((element) => {
-    //       element.style.opacity = "1";
-    //       if (element.lastElementChild !== logo[1].lastElementChild) {
-    //         element.style.opacity = "0.5";
-    //       }
-    //     });
-    //   } else if (element.lastElementChild === logo[2].lastElementChild) {
-    //     background.style.backgroundColor = "#36a9e1";
-    //     element.style.opacity = "1";
-    //     logo.forEach((element) => {
-    //       if (element.lastElementChild !== logo[2].lastElementChild) {
-    //         element.style.opacity = "0.5";
-    //       }
-    //     });
-    //   } else if (element.lastElementChild === logo[3].lastElementChild) {
-    //     background.style.backgroundColor = "#2d396b";
-    //     element.style.opacity = "1";
-    //     logo.forEach((element) => {
-    //       if (element.lastElementChild !== logo[3].lastElementChild) {
-    //         element.style.opacity = "0.5";
-    //       }
-    //     });
-    //   }
+btn.forEach((element) => {
+  element.onmouseover = function () {
+    tempButtonText = element.innerText;
+    tempButtonBg = element.style.backgroundColor;
+    tempButtoColor = element.style.color;
+    tempButtonWidth = `${element.offsetWidth}px`;
+    element.innerText = "Перейти";
+    element.style.backgroundColor = "#00653a";
+    element.style.color = "#ffffff";
+    element.style.minWidth = tempButtonWidth;
   };
 });
 
-item.forEach((element) => {
+btn.forEach((element) => {
+  element.onmouseout = function () {
+    element.innerText = tempButtonText;
+    element.style.backgroundColor = tempButtonBg;
+    element.style.minWidth = "";
+    element.style.color = tempButtoColor;
+  };
+});
+
+itemElem.forEach((element) => {
+  element.onmouseover = function (event) {
+    let target = event.target;
+    let togledClass = `conf__btn-${element.id}--active`;
+    childs = element.childNodes;
+    // tempButtonText = element.lastElementChild.innerText;
+
+    element.style.opacity = 1;
+    for (let i = 0; i < childs.length - 2; i++) {
+      if (i % 2 !== 0) {
+        childs[i].style.filter = "none";
+      }
+    }
+    element.lastElementChild.classList.toggle(togledClass);
+    // element.lastElementChild.innerText = "Перейти";
+
+    if (element.id === "hr") {
+      background.style.backgroundColor = "#f24944";
+    } else if (element.id === "py") {
+      background.style.backgroundColor = "#316696";
+    } else if (element.id === "ost") {
+      background.style.backgroundColor = "#36a9e1";
+    } else if (element.id === "go") {
+      background.style.backgroundColor = "#2d396b";
+    }
+  };
+});
+
+itemElem.forEach((element) => {
   element.onmouseout = function (event) {
     let target = event.target;
-    
-    // console.log(element.id);
+    childs = element.childNodes;
+    for (let i = 0; i < childs.length - 2; i++) {
+      if (i % 2 !== 0) {
+        // console.log(childs[i].classList);
+        childs[i].style.filter = "grayscale(100%)";
+      }
+    }
     background.style.backgroundColor = "#2f2f2f";
-    element.style.opacity = 0.5;    
+    element.style.opacity = 0.5;
+    // element.lastElementChild.innerText = tempButtonText;
+    // element.style.filter = "grayscale(100%)";
     let togledClass = `conf__btn-${element.id}--active`;
-    // console.log(togledClass);
     element.lastElementChild.classList.toggle(togledClass);
   };
 });

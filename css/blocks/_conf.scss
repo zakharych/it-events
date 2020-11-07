@@ -18,44 +18,47 @@
     display: flex;
     justify-content: space-between;
   }
-&__item {
-  position: relative;
-  &::before {
-    position: absolute;
-    content: "";
-    display: block;
-    width: 100px;
-    height: 3px;
-    background-color: #ffffff;
-    right: 0;
-    top: 48px;
-    transform: translate(60%, -50%);
-
-    opacity: 1;
+  &__item {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 100px;
+      height: 3px;
+      background-color: #ffffff;
+      right: 0;
+      top: 48px;
+      transform: translate(60%, -50%);
+      opacity: 0.5;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 100px;
+      height: 3px;
+      background-color: #ffffff;
+      left: 0;
+      top: 48px;
+      transform: translate(-60%, -50%);
+      opacity: 0.5;
+    }
   }
-  &::after {
-    position: absolute;
-    content: "";
-    display: block;
-    width: 100px;
-    height: 3px;
-    background-color: #ffffff;
-    left: 0;
-    top: 48px;
-    transform: translate(-60%, -50%);
-
-    opacity: 1;
-  }
-}
   &__item-elem {
+    &:not(:last-of-type) {
+    }
     display: flex;
     flex-direction: column;
     align-items: center;
     color: #ffffff;
     position: relative;
+    // filter: grayscale(100%);
     opacity: 0.5;
+  }
 
-   
+  &__item-elem > * {
+    filter: grayscale(100%);
   }
   &__name {
     font-size: 22px;
@@ -87,30 +90,37 @@
 
   &__btn {
     // display: block;
+    transition: 0.4s;
     font-size: 16px;
     letter-spacing: 1.6px;
     padding: 12px 10px;
-    background-color: #ffffff;
+    background-color: #ffffff;    
+    filter: grayscale(0);
+    text-align: center;
 
-    &-hr:hover, 
-    &-hr--active {
+    &-hr:hover,
+    &-hr--active, 
+    &-hr--prev {
       background-color: #080808;
       color: #ffffff;
     }
-    &-py:hover, 
-    &-py--active {
+    &-py:hover,
+    &-py--active, 
+    &-py--prev {
       background-color: #fff000;
       color: #010812;
     }
-    &-ost:hover, 
-    &-ost--active {
+    &-ost:hover,
+    &-ost--active, 
+    &-ost--prev {
       background-color: #cb5b9e;
       color: #ffffff;
     }
-    &-go:hover, 
-    &-go--active {
-      background-color: #010812;
-      color: #ffffff;
+    &-go:hover,
+    &-go--active, 
+    &-go--prev {
+      background-color: #9bd4f0;
+      color: #010812;
     }
   }
 }

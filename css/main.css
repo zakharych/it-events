@@ -402,6 +402,7 @@ h3 {
 }
 
 .header {
+  min-width: 100%;
   height: 86px;
   padding: 0 60px;
   display: flex;
@@ -654,7 +655,7 @@ h3 {
   right: 0;
   top: 48px;
   transform: translate(60%, -50%);
-  opacity: 1;
+  opacity: 0.5;
 }
 
 .conf__item::after {
@@ -667,7 +668,7 @@ h3 {
   left: 0;
   top: 48px;
   transform: translate(-60%, -50%);
-  opacity: 1;
+  opacity: 0.5;
 }
 
 .conf__item-elem {
@@ -677,6 +678,10 @@ h3 {
   color: #ffffff;
   position: relative;
   opacity: 0.5;
+}
+
+.conf__item-elem > * {
+  filter: grayscale(100%);
 }
 
 .conf__name {
@@ -709,30 +714,33 @@ h3 {
 }
 
 .conf__btn {
+  transition: 0.4s;
   font-size: 16px;
   letter-spacing: 1.6px;
   padding: 12px 10px;
   background-color: #ffffff;
+  filter: grayscale(0);
+  text-align: center;
 }
 
-.conf__btn-hr:hover, .conf__btn-hr--active {
+.conf__btn-hr:hover, .conf__btn-hr--active, .conf__btn-hr--prev {
   background-color: #080808;
   color: #ffffff;
 }
 
-.conf__btn-py:hover, .conf__btn-py--active {
+.conf__btn-py:hover, .conf__btn-py--active, .conf__btn-py--prev {
   background-color: #fff000;
   color: #010812;
 }
 
-.conf__btn-ost:hover, .conf__btn-ost--active {
+.conf__btn-ost:hover, .conf__btn-ost--active, .conf__btn-ost--prev {
   background-color: #cb5b9e;
   color: #ffffff;
 }
 
-.conf__btn-go:hover, .conf__btn-go--active {
-  background-color: #010812;
-  color: #ffffff;
+.conf__btn-go:hover, .conf__btn-go--active, .conf__btn-go--prev {
+  background-color: #9bd4f0;
+  color: #010812;
 }
 
 .project {

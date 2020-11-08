@@ -590,21 +590,8 @@ h3 {
 }
 
 .projects__item {
-  padding: 4px 12px;
   margin-right: 45px;
-  white-space: nowrap;
-  font-size: 17.5px;
-  font-weight: bold;
-  letter-spacing: 0.1rem;
-  color: #19143a;
-  text-transform: uppercase;
   position: relative;
-}
-
-.projects__item:hover {
-  background-color: #ed4963;
-  color: #ffffff;
-  border-radius: 25px;
 }
 
 .projects__item:last-child::before {
@@ -622,6 +609,23 @@ h3 {
   right: -8px;
   top: 50%;
   transform: translate(100%, -50%);
+}
+
+.projects__link {
+  padding: 4px 12px;
+  display: block;
+  white-space: nowrap;
+  font-size: 17.5px;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  color: #19143a;
+  text-transform: uppercase;
+}
+
+.projects__link:hover {
+  background-color: #ed4963;
+  color: #ffffff;
+  border-radius: 25px;
 }
 
 .conf {
@@ -869,7 +873,7 @@ h3 {
 }
 
 .project__link {
-  margin-right: 11px;
+  margin-right: 13px;
 }
 
 .project__link:hover {
@@ -924,7 +928,8 @@ h3 {
 }
 
 .school__social {
-  height: 40px;
+  display: flex;
+  align-items: center;
 }
 
 .challenge {
@@ -1098,7 +1103,7 @@ details summary::-webkit-details-marker {
 }
 
 .socials__item {
-  display: inline-block;
+  display: block;
   width: 40px;
   height: 40px;
   background-image: url(https://ostconf.com/i/blocks/social/twitter.svg);

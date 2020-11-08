@@ -467,7 +467,7 @@ h3 {
 .language {
   font-weight: bold;
   line-height: 5.16;
-  letter-spacing: 1.44px;
+  letter-spacing: 0.1rem;
   color: #ed4963;
   margin-bottom: 5px;
 }
@@ -595,9 +595,8 @@ h3 {
   white-space: nowrap;
   font-size: 17.5px;
   font-weight: bold;
-  letter-spacing: 1.58px;
+  letter-spacing: 0.1rem;
   color: #19143a;
-  letter-spacing: 0.08rem;
   text-transform: uppercase;
   position: relative;
 }
@@ -723,7 +722,7 @@ h3 {
 .conf__btn {
   transition: 0.4s;
   font-size: 16px;
-  letter-spacing: 1.6px;
+  letter-spacing: 0.1rem;
   padding: 12px 10px;
   background-color: #ffffff;
   filter: grayscale(0);
@@ -978,7 +977,7 @@ h3 {
   text-transform: uppercase;
   font-weight: 500;
   line-height: 1.66;
-  letter-spacing: 1.44px;
+  letter-spacing: 0.1rem;
   color: #ffffff;
 }
 
@@ -1031,7 +1030,7 @@ h3 {
 .aggregator__text-socials {
   font-size: 15px;
   line-height: 1.67;
-  letter-spacing: 1.35px;
+  letter-spacing: 0.1rem;
   color: #241d3a;
   flex: 1;
   text-align: right;
@@ -1075,7 +1074,7 @@ h3 {
   cursor: pointer;
   font-weight: bold;
   line-height: 1.66;
-  letter-spacing: 1.44px;
+  letter-spacing: 0.1rem;
   color: #e63d5b;
 }
 
@@ -1249,7 +1248,7 @@ details summary::-webkit-details-marker {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.66;
-  letter-spacing: 1.44px;
+  letter-spacing: 0.1rem;
   color: #664e4b;
   margin-bottom: 42px;
 }
@@ -1332,7 +1331,7 @@ details summary::-webkit-details-marker {
   margin-bottom: 50px;
   font-weight: 500;
   line-height: 1.66;
-  letter-spacing: 1.44px;
+  letter-spacing: 0.1rem;
   text-align: center;
   color: #464646;
 }

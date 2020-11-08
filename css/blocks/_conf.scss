@@ -46,8 +46,6 @@
     }
   }
   &__item-elem {
-    &:not(:last-of-type) {
-    }
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -92,7 +90,7 @@
     // display: block;
     transition: 0.4s;
     font-size: 16px;
-    letter-spacing: 1.6px;
+    letter-spacing: 0.1rem;
     padding: 12px 10px;
     background-color: #ffffff;    
     filter: grayscale(0);

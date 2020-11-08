@@ -1,6 +1,11 @@
 .teamchallenge {
   &-section {
     background-color: #2b4c9a;
+    color: #ffffff;
+  }
+  &__title {
+    line-height: 1;
+    margin-bottom: 0;
   }
 
   background-image: url("../assets/img/bg_teamchallenge.png");

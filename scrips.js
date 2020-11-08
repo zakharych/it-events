@@ -113,10 +113,12 @@ left.addEventListener("click", (e) => {
 const prev = document.querySelector("#prev");
 const next = document.querySelector("#next");
 const slider = document.querySelector("#hero__slider");
+const heroSection = document.querySelector(".hero-section");
 
 const slide = (direction) => {
   next.classList.toggle("hero__slider--active");
   prev.classList.toggle("hero__slider--active");
+  heroSection.classList.toggle("hero-section--toggled");
   if (direction === "right") {
     slider.appendChild(slider.firstElementChild);
   } else {

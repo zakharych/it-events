@@ -9,7 +9,10 @@
   &__subtitle {
     color: #241d3a;
   }
-
+  &__img {
+    align-self: start;
+    margin-top: 112px;
+  }
   &__socials {
     display: flex;
     align-items: center;

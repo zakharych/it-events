@@ -474,6 +474,14 @@ h3 {
 
 .hero-section {
   padding: 0;
+  background-image: url("../../assets/img/bg_hero-section_2.png");
+  background-position: center center;
+  background-size: cover;
+}
+
+.hero-section--toggled {
+  z-index: 10;
+  background-image: url("../../assets/img/bg_hero-section_1.png");
 }
 
 .hero__item {
@@ -750,10 +758,16 @@ h3 {
   justify-content: space-between;
 }
 
-.project__title--sub {
+.project__title--est {
   font-size: 14.5px;
   font-weight: bold;
   color: #ffffff;
+  margin-left: 8px;
+}
+
+.project__title--sub {
+  font-weight: bold;
+  margin-bottom: 28px;
 }
 
 .project__img {
@@ -982,6 +996,12 @@ h3 {
 
 .teamchallenge-section {
   background-color: #2b4c9a;
+  color: #ffffff;
+}
+
+.teamchallenge__title {
+  line-height: 1;
+  margin-bottom: 0;
 }
 
 .aggregator-section {
@@ -994,6 +1014,11 @@ h3 {
 
 .aggregator__subtitle {
   color: #241d3a;
+}
+
+.aggregator__img {
+  align-self: start;
+  margin-top: 112px;
 }
 
 .aggregator__socials {

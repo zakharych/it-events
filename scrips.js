@@ -143,3 +143,72 @@ next.addEventListener("click", (e) => {
   e.preventDefault();
   slide("left");
 });
+
+///////////////////////////////////////////////////////////////     Анимация цифр                ///////////////////////////////////
+
+const list = document.querySelector(".about__content");
+const time = 5000;
+const step = 1;
+
+start = false;
+const elems = document.querySelectorAll(".about__text");
+// function outNum(num, elem) {
+
+//   if (start === false) {
+//     n = 0;
+//     const t = Math.round(time / (num / step));
+//     let interval = setInterval(() => {
+//       n = n + step;
+//       if (n >= num) {
+//         clearInterval(interval);
+//       }
+
+//       elem.innerText = n;
+//       if(n > num) {
+//         elem.innerText = tempText
+//       }
+//     }, t);
+//   }
+// }
+
+function iter(num, elem) {
+  console.log("опа");
+  if (start === false) {
+    // const tempText = elem.innerText;
+    let i = 0;
+    while (i < num) {
+      setInterval(() => {
+        i++;
+        console.log();
+        elem.innerText = i;
+        console.log(elem.innerText);
+      }, 1000);
+    }
+  }
+}
+
+function checkVisibility(el) {
+  var dTop = window.scrollY,
+    dBot = dTop + window.innerHeight,
+    elTop = el.offsetTop,
+    elBot = elTop + el.offsetHeight;
+  return elTop <= dBot && elTop >= dTop;
+}
+
+window.addEventListener("scroll", function () {
+  if (checkVisibility(list)) {
+    console.log("Я тут");
+
+    for (let i = 0; i < elems.length; i++) {
+      // console.log(elems[i].innerText);
+      iter(elems[i].innerText, elems[i]);
+
+      if (i === elems.length - 1) {
+        start = true;
+      }
+      // console.log(i);
+    }
+  } else {
+    console.log("Ушёл на обед");
+  }
+});

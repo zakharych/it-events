@@ -594,6 +594,10 @@ h3 {
   position: relative;
 }
 
+.projects__item:last-child {
+  margin-right: 0;
+}
+
 .projects__item:last-child::before {
   content: none;
 }

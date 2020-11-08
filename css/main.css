@@ -474,14 +474,13 @@ h3 {
 
 .hero-section {
   padding: 0;
-  background-image: url("../../assets/img/bg_hero-section_2.png");
+  background-image: url("./../assets/img/bg_hero-section_2.png");
   background-position: center center;
   background-size: cover;
 }
 
 .hero-section--toggled {
-  z-index: 10;
-  background-image: url("../../assets/img/bg_hero-section_1.png");
+  background-image: url("./../assets/img/bg_hero-section_1.png");
 }
 
 .hero__item {

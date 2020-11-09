@@ -27,7 +27,7 @@
 
   &__item {
     
-    margin-right: 45px;
+    margin-right: 35px;
     position: relative;
     
 
@@ -40,14 +40,14 @@
     }
 
     &::before {
-      margin-left: 21px;
+      // margin-left: 11px;
       position: absolute;
       content: "";
       display: block;
       width: 27px;
       height: 3px;
       background-color: #ed4963;
-      right: -8px;
+      right: -4px;
       top: 50%;
 
       transform: translate(100%, -50%);

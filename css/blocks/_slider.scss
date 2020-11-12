@@ -34,3 +34,17 @@
   display: block;
   object-fit: contain;
 }
+
+.arrow {
+  display: block;
+  height: 28px;
+  width: 19px;
+  overflow: hidden;
+
+  &__img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+}

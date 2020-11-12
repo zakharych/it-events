@@ -440,6 +440,12 @@ h3 {
   letter-spacing: 0.06rem;
 }
 
+.menu__link {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
 .menu__list {
   display: flex;
   align-items: center;
@@ -472,6 +478,57 @@ h3 {
   margin-bottom: 5px;
 }
 
+.socials__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.socials__item {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-image: url(https://ostconf.com/i/blocks/social/twitter.svg);
+  background-color: #ed4963;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  margin-right: 13px;
+}
+
+.socials__item:last-child {
+  margin-right: 0;
+}
+
+.socials__item:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.socials__link {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.socials__item-vk {
+  background-image: url(https://ostconf.com/i/blocks/social/vk.svg);
+}
+
+.socials__item-fb {
+  background-image: url(https://ostconf.com/i/blocks/social/facebook.svg);
+}
+
+.socials__item-yb {
+  background-image: url(https://ostconf.com/i/blocks/social/youtube.svg);
+}
+
+.socials__item-tg {
+  background-image: url(https://ostconf.com/i/blocks/social/telegram.svg);
+}
+
+.socials__item-in {
+  background-image: url(../assets/img/icon_Instagram.png);
+  background-size: 20px 20px;
+}
+
 .hero-section {
   padding: 0;
   background-image: url("./../assets/img/bg_hero-section_2.png");
@@ -489,6 +546,7 @@ h3 {
   min-height: 480px;
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .hero__inner {
@@ -498,6 +556,7 @@ h3 {
 .hero__slider {
   max-height: 480px;
   overflow: hidden;
+  display: flex;
 }
 
 .hero__slider--controls {
@@ -564,7 +623,7 @@ h3 {
 
 .projects {
   display: flex;
-  padding-top: 60px;
+  padding: 60px 48px;
   padding-bottom: 79px;
   flex-direction: column;
   align-items: center;
@@ -585,12 +644,11 @@ h3 {
 
 .projects__list {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
 }
 
 .projects__item {
-  margin-right: 35px;
   position: relative;
 }
 
@@ -606,10 +664,10 @@ h3 {
   position: absolute;
   content: "";
   display: block;
-  width: 27px;
-  height: 3px;
+  width: 23px;
+  height: 2px;
   background-color: #ed4963;
-  right: -4px;
+  right: -2px;
   top: 50%;
   transform: translate(100%, -50%);
 }
@@ -935,6 +993,10 @@ h3 {
   align-items: center;
 }
 
+.school__social-item:hover, .school__social-item:active {
+  background-color: #c83131;
+}
+
 .challenge {
   background-image: url("../assets/img/Elements.png");
   background-repeat: no-repeat;
@@ -993,19 +1055,19 @@ h3 {
   display: block;
 }
 
-.teamchallenge {
+.WSB {
   background-image: url("../assets/img/bg_teamchallenge.png");
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: 520px 450px;
 }
 
-.teamchallenge-section {
+.WSB-section {
   background-color: #2b4c9a;
   color: #ffffff;
 }
 
-.teamchallenge__title {
+.WSB__title {
   line-height: 1;
   margin-bottom: 0;
 }
@@ -1098,57 +1160,6 @@ h3 {
 details summary::-webkit-details-marker {
   /* нестандартный псевдоэлемент Google Chrome */
   display: none;
-}
-
-.socials__list {
-  display: flex;
-  justify-content: space-between;
-}
-
-.socials__item {
-  display: block;
-  width: 40px;
-  height: 40px;
-  background-image: url(https://ostconf.com/i/blocks/social/twitter.svg);
-  background-color: #ed4963;
-  background-repeat: no-repeat;
-  background-position: 50%;
-  margin-right: 13px;
-}
-
-.socials__item:last-child {
-  margin-right: 0;
-}
-
-.socials__item:hover {
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.socials__link {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-.socials__item-vk {
-  background-image: url(https://ostconf.com/i/blocks/social/vk.svg);
-}
-
-.socials__item-fb {
-  background-image: url(https://ostconf.com/i/blocks/social/facebook.svg);
-}
-
-.socials__item-yb {
-  background-image: url(https://ostconf.com/i/blocks/social/youtube.svg);
-}
-
-.socials__item-tg {
-  background-image: url(https://ostconf.com/i/blocks/social/telegram.svg);
-}
-
-.socials__item-in {
-  background-image: url(../assets/img/icon_Instagram.png);
-  background-size: 20px 20px;
 }
 
 .info-block {
@@ -1319,6 +1330,20 @@ details summary::-webkit-details-marker {
   width: 100%;
   height: 100%;
   display: block;
+  object-fit: contain;
+}
+
+.arrow {
+  display: block;
+  height: 28px;
+  width: 19px;
+  overflow: hidden;
+}
+
+.arrow__img {
+  display: block;
+  height: 100%;
+  width: 100%;
   object-fit: contain;
 }
 

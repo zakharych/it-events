@@ -1,7 +1,5 @@
 .school {
-
   &-section {
-
     background-color: #bed2d6;
   }
   &__title {
@@ -41,5 +39,12 @@
   &__social {
     display: flex;
     align-items: center;
+    
+    &-item {
+      &:hover,
+      &:active {
+        background-color: #c83131;
+      }
+    }
   }
 }

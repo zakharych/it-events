@@ -109,6 +109,7 @@ left.addEventListener("click", (e) => {
 });
 
 ///////////////////////              hero slider            /////////////////////
+const time = 7; // время задержки sec
 
 const prev = document.querySelector("#prev");
 const next = document.querySelector("#next");
@@ -126,20 +127,24 @@ const slide = (direction) => {
   }
 };
 
-function nextSlide() {
-  slide("right");
-  setTimeout(function () {
-    nextSlide();
-  }, 5000);
+function start() {
+  timeOut = setTimeout(() => {
+    slide("right");
+    start();
+  }, time * 1000);
 }
+start();
 
-nextSlide();
 prev.addEventListener("click", (e) => {
   e.preventDefault();
+  clearInterval(timeOut);
+  start();
   slide("right");
 });
 
 next.addEventListener("click", (e) => {
   e.preventDefault();
+  clearInterval(timeOut);
+  start();
   slide("left");
 });

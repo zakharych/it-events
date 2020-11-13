@@ -23,7 +23,7 @@
   <meta property="title" content="IT-Events, LTD" />
   <meta
     property="og:description"
-    content="Конференции, митапы, хакатоны, тренинги, олимпиады, форумы... в сфере информационных технологий, робототехники и телекома."
+    content="Мы организуем и проводим конференции, корпоративные спортивные турниры, Кубок IT-Challenge и другие классные события."
   />
   <meta
     property="og:image"
@@ -35,7 +35,7 @@
   <meta property="twitter:card" content="summary_large_image" />
   <meta
     property="twitter:description"
-    content="Конференции, митапы, хакатоны, тренинги, олимпиады, форумы... в сфере информационных технологий, робототехники и телекома."
+    content="Мы организуем и проводим конференции, корпоративные спортивные турниры, Кубок IT-Challenge и другие классные события."
   />
   <meta
     property="twitter:image"
@@ -43,7 +43,7 @@
   />
   <meta
     name="description"
-    content="Конференции, митапы, хакатоны, тренинги, олимпиады, форумы... в сфере информационных технологий, робототехники и телекома."
+    content="Мы организуем и проводим конференции, корпоративные спортивные турниры, Кубок IT-Challenge и другие классные события."
   />
     <title>IT-Events, LTD</title>
     <link
@@ -55,7 +55,10 @@
       rel="stylesheet"
     />
     <!-- <link rel="stylesheet" href="https://it-events.com/system/attachments/files/000/001/962/original/main.css" /> -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
     <link rel="stylesheet" href="./css/main.css" />
+    <script src="https://kit.fontawesome.com/b16fae3f3d.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
@@ -94,16 +97,24 @@
       </div>
     </header>
     <section class="hero-section">
-      <div class="wrapper">
+      <ul class="sliderBg">
+        <li class="sliderBg__item">
+          <img class="sliderBg__pic"  src="./assets/img/bg_hero-section_2.png" alt="">
+        </li>
+        <li class="sliderBg__item">
+          <img class="sliderBg__pic" src="./assets/img/bg_hero-section_1.png" alt="">
+        </li>
+      </ul>
+      <div class="wrapper hero-wrapper">
         <div class="hero">
           <div class="hero__inner">
-            <div class="hero__slider--controls">
+            <!-- <div class="hero__slider--controls">
               <div
                 class="hero__slider--control hero__slider--active"
                 id="prev"
               ></div>
               <div class="hero__slider--control" id="next"></div>
-            </div>
+            </div> -->
             <ul class="hero__slider" id="hero__slider">
               <li class="hero__item hero__item-chalange">
                 <div class="hero__content">
@@ -136,6 +147,7 @@
                 </div>
               </li>
             </ul>
+            <div class="arrows"></div>
           </div>
         </div>
       </div>
@@ -447,7 +459,7 @@
           <div class="project__img">
             <img
               src="https://it-events.com/system/attachments/files/000/001/960/original/WSB.svg"
-              alt="TEAM Chellenge logo"
+              alt="WBS logo"
               class="project__pic"
             />
           </div>
@@ -1292,8 +1304,7 @@
       </section>
     </footer>
     <!-- <script src="https://it-events.com/system/attachments/files/000/001/956/original/scrips.js"></script> -->
-    <script src="./scrips.js"></script>
-
+    
     <!-- Yandex.Metrika counter -->
     <!-- <script type="text/javascript">
       (function (m, e, t, r, i, k, a) {
@@ -1302,20 +1313,20 @@
           function () {
             (m[i].a = m[i].a || []).push(arguments);
           };
-        m[i].l = 1 * new Date();
-        (k = e.createElement(t)),
+          m[i].l = 1 * new Date();
+          (k = e.createElement(t)),
           (a = e.getElementsByTagName(t)[0]),
           (k.async = 1),
           (k.src = r),
           a.parentNode.insertBefore(k, a);
-      })(
+        })(
         window,
         document,
         "script",
         "https://mc.yandex.ru/metrika/tag.js",
         "ym"
       );
-
+      
       ym(49985536, "init", {
         clickmap: true,
         trackLinks: true,
@@ -1323,14 +1334,24 @@
       });
     </script>
     <noscript
-      ><div>
-        <img
-          src="https://mc.yandex.ru/watch/49985536"
-          style="position: absolute; left: -9999px"
-          alt=""
-        /></div
-    ></noscript> -->
-    <!-- /Yandex.Metrika counter -->
+    ><div>
+      <img
+      src="https://mc.yandex.ru/watch/49985536"
+      style="position: absolute; left: -9999px"
+      alt=""
+      /></div
+      ></noscript> -->
+      <!-- /Yandex.Metrika counter -->
+      
+      <script src="./scrips.js"></script>
+      <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+      crossorigin="anonymous"></script> 
+      
+      <script src="/slick/slick.min.js"></script>      
+      <script src="./sliderSetup.js"></script>
+
   </body>
 </html>
 

@@ -1,13 +1,25 @@
 .hero {
+  // position: relative;
+
+  &-wrapper {
+    position: absolute;
+    height: 480px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
   &-section {
     padding: 0;
-    background-image: url("./../assets/img/bg_hero-section_2.png");
-    background-position: center center;
-    background-size: cover;
+    // background-image: url("./../assets/img/bg_hero-section_2.png");
+    // background-position: center center;
+    // background-size: cover;
+    height: 480px;
+    overflow: hidden;
+    position: relative;
   }
-  &-section--toggled {
-    background-image: url("./../assets/img/bg_hero-section_1.png");
-  }
+  // &-section--toggled {
+  //   // background-image: url("./../assets/img/bg_hero-section_1.png");
+  // }
   &__item {
     position: relative;
     width: 100%;
@@ -17,12 +29,15 @@
     flex-shrink: 0;
   }
 
-  &__inner {
-    position: relative;
-  }
+  // &__inner {
+  //   position: absolute;
+  //   bottom: 100%;
+  //   z-index: 20;
+  // }
 
   &__slider {
     max-height: 480px;
+    // position: absolute;
     overflow: hidden;
     display: flex;
     &--controls {
@@ -59,6 +74,8 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 0 323px;
+    min-height: 480px;
+    justify-content: center;
   }
 
   &__title {
@@ -69,6 +86,59 @@
   &__subtitle {
     margin-bottom: 24px;
     letter-spacing: 0.1rem;
+  }
+
+  .slick-dotted.slick-slider {
+    //  Класс слйдера с точками
+    margin-bottom: 0;
+  }
+  .slick-dots {
+    //  контейнер с точками
+    display: flex;
+    flex-direction: column;
+    width: 10px;
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    transform: translateY(-50%);
+    bottom: auto;
+  }
+
+  .slick-dots li {
+    // контейнер точки
+
+    margin: 0;
+    content: none;
+    height: 42px;
+    width: 3px;
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .slick-dots li button {
+    // кнопка точки
+    padding: 0;
+    height: 42px;
+    width: 3px;
+
+    &::before {
+      //  отображение точки
+      display: block;
+      height: 42px;
+      width: 3px;
+      content: "";
+      cursor: pointer;
+      background-color: #ffffff;
+      opacity: 1;
+    }
+  }
+  .slick-dots li.slick-active button:before {
+    // Активная точка
+    opacity: 1;
+    background-color: #ff0000;
+    color: black;
   }
 }
 
@@ -84,5 +154,136 @@
   &:hover,
   &:active {
     background-color: #fff000;
+  }
+
+  &__hero-slider-l,
+  &__hero-slider-r {
+    position: absolute;
+    top: 50%;
+    display: block;
+    height: 28px;
+    width: 19px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  &__hero-slider-l {
+    left: 10px;
+    -webkit-animation-name: fadeInRIght;
+    animation-name: fadeInRIght;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+
+    &--disabled {
+      -webkit-animation-name: fadeInLeft;
+      animation-name: fadeInLeft;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+    }
+  }
+  &__hero-slider-r {
+    right: 10px;
+    -webkit-animation-name: fadeInLeftR;
+    animation-name: fadeInLeftR;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    &--disabled {
+      -webkit-animation-name: fadeInRIghtR;
+      animation-name: fadeInRIghtR;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+    }
+  }
+}
+
+// .fadeInLeft {
+//   -webkit-animation-name: fadeInLeft;
+//   animation-name: fadeInLeft;
+//   -webkit-animation-duration: 1s;
+//   animation-duration: 1s;
+//   -webkit-animation-fill-mode: both;
+//   animation-fill-mode: both;
+// }
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, -50%, 0);
+    transform: translate3d(-100%, -50%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+  }
+}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+  }
+}
+
+@keyframes fadeInRIght {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, -50%, 0);
+    transform: translate3d(-100%, -50%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+  }
+}
+
+@keyframes fadeInLeftR {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, -50%, 0);
+    transform: translate3d(100%, -50%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+  }
+}
+
+@keyframes fadeInRIghtR {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, -50%, 0);
+    transform: translate3d(100%, -50%, 0);
+  }
+}
+
+.sliderBg {
+  height: 480px;
+  width: 100%;
+  overflow: hidden;
+  &__pic {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
 }

@@ -529,15 +529,19 @@ h3 {
   background-size: 20px 20px;
 }
 
-.hero-section {
-  padding: 0;
-  background-image: url("./../assets/img/bg_hero-section_2.png");
-  background-position: center center;
-  background-size: cover;
+.hero-wrapper {
+  position: absolute;
+  height: 480px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.hero-section--toggled {
-  background-image: url("./../assets/img/bg_hero-section_1.png");
+.hero-section {
+  padding: 0;
+  height: 480px;
+  overflow: hidden;
+  position: relative;
 }
 
 .hero__item {
@@ -547,10 +551,6 @@ h3 {
   display: flex;
   align-items: center;
   flex-shrink: 0;
-}
-
-.hero__inner {
-  position: relative;
 }
 
 .hero__slider {
@@ -594,6 +594,8 @@ h3 {
   flex-direction: column;
   align-items: flex-start;
   padding: 0 323px;
+  min-height: 480px;
+  justify-content: center;
 }
 
 .hero__title {
@@ -605,6 +607,55 @@ h3 {
 .hero__subtitle {
   margin-bottom: 24px;
   letter-spacing: 0.1rem;
+}
+
+.hero .slick-dotted.slick-slider {
+  margin-bottom: 0;
+}
+
+.hero .slick-dots {
+  display: flex;
+  flex-direction: column;
+  width: 10px;
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  transform: translateY(-50%);
+  bottom: auto;
+}
+
+.hero .slick-dots li {
+  margin: 0;
+  content: none;
+  height: 42px;
+  width: 3px;
+  margin-bottom: 10px;
+}
+
+.hero .slick-dots li:last-child {
+  margin-bottom: 0;
+}
+
+.hero .slick-dots li button {
+  padding: 0;
+  height: 42px;
+  width: 3px;
+}
+
+.hero .slick-dots li button::before {
+  display: block;
+  height: 42px;
+  width: 3px;
+  content: "";
+  cursor: pointer;
+  background-color: #ffffff;
+  opacity: 1;
+}
+
+.hero .slick-dots li.slick-active button:before {
+  opacity: 1;
+  background-color: #ff0000;
+  color: black;
 }
 
 .btn {
@@ -619,6 +670,99 @@ h3 {
 
 .btn:hover, .btn:active {
   background-color: #fff000;
+}
+
+.btn__hero-slider-l, .btn__hero-slider-r {
+  position: absolute;
+  top: 50%;
+  display: block;
+  height: 28px;
+  width: 19px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.btn__hero-slider-l {
+  left: 10px;
+  animation-name: fadeInRIght;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.btn__hero-slider-l--disabled {
+  animation-name: fadeInLeft;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.btn__hero-slider-r {
+  right: 10px;
+  animation-name: fadeInLeftR;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.btn__hero-slider-r--disabled {
+  animation-name: fadeInRIghtR;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, -50%, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0, -50%, 0);
+  }
+}
+
+@keyframes fadeInRIght {
+  0% {
+    opacity: 0;
+    transform: translate3d(-100%, -50%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, -50%, 0);
+  }
+}
+
+@keyframes fadeInLeftR {
+  0% {
+    opacity: 0;
+    transform: translate3d(100%, -50%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, -50%, 0);
+  }
+}
+
+@keyframes fadeInRIghtR {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, -50%, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(100%, -50%, 0);
+  }
+}
+
+.sliderBg {
+  height: 480px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.sliderBg__pic {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .projects {
@@ -818,7 +962,6 @@ h3 {
   padding: 100px 60px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 .project__title--est {

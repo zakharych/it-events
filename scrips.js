@@ -108,43 +108,46 @@ left.addEventListener("click", (e) => {
   loop("left", e);
 });
 
-///////////////////////              hero slider            /////////////////////
-const time = 7; // время задержки sec
+// ///////////////////////              hero slider            /////////////////////
+// const time = 7; // время задержки sec
 
-const prev = document.querySelector("#prev");
-const next = document.querySelector("#next");
-const slider = document.querySelector("#hero__slider");
-const heroSection = document.querySelector(".hero-section");
+// const prev = document.querySelector("#prev");
+// const next = document.querySelector("#next");
+// const slider = document.querySelector("#hero__slider");
+// const heroSection = document.querySelector(".hero-section");
 
-const slide = (direction) => {
-  next.classList.toggle("hero__slider--active");
-  prev.classList.toggle("hero__slider--active");
-  heroSection.classList.toggle("hero-section--toggled");
-  if (direction === "right") {
-    slider.appendChild(slider.firstElementChild);
-  } else {
-    slider.insertBefore(slider.lastElementChild, slider.firstElementChild);
-  }
-};
+// $('.hero__slider').hover( function name(params) {
+//   console.log("hover");
+// } )
+// const slide = (direction) => {
+//   next.classList.toggle("hero__slider--active");
+//   prev.classList.toggle("hero__slider--active");
+//   heroSection.classList.toggle("hero-section--toggled");
+//   if (direction === "right") {
+//     slider.appendChild(slider.firstElementChild);
+//   } else {
+//     slider.insertBefore(slider.lastElementChild, slider.firstElementChild);
+//   }
+// };
 
-function start() {
-  timeOut = setTimeout(() => {
-    slide("right");
-    start();
-  }, time * 1000);
-}
-start();
+// function start() {
+//   timeOut = setTimeout(() => {
+//     slide("right");
+//     start();
+//   }, time * 1000);
+// }
+// start();
 
-prev.addEventListener("click", (e) => {
-  e.preventDefault();
-  clearInterval(timeOut);
-  start();
-  slide("right");
-});
+// prev.addEventListener("click", (e) => {
+//   e.preventDefault();
+//   clearInterval(timeOut);
+//   start();
+//   slide("right");
+// });
 
-next.addEventListener("click", (e) => {
-  e.preventDefault();
-  clearInterval(timeOut);
-  start();
-  slide("left");
-});
+// next.addEventListener("click", (e) => {
+//   e.preventDefault();
+//   clearInterval(timeOut);
+//   start();
+//   slide("left");
+// });

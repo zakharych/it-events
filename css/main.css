@@ -451,6 +451,7 @@ h3 {
   align-items: center;
   justify-content: space-between;
   height: 100%;
+  margin-top: 12px;
 }
 
 .menu__item {
@@ -475,6 +476,7 @@ h3 {
   line-height: 5.16;
   letter-spacing: 0.1rem;
   color: #ed4963;
+  margin-top: 12px;
   margin-bottom: 5px;
 }
 
@@ -553,39 +555,30 @@ h3 {
   flex-shrink: 0;
 }
 
+.hero__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: -10;
+  overflow: hidden;
+}
+
+.hero__bg-pic {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 .hero__slider {
   max-height: 480px;
   overflow: hidden;
   display: flex;
 }
 
-.hero__slider--controls {
-  position: absolute;
-  top: 50%;
-  right: 26px;
-  transform: translateY(-50%);
-  z-index: 10;
-}
-
-.hero__slider--control {
-  display: block;
-  height: 42px;
-  width: 3px;
-  cursor: pointer;
-  background-color: #ffffff;
-  margin-bottom: 10px;
-}
-
 .hero__slider--active {
   background-color: #ff0000;
-}
-
-.hero__item {
-  background: url("./../assets/img/hero__tournaments.png") center center/cover;
-}
-
-.hero__item-chalange {
-  background: url("./../assets/img/IT_Cyber_Games.png") center center/cover;
 }
 
 .hero__content {
@@ -715,7 +708,7 @@ h3 {
   }
   100% {
     opacity: 0;
-    transform: translate3d(0, -50%, 0);
+    transform: translate3d(-100%, -50%, 0);
   }
 }
 
@@ -788,11 +781,11 @@ h3 {
 
 .projects__list {
   display: flex;
-  justify-content: space-between;
   width: 100%;
 }
 
 .projects__item {
+  margin-right: 29px;
   position: relative;
 }
 
@@ -972,8 +965,8 @@ h3 {
 }
 
 .project__title--sub {
-  font-weight: bold;
-  margin-bottom: 28px;
+  text-transform: uppercase;
+  letter-spacing: 0.165rem;
 }
 
 .project__img {
@@ -1024,6 +1017,7 @@ h3 {
   overflow: hidden;
   flex-shrink: 0;
   margin-right: 16px;
+  margin-top: 10px;
 }
 
 .project__block--pic {
@@ -1198,21 +1192,18 @@ h3 {
   display: block;
 }
 
-.WSB {
+.WSB-section {
+  background-color: #2b4c9a;
+  color: #ffffff;
   background-image: url("../assets/img/bg_teamchallenge.png");
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: 520px 450px;
 }
 
-.WSB-section {
-  background-color: #2b4c9a;
-  color: #ffffff;
-}
-
 .WSB__title {
   line-height: 1;
-  margin-bottom: 0;
+  margin-bottom: 44px;
 }
 
 .aggregator-section {
@@ -1307,8 +1298,8 @@ details summary::-webkit-details-marker {
 
 .info-block {
   padding: 60px;
-  padding-top: 50px;
-  padding-bottom: 100px;
+  padding-top: 66px;
+  padding-bottom: 70px;
 }
 
 .about-section {
@@ -1436,6 +1427,153 @@ details summary::-webkit-details-marker {
   margin-bottom: 80px;
 }
 
+.reviews {
+  margin-bottom: 78px;
+}
+
+.reviews-section {
+  background-color: #ffffff;
+}
+
+.reviews .slick-list {
+  width: 1058px;
+}
+
+.reviews__arrow {
+  height: 100%;
+  width: 52px;
+  position: absolute;
+  left: -54px;
+  cursor: pointer;
+  padding-right: 40px;
+}
+
+.reviews__arrow-l:hover {
+  padding-right: 38px;
+}
+
+.reviews__arrow-r {
+  right: -47px;
+  left: auto;
+  padding-right: 0;
+  padding-left: 40px;
+}
+
+.reviews__arrow-r:hover {
+  padding-left: 38px;
+}
+
+.reviews .slick-dots li button::before {
+  font-size: 22px;
+}
+
+.reviews__list {
+  display: flex;
+  align-items: center;
+  width: 1058px;
+  margin: 0 auto;
+}
+
+.reviews__item {
+  display: block;
+  width: 1054px;
+  min-height: 231px;
+  padding: 23px 54px 25px 40px;
+  margin-bottom: 11px;
+  margin-right: 11px;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.66;
+  letter-spacing: 0.06rem;
+  color: #664e4b;
+  border-radius: 7px;
+  background-color: #e7e7e7;
+  box-shadow: 4px 5px 0px 0px #b1b1b1, 9px 11px 0px 0px #4e4e4e;
+}
+
+.review {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.review__conf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 13px;
+}
+
+.review__date {
+  color: #9e9d9d;
+}
+
+.review__conf-logo {
+  display: block;
+  height: 54px;
+  width: 54px;
+  overflow: hidden;
+}
+
+.review__conf-img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.review__text {
+  margin-right: 10px;
+  width: 474px;
+}
+
+.review__author {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.review__author-img {
+  display: block;
+  width: 147px;
+  height: 147px;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.review__author-pic {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.review__text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 250px;
+}
+
+.review__name {
+  font-size: 18.5px;
+  font-weight: bold;
+  line-height: 1.43;
+  letter-spacing: 0.07rem;
+}
+
+.review__company {
+  font-weight: 500;
+  line-height: 1.66;
+  letter-spacing: 0.06rem;
+}
+
+.review__position {
+  font-weight: 300;
+  line-height: 1.66;
+  letter-spacing: 0.06rem;
+}
+
 .sponsors__slider {
   display: flex;
   position: relative;
@@ -1478,7 +1616,7 @@ details summary::-webkit-details-marker {
 
 .arrow {
   display: block;
-  height: 28px;
+  height: 19px;
   width: 19px;
   overflow: hidden;
 }

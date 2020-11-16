@@ -10,8 +10,10 @@
     margin-left: 8px;
   }
   &__title--sub {
-    font-weight: bold;
-    margin-bottom: 28px;
+    // font-weight: bold;
+    // margin-bottom: 28px;
+    text-transform: uppercase;
+    letter-spacing: 0.165rem;
   }
   &__img {
     display: block;
@@ -57,6 +59,7 @@
       overflow: hidden;
       flex-shrink: 0;
       margin-right: 16px;
+      margin-top: 10px;
     }
 
     &--pic {

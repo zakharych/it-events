@@ -555,39 +555,30 @@ h3 {
   flex-shrink: 0;
 }
 
+.hero__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: -10;
+  overflow: hidden;
+}
+
+.hero__bg-pic {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 .hero__slider {
   max-height: 480px;
   overflow: hidden;
   display: flex;
 }
 
-.hero__slider--controls {
-  position: absolute;
-  top: 50%;
-  right: 26px;
-  transform: translateY(-50%);
-  z-index: 10;
-}
-
-.hero__slider--control {
-  display: block;
-  height: 42px;
-  width: 3px;
-  cursor: pointer;
-  background-color: #ffffff;
-  margin-bottom: 10px;
-}
-
 .hero__slider--active {
   background-color: #ff0000;
-}
-
-.hero__item {
-  background: url("./../assets/img/hero__tournaments.png") center center/cover;
-}
-
-.hero__item-chalange {
-  background: url("./../assets/img/IT_Cyber_Games.png") center center/cover;
 }
 
 .hero__content {
@@ -1625,7 +1616,7 @@ details summary::-webkit-details-marker {
 
 .arrow {
   display: block;
-  height: 28px;
+  height: 19px;
   width: 19px;
   overflow: hidden;
 }

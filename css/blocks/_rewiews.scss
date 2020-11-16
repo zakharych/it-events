@@ -1,0 +1,147 @@
+.reviews {
+  margin-bottom: 78px;
+  &-section {
+    background-color: #ffffff;
+  }
+  .slick-list {
+    width: 1058px;
+  }
+
+  &__arrow {
+    height: 100%;
+    width: 52px;
+    position: absolute;
+    left: -54px;
+    cursor: pointer;
+    padding-right: 40px;
+
+    &-l {
+      &:hover {
+        padding-right: 38px;
+      }
+    }
+
+    &-r {
+      right: -47px;
+      left: auto;
+      padding-right: 0;
+      padding-left: 40px;
+      &:hover {
+        padding-left: 38px;
+      }
+    }
+  }
+  .slick-dots li button::before {
+    font-size: 22px;
+  }
+  &__list {
+    display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    width: 1058px;
+    margin: 0 auto;
+  }
+  &__item {
+    display: block;
+    width: 1054px;
+    min-height: 231px;
+    padding: 23px 54px 25px 40px;
+
+    margin-bottom: 11px;
+    margin-right: 11px;
+
+    font-weight: 500;
+    font-style: italic;
+    line-height: 1.66;
+    letter-spacing: 0.06rem;
+    color: #664e4b;
+
+    border-radius: 7px;
+    background-color: #e7e7e7;
+    -webkit-box-shadow: 6px 6px 0px 0px rgba(177, 177, 177, 1),
+      11px 11px 0px 0px rgba(78, 78, 78, 1);
+    -moz-box-shadow: 6px 6px 0px 0px rgba(177, 177, 177, 1),
+      11px 11px 0px 0px rgba(78, 78, 78, 1);
+    box-shadow: 4px 5px 0px 0px rgba(177, 177, 177, 1),
+      9px 11px 0px 0px rgba(78, 78, 78, 1);
+  }
+}
+
+.review {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+
+  &__conf {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 13px;
+  }
+  &__date {
+    color: #9e9d9d;
+  }
+  &__conf-logo {
+    display: block;
+    height: 54px;
+    width: 54px;
+    overflow: hidden;
+  }
+
+  &__conf-img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+  &__text {
+    margin-right: 10px;
+    width: 474px;
+    // text-align: justify;
+  }
+  &__author {
+    display: flex;
+    flex-shrink: 0;
+
+    &-img {
+      display: block;
+      width: 147px;
+      height: 147px;
+      overflow: hidden;
+      margin-right: 10px;
+    }
+
+    &-pic {
+      display: block;
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  &__text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 250px;
+  }
+
+  &__name {
+    font-size: 18.5px;
+    font-weight: bold;
+    line-height: 1.43;
+    letter-spacing: 0.07rem;
+  }
+  &__company {
+    font-weight: 500;
+    line-height: 1.66;
+    letter-spacing: 0.06rem;
+  }
+
+  &__position {
+    font-weight: 300;
+    line-height: 1.66;
+    letter-spacing: 0.06rem;
+  }
+}

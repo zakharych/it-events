@@ -2,14 +2,15 @@
   &-section {
     background-color: #2b4c9a;
     color: #ffffff;
+    background-image: url("../assets/img/bg_teamchallenge.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 520px 450px;
+  
   }
   &__title {
     line-height: 1;
-    margin-bottom: 0;
+    margin-bottom: 44px;
   }
 
-  background-image: url("../assets/img/bg_teamchallenge.png");
-  background-repeat: no-repeat;
-  background-position: right bottom;
-  background-size: 520px 450px;
 }

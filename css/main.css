@@ -864,6 +864,7 @@ h3 {
   right: 0;
   top: 48px;
   transform: translate(60%, -50%);
+  opacity: 0.5;
 }
 
 .conf__item::after {
@@ -876,6 +877,7 @@ h3 {
   left: 0;
   top: 48px;
   transform: translate(-60%, -50%);
+  opacity: 0.5;
 }
 
 .conf__item-elem {

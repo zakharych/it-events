@@ -782,11 +782,11 @@ h3 {
 
 .projects__list {
   display: flex;
+  justify-content: space-between;
   width: 100%;
 }
 
 .projects__item {
-  margin-right: 29px;
   position: relative;
 }
 
@@ -802,10 +802,10 @@ h3 {
   position: absolute;
   content: "";
   display: block;
-  width: 23px;
+  width: 16px;
   height: 2px;
   background-color: #ed4963;
-  right: -2px;
+  right: -16px;
   top: 50%;
   transform: translate(100%, -50%);
 }
@@ -814,7 +814,6 @@ h3 {
   padding: 4px 12px;
   display: block;
   white-space: nowrap;
-  font-size: 17.5px;
   font-weight: bold;
   letter-spacing: 0.1rem;
   color: #19143a;
@@ -1440,6 +1439,11 @@ details summary::-webkit-details-marker {
   width: 1058px;
 }
 
+.reviews .slick-slide {
+  height: 288px;
+  overflow: hidden;
+}
+
 .reviews__arrow {
   height: 100%;
   width: 52px;
@@ -1473,6 +1477,9 @@ details summary::-webkit-details-marker {
   align-items: center;
   width: 1058px;
   margin: 0 auto;
+  color: #664e4b;
+  background-color: #e7e7e7;
+  border-radius: 7px;
 }
 
 .reviews__item {
@@ -1480,16 +1487,10 @@ details summary::-webkit-details-marker {
   width: 1054px;
   min-height: 231px;
   padding: 23px 54px 25px 40px;
-  margin-bottom: 11px;
-  margin-right: 11px;
   font-weight: 500;
   font-style: italic;
   line-height: 1.66;
   letter-spacing: 0.06rem;
-  color: #664e4b;
-  border-radius: 7px;
-  background-color: #e7e7e7;
-  box-shadow: 4px 5px 0px 0px #b1b1b1, 9px 11px 0px 0px #4e4e4e;
 }
 
 .review {
@@ -1540,6 +1541,7 @@ details summary::-webkit-details-marker {
   height: 147px;
   overflow: hidden;
   margin-right: 10px;
+  border-radius: 50%;
 }
 
 .review__author-pic {

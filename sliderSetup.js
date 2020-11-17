@@ -24,10 +24,9 @@ $(document).ready(function () {
 
   $(".reviews__list").slick({
     dots: true,
-    adaptiveHeight: true,
     prevArrow:
-      '<div id="prev" class=" reviews__arrow reviews__arrow-l"><img src="https://it-events.com/system/attachments/files/000/002/012/original/left_arrow.svg" alt="<" class="arrow__img"></div>',
+      '<div id="prev" class=" reviews__arrow reviews__arrow-l"><img src="https://it-events.com/system/attachments/files/000/002/026/original/left_arrow_grey.svg" alt="<" class="arrow__img"></div>',
     nextArrow:
-      '<div id="next" class=" reviews__arrow reviews__arrow-r"><img src="https://it-events.com/system/attachments/files/000/002/013/original/right_arrow.svg" alt=">" class="arrow__img"></div>',
+      '<div id="next" class=" reviews__arrow reviews__arrow-r"><img src="https://it-events.com/system/attachments/files/000/002/027/original/right_arrow_grey.svg" alt=">" class="arrow__img"></div>',
   });
 });

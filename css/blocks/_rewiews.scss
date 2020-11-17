@@ -6,6 +6,11 @@
   .slick-list {
     width: 1058px;
   }
+  .slick-slide {
+    
+    height: 288px;
+    overflow: hidden;
+  }
 
   &__arrow {
     height: 100%;
@@ -41,6 +46,11 @@
     align-items: center;
     width: 1058px;
     margin: 0 auto;
+    
+    color: #664e4b;
+    
+    background-color: #e7e7e7;
+    border-radius: 7px;
   }
   &__item {
     display: block;
@@ -48,23 +58,17 @@
     min-height: 231px;
     padding: 23px 54px 25px 40px;
 
-    margin-bottom: 11px;
-    margin-right: 11px;
 
     font-weight: 500;
     font-style: italic;
     line-height: 1.66;
     letter-spacing: 0.06rem;
-    color: #664e4b;
-
-    border-radius: 7px;
-    background-color: #e7e7e7;
-    -webkit-box-shadow: 6px 6px 0px 0px rgba(177, 177, 177, 1),
-      11px 11px 0px 0px rgba(78, 78, 78, 1);
-    -moz-box-shadow: 6px 6px 0px 0px rgba(177, 177, 177, 1),
-      11px 11px 0px 0px rgba(78, 78, 78, 1);
-    box-shadow: 4px 5px 0px 0px rgba(177, 177, 177, 1),
-      9px 11px 0px 0px rgba(78, 78, 78, 1);
+    // -webkit-box-shadow: 6px 6px 0px 0px rgba(177, 177, 177, 1),
+    //   11px 11px 0px 0px rgba(78, 78, 78, 1);
+    // -moz-box-shadow: 6px 6px 0px 0px rgba(177, 177, 177, 1),
+    //   11px 11px 0px 0px rgba(78, 78, 78, 1);
+    // box-shadow: 4px 5px 0px 0px rgba(177, 177, 177, 1),
+    //   9px 11px 0px 0px rgba(78, 78, 78, 1);
   }
 }
 
@@ -111,6 +115,7 @@
       height: 147px;
       overflow: hidden;
       margin-right: 10px;
+      border-radius: 50%;
     }
 
     &-pic {

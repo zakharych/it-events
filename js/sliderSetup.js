@@ -3,7 +3,7 @@ $(document).ready(function () {
     arrows: true,
     autoplay: true,
     dots: true,
-    autoplaySpeed: 7000,
+    autoplaySpeed: 7000, // скорость листания слайдов 7 сек
     appendArrows: ".arrows",
     appendDots: ".arrows",
     prevArrow:

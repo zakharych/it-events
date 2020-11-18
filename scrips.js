@@ -2,11 +2,18 @@ const logo = document.querySelectorAll(".conf__logo"),
   background = document.querySelector(".conf-section"),
   itemElem = document.querySelectorAll(".conf__item-elem"),
   item = document.querySelectorAll(".conf__item"),
-  btn = document.querySelectorAll(".conf__btn");
+  btn = document.querySelectorAll(".conf__btn"),
+  confName = document.querySelectorAll(".conf__name"),
+  confDate = document.querySelectorAll(".conf__date"),
+  lineL = document.querySelectorAll(".conf__item-line-l"),
+  lineR = document.querySelectorAll(".conf__item-line-r");
 tempButtonText = "";
 tempButtonBg = "";
 tempButtoColor = "";
 tempButtonWidth = 0;
+const hiddenpic = document.querySelector(".hiddenpicOst");
+const ostUnActive = logo[2].innerHTML;
+const ostActive = hiddenpic.innerHTML;
 
 btn.forEach((element) => {
   element.onmouseover = function () {
@@ -35,25 +42,62 @@ itemElem.forEach((element) => {
     let target = event.target;
     let togledClass = `conf__btn-${element.id}--active`;
     childs = element.childNodes;
-    // tempButtonText = element.lastElementChild.innerText;
 
-    element.style.opacity = 1;
+    element.children[2].style.opacity = 1;
+    element.children[3].style.opacity = 1;
     for (let i = 0; i < childs.length - 2; i++) {
       if (i % 2 !== 0) {
         childs[i].style.filter = "none";
       }
     }
-    element.lastElementChild.classList.toggle(togledClass);
-    // element.lastElementChild.innerText = "Перейти";
+    element.lastElementChild.classList.add(togledClass);
+
+    lineL.forEach((element) => {
+      element.style.opacity = 0.5;
+    });
+    lineR.forEach((element) => {
+      element.style.opacity = 0.5;
+    });
 
     if (element.id === "hr") {
       background.style.backgroundColor = "#f24944";
+      for (let i = 0; i < confName.length; i++) {
+        if (i !== 0) {
+          confName[i].style.opacity = 0.5;
+          confDate[i].style.opacity = 0.5;
+        } 
+        
+      }
     } else if (element.id === "py") {
       background.style.backgroundColor = "#316696";
+      for (let i = 0; i < confName.length; i++) {
+        if (i !== 1) {
+          confName[i].style.opacity = 0.5;
+          confDate[i].style.opacity = 0.5;
+        } 
+        
+      }
     } else if (element.id === "ost") {
+      if (logo[2].innerHTML === ostUnActive) {
+        logo[2].innerHTML = ostActive;
+      }
       background.style.backgroundColor = "#36a9e1";
+      for (let i = 0; i < confName.length; i++) {
+        if (i !== 2) {
+          confName[i].style.opacity = 0.5;
+          confDate[i].style.opacity = 0.5;
+        } 
+        
+      }
     } else if (element.id === "go") {
       background.style.backgroundColor = "#2d396b";
+      for (let i = 0; i < confName.length; i++) {
+        if (i !== 3) {
+          confName[i].style.opacity = 0.5;
+          confDate[i].style.opacity = 0.5;
+        } 
+        
+      }
     }
   };
 });
@@ -61,19 +105,35 @@ itemElem.forEach((element) => {
 itemElem.forEach((element) => {
   element.onmouseout = function (event) {
     let target = event.target;
-    childs = element.childNodes;
-    for (let i = 0; i < childs.length - 2; i++) {
-      if (i % 2 !== 0) {
-        // console.log(childs[i].classList);
-        childs[i].style.filter = "grayscale(100%)";
-      }
-    }
+    // childs = element.childNodes;
+    // for (let i = 0; i < childs.length - 2; i++) {
+    //   if (i % 2 !== 0) {
+    //     childs[i].style.filter = "grayscale(100%)";
+    //   }
+    // }
     background.style.backgroundColor = "#2f2f2f";
-    element.style.opacity = 0.5;
-    // element.lastElementChild.innerText = tempButtonText;
-    // element.style.filter = "grayscale(100%)";
+    element.children[2].style.opacity = 0.5;
+    element.children[3].style.opacity = 0.5;
     let togledClass = `conf__btn-${element.id}--active`;
     element.lastElementChild.classList.toggle(togledClass);
+
+    if (logo[2].innerHTML === ostActive) {
+      logo[2].innerHTML = ostUnActive;
+    }
+
+    lineL.forEach((element) => {
+      element.style.opacity = 1;
+    });
+    lineR.forEach((element) => {
+      element.style.opacity = 1;
+    });
+
+    confName.forEach(element => {
+      element.style.opacity = 1;      
+    });
+    confDate.forEach(element => {
+      element.style.opacity = 1;      
+    });
   };
 });
 

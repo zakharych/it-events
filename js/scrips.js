@@ -1,3 +1,5 @@
+///////    conf section     ////////
+
 const logo = document.querySelectorAll(".conf__logo"),
   background = document.querySelector(".conf-section"),
   itemElem = document.querySelectorAll(".conf__item-elem"),
@@ -6,14 +8,15 @@ const logo = document.querySelectorAll(".conf__logo"),
   confName = document.querySelectorAll(".conf__name"),
   confDate = document.querySelectorAll(".conf__date"),
   lineL = document.querySelectorAll(".conf__item-line-l"),
-  lineR = document.querySelectorAll(".conf__item-line-r");
+  lineR = document.querySelectorAll(".conf__item-line-r"),
+  hiddenpic = document.querySelector(".hiddenpicOst"),
+  ostUnActive = logo[2].innerHTML,
+  ostActive = hiddenpic.innerHTML;
+  
 tempButtonText = "";
 tempButtonBg = "";
 tempButtoColor = "";
 tempButtonWidth = 0;
-const hiddenpic = document.querySelector(".hiddenpicOst");
-const ostUnActive = logo[2].innerHTML;
-const ostActive = hiddenpic.innerHTML;
 
 btn.forEach((element) => {
   element.onmouseover = function () {
@@ -65,8 +68,7 @@ itemElem.forEach((element) => {
         if (i !== 0) {
           confName[i].style.opacity = 0.5;
           confDate[i].style.opacity = 0.5;
-        } 
-        
+        }
       }
     } else if (element.id === "py") {
       background.style.backgroundColor = "#316696";
@@ -74,8 +76,7 @@ itemElem.forEach((element) => {
         if (i !== 1) {
           confName[i].style.opacity = 0.5;
           confDate[i].style.opacity = 0.5;
-        } 
-        
+        }
       }
     } else if (element.id === "ost") {
       if (logo[2].innerHTML === ostUnActive) {
@@ -86,8 +87,7 @@ itemElem.forEach((element) => {
         if (i !== 2) {
           confName[i].style.opacity = 0.5;
           confDate[i].style.opacity = 0.5;
-        } 
-        
+        }
       }
     } else if (element.id === "go") {
       background.style.backgroundColor = "#2d396b";
@@ -95,8 +95,7 @@ itemElem.forEach((element) => {
         if (i !== 3) {
           confName[i].style.opacity = 0.5;
           confDate[i].style.opacity = 0.5;
-        } 
-        
+        }
       }
     }
   };
@@ -105,12 +104,7 @@ itemElem.forEach((element) => {
 itemElem.forEach((element) => {
   element.onmouseout = function (event) {
     let target = event.target;
-    // childs = element.childNodes;
-    // for (let i = 0; i < childs.length - 2; i++) {
-    //   if (i % 2 !== 0) {
-    //     childs[i].style.filter = "grayscale(100%)";
-    //   }
-    // }
+
     background.style.backgroundColor = "#2f2f2f";
     element.children[2].style.opacity = 0.5;
     element.children[3].style.opacity = 0.5;
@@ -128,16 +122,16 @@ itemElem.forEach((element) => {
       element.style.opacity = 1;
     });
 
-    confName.forEach(element => {
-      element.style.opacity = 1;      
+    confName.forEach((element) => {
+      element.style.opacity = 1;
     });
-    confDate.forEach(element => {
-      element.style.opacity = 1;      
+    confDate.forEach((element) => {
+      element.style.opacity = 1;
     });
   };
 });
 
-////slider
+////slider Partners
 
 const left = document.querySelector("#left");
 const right = document.querySelector("#right");
@@ -167,47 +161,3 @@ right.addEventListener("click", (e) => {
 left.addEventListener("click", (e) => {
   loop("left", e);
 });
-
-// ///////////////////////              hero slider            /////////////////////
-// const time = 7; // время задержки sec
-
-// const prev = document.querySelector("#prev");
-// const next = document.querySelector("#next");
-// const slider = document.querySelector("#hero__slider");
-// const heroSection = document.querySelector(".hero-section");
-
-// $('.hero__slider').hover( function name(params) {
-//   console.log("hover");
-// } )
-// const slide = (direction) => {
-//   next.classList.toggle("hero__slider--active");
-//   prev.classList.toggle("hero__slider--active");
-//   heroSection.classList.toggle("hero-section--toggled");
-//   if (direction === "right") {
-//     slider.appendChild(slider.firstElementChild);
-//   } else {
-//     slider.insertBefore(slider.lastElementChild, slider.firstElementChild);
-//   }
-// };
-
-// function start() {
-//   timeOut = setTimeout(() => {
-//     slide("right");
-//     start();
-//   }, time * 1000);
-// }
-// start();
-
-// prev.addEventListener("click", (e) => {
-//   e.preventDefault();
-//   clearInterval(timeOut);
-//   start();
-//   slide("right");
-// });
-
-// next.addEventListener("click", (e) => {
-//   e.preventDefault();
-//   clearInterval(timeOut);
-//   start();
-//   slide("left");
-// });

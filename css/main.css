@@ -853,7 +853,7 @@ h3 {
   position: relative;
 }
 
-.conf__item::before {
+.conf__item-line-l {
   position: absolute;
   content: "";
   display: block;
@@ -863,10 +863,9 @@ h3 {
   right: 0;
   top: 48px;
   transform: translate(60%, -50%);
-  opacity: 0.5;
 }
 
-.conf__item::after {
+.conf__item-line-r {
   position: absolute;
   content: "";
   display: block;
@@ -876,7 +875,6 @@ h3 {
   left: 0;
   top: 48px;
   transform: translate(-60%, -50%);
-  opacity: 0.5;
 }
 
 .conf__item-elem {
@@ -885,11 +883,6 @@ h3 {
   align-items: center;
   color: #ffffff;
   position: relative;
-  opacity: 0.5;
-}
-
-.conf__item-elem > * {
-  filter: grayscale(100%);
 }
 
 .conf__name {
@@ -912,6 +905,7 @@ h3 {
   justify-content: center;
   overflow: hidden;
   margin-bottom: 32px;
+  opacity: 0.5;
 }
 
 .conf__img {
@@ -929,6 +923,7 @@ h3 {
   background-color: #ffffff;
   filter: grayscale(0);
   text-align: center;
+  opacity: 0.5;
 }
 
 .conf__btn-hr:hover, .conf__btn-hr--active, .conf__btn-hr--prev {
@@ -949,6 +944,13 @@ h3 {
 .conf__btn-go:hover, .conf__btn-go--active, .conf__btn-go--prev {
   background-color: #9bd4f0;
   color: #010812;
+}
+
+.hiddenpicOst {
+  position: absolute;
+  height: 0;
+  width: 0;
+  opacity: 0;
 }
 
 .project {

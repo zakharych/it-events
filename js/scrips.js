@@ -46,6 +46,7 @@ itemElem.forEach((element) => {
     let togledClass = `conf__btn-${element.id}--active`;
     childs = element.childNodes;
 
+    // element.style.filter = "none";
     element.children[2].style.opacity = 1;
     element.children[3].style.opacity = 1;
     for (let i = 0; i < childs.length - 2; i++) {
@@ -104,7 +105,12 @@ itemElem.forEach((element) => {
 itemElem.forEach((element) => {
   element.onmouseout = function (event) {
     let target = event.target;
-
+    childs = element.childNodes;
+    for (let i = 0; i < childs.length - 2; i++) {
+      if (i % 2 !== 0) {
+        childs[i].style.filter = "grayscale(100%)";
+      }
+    }
     background.style.backgroundColor = "#2f2f2f";
     element.children[2].style.opacity = 0.5;
     element.children[3].style.opacity = 0.5;

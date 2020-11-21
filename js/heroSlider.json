@@ -1,0 +1,18 @@
+[
+  {
+    "title": "IT Cyber Games Russia 2020",
+    "subtitle": "Киберспортивный турнир среди ИТ компаний. Дисциплины: CS:GO и Dota 2. Дата начала турнира: 15 ноября.",
+    "imgProj": "./assets/img/IT_Cyber_Games_v2.png",
+    "bg": "./assets/img/ICG.png",
+    "link": "https://it-challenge.ru/events/19569",
+    "btnText": "СМОТРЕТЬ ТРАНСЛЯЦИИ ИГР"
+  },
+  {
+    "title": "WORK SPORT BALANCE",
+    "subtitle": "Корпоративные спортивные турниры “под ключ”. Организация онлайн кибертурнира и турнира по шахматам.",
+    "imgProj": "",
+    "bg": "https://it-events.com/system/event_photos/imgs/000/013/197/original/hero__tournaments.png",
+    "link": "https://it-events.com/system/attachments/files/000/001/963/original/ITE_%D1%81orp_sports_crop_3.pdf",
+    "btnText": "Перейти"
+  }
+]

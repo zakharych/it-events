@@ -1,0 +1,74 @@
+[
+  {
+    "confImg": "https://it-events.com/system/attachments/files/000/001/988/original/HRAPI.svg",
+    "date": "2020",
+    "reviewText": "Спасибо команде HR API за блестящую организацию, это самая комфортная в моем опыте конференция, в которой я принимала участие как спикер. <br> Ребята очень классные!:) Программа в этом году действительно была одной из самых насыщенных. Очень рада, что у ребят получилось перевести мероприятие в онлайн с таким успехом!",
+    "avatar": "https://it-events.com/system/event_photos/imgs/000/013/234/original/content_vozhakina.png",
+    "name": "Любовь Вожакина",
+    "company": "Sperasoft",
+    "position": "Старший арт-менеджер"
+  },
+  {
+    "confImg": "https://it-events.com/system/attachments/files/000/001/988/original/HRAPI.svg",
+    "date": "2020",
+    "reviewText": "С ребятами из IT-Events я познакомилась ещё в 2014 году, когда впервые побывала на конференции HR API (ex. «нAйТи ответ»). Ещё тогда я оценила, насколько ответственно они относятся к своей работе, к участникам, к спикерам, сколько внимания и любви они вкладывают в то, что делают.",
+    "avatar": "https://it-events.com/system/event_photos/imgs/000/013/237/original/photo_2020-11-20_00.18.27.jpeg",
+    "name": "Ольга Конева",
+    "company": "Xored",
+    "position": "HRD"
+  },
+  {
+    "confImg": "https://it-events.com/system/attachments/files/000/002/033/original/ITC.svg",
+    "date": "2020",
+    "reviewText": "Работать с ребятами из IT-Events приятно: им удалось создать вокруг себя соревновательную, но дружескую атмосферу, в которой увлеченные люди получают удовольствие от своих хобби. Турниры постоянно совершенствуются, добавляются новые виды спорта, людей собирается все больше - это здорово!",
+    "avatar": "https://it-events.com/system/event_photos/imgs/000/013/233/original/Svetlichnaya.png",
+    "name": "Анастасия Светличная",
+    "company": "Selectel",
+    "position": "Руководитель отдела персонала"
+  },
+  {
+    "confImg": "https://it-events.com/system/attachments/files/000/002/033/original/ITC.svg",
+    "date": "2020",
+    "reviewText": "SEMrush участвует в спортивных турнирах IT-Events уже много лет, и мы всегда очень довольны тем, как все проходит! Ребята заранее информируют о предстоящих турнирах, их правилах и регламентах, в день проведения турниров все проходит гладко и без накладок. Даже если мы не выигрываем, мы всегда уходим с хорошим настроением, потому что участие в турнире - это всегда весело, интересно и драйвово!",
+    "avatar": "https://it-events.com/system/event_photos/imgs/000/013/228/original/photo_2020-11-18_17.04.20.jpeg",
+    "name": "Наталья Бахмурнова",
+    "company": "SEMrush",
+    "position": "HR Business Partner"
+  },
+  {
+    "confImg": "https://it-events.com/system/attachments/files/000/002/025/original/OST___unactive.svg",
+    "date": "2018",
+    "reviewText": "I think the conference was perfect both in organization and in content, I can't really think of anything I didn't like!",
+    "avatar": "https://it-events.com/system/event_photos/imgs/000/013/230/original/Lennart_Poettering.png",
+    "name": "Lennart Poettering",
+    "company": "Red Hat Principal",
+    "position": "Software Engineer"
+  },
+  {
+    "confImg": "https://it-events.com/system/attachments/files/000/001/966/original/PiterPy___active.svg",
+    "date": "2017",
+    "reviewText": "At any moment in the course of the event, I felt welcome. No communication issues what-so-ever, both organizers and attendees have gone out of their league to help and assist me in every possible way.",
+    "avatar": "https://it-events.com/system/event_photos/imgs/000/013/231/original/Nicola_Iarocci.png",
+    "name": "Nicola Iarocci",
+    "company": "CIR 2000",
+    "position": "Lead Developer"
+  },
+  {
+    "confImg": "https://it-events.com/system/attachments/files/000/001/990/original/IT_HR_Shool.svg",
+    "date": "2019",
+    "reviewText": "Отличный курс для рекрутеров с опытом и без :) Если хотите \"прокачаться\" не только в языках программирования, но и в подборе в целом, тогда этот курс точно для вас!",
+    "avatar": "https://it-events.com/system/event_photos/imgs/000/013/238/original/sofia.png",
+    "name": "Раханаева Софья",
+    "company": "ТД \"АВТОграф\"",
+    "position": "HR менеджер"
+  },
+  {
+    "confImg": "https://it-events.com/system/attachments/files/000/002/033/original/ITC.svg",
+    "date": "2020",
+    "reviewText": "Команды DataArt участвуют в спортивных событиях IT-Events много лет и каждый раз — с большим удовольствием. Вы создаете не просто турниры, а встречи близких по духу людей. С уверенностью скажу: IT-Events для нас значит больше, чем просто организатор турниров. IT-Events помогает строить и поддерживать наши спортивные сообщества, в основе которых лежат крепкие и душевные связи.",
+    "avatar": "https://it-events.com/system/event_photos/imgs/000/013/239/original/Gromtseva.png",
+    "name": "Юлия Громцева",
+    "company": "DataArt",
+    "position": "PR-менеджер"
+  }
+]

@@ -7,7 +7,6 @@
     width: 1058px;
   }
   .slick-slide {
-    
     height: 288px;
     overflow: hidden;
   }
@@ -46,9 +45,9 @@
     align-items: center;
     width: 1058px;
     margin: 0 auto;
-    
+
     color: #664e4b;
-    
+
     background-color: #e7e7e7;
     border-radius: 7px;
   }
@@ -57,7 +56,6 @@
     width: 1054px;
     min-height: 231px;
     padding: 23px 54px 25px 40px;
-
 
     font-weight: 500;
     font-style: italic;
@@ -92,7 +90,7 @@
     height: 54px;
     width: 54px;
     overflow: hidden;
-    filter: grayscale(50%);
+    filter: grayscale(100%);
   }
 
   &__conf-img {
@@ -100,6 +98,7 @@
     height: 100%;
     width: 100%;
     object-fit: contain;
+    text-align: center;
   }
   &__text {
     margin-right: 10px;
@@ -124,6 +123,7 @@
       height: 100%;
       width: 100%;
       object-fit: contain;
+      text-align: center;
     }
   }
   &__text-content {

@@ -30,7 +30,6 @@
       right: 0;
       top: 48px;
       transform: translate(60%, -50%);
-      // opacity: 0.5;
     }
     &-line-r {
       position: absolute;
@@ -42,7 +41,6 @@
       left: 0;
       top: 48px;
       transform: translate(-60%, -50%);
-      // opacity: 0.5;
     }
   }
   &__item-elem {
@@ -51,10 +49,11 @@
     align-items: center;
     color: #ffffff;
     position: relative;
-    // filter: grayscale(100%);
-    // opacity: 0.5;
   }
 
+  &__item-elem > * {
+    filter: grayscale(100%);
+  }
   &__name {
     font-size: 22px;
     font-weight: 500;
@@ -75,7 +74,6 @@
     overflow: hidden;
     margin-bottom: 32px;
     opacity: 0.5;
-
   }
 
   &__img {
@@ -86,7 +84,6 @@
   }
 
   &__btn {
-    // display: block;
     transition: 0.4s;
     font-size: 16px;
     letter-spacing: 0.1rem;

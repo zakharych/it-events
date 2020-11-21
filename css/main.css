@@ -797,7 +797,7 @@ h3 {
 }
 
 .socials__item-in {
-  background-image: url(../assets/img/icon_Instagram.png);
+  background-image: url(https://it-events.com/system/event_photos/imgs/000/013/225/original/icon_Instagram.png);
   background-size: 20px 20px;
 }
 
@@ -823,6 +823,35 @@ h3 {
   display: flex;
   align-items: center;
   flex-shrink: 0;
+  color: #ffffff;
+  padding: 0 60px;
+}
+
+.hero__item.slick-slide {
+  display: flex;
+}
+
+.hero__img {
+  display: block;
+  height: 238px;
+  width: 238px;
+  overflow: hidden;
+  margin-right: 47px;
+}
+
+.hero__pic {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.hero__desc {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 480px;
+  justify-content: center;
 }
 
 .hero__bg {
@@ -850,16 +879,6 @@ h3 {
 
 .hero__slider--active {
   background-color: #ff0000;
-}
-
-.hero__content {
-  color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0 323px;
-  min-height: 480px;
-  justify-content: center;
 }
 
 .hero__title {
@@ -1027,6 +1046,7 @@ h3 {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  filter: blur(5px);
 }
 
 .projects {
@@ -1155,6 +1175,10 @@ h3 {
   position: relative;
 }
 
+.conf__item-elem > * {
+  filter: grayscale(100%);
+}
+
 .conf__name {
   font-size: 22px;
   font-weight: 500;
@@ -1234,6 +1258,10 @@ h3 {
   font-weight: bold;
   color: #ffffff;
   margin-left: 8px;
+}
+
+.project__title--est-dark {
+  color: #4a4a4a;
 }
 
 .project__title--sub {
@@ -1366,11 +1394,6 @@ h3 {
   color: #c83131;
 }
 
-.school__title--sub {
-  font-size: 14.5px;
-  color: #4a4a4a;
-}
-
 .school__subtitle {
   color: #4a4a4a;
 }
@@ -1467,7 +1490,7 @@ h3 {
 .WSB-section {
   background-color: #2b4c9a;
   color: #ffffff;
-  background-image: url("../assets/img/bg_teamchallenge.png");
+  background-image: url("https://it-events.com/system/attachments/files/000/002/034/original/bg_teamchallenge.svg");
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: 520px 450px;
@@ -1788,7 +1811,7 @@ details summary::-webkit-details-marker {
   height: 54px;
   width: 54px;
   overflow: hidden;
-  filter: grayscale(50%);
+  filter: grayscale(100%);
 }
 
 .review__conf-img {
@@ -1796,6 +1819,7 @@ details summary::-webkit-details-marker {
   height: 100%;
   width: 100%;
   object-fit: contain;
+  text-align: center;
 }
 
 .review__text {
@@ -1822,6 +1846,7 @@ details summary::-webkit-details-marker {
   height: 100%;
   width: 100%;
   object-fit: contain;
+  text-align: center;
 }
 
 .review__text-content {

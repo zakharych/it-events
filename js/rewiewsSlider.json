@@ -6,7 +6,12 @@
     "avatar": "https://it-events.com/system/event_photos/imgs/000/013/234/original/content_vozhakina.png",
     "name": "Любовь Вожакина",
     "company": "Sperasoft",
-    "position": "Старший арт-менеджер"
+    "position": "Старший арт-менеджер",
+
+    "reviewTextEng": "I'm grateful to the HR API team for the brilliant organization, this is the most convenient conference in my experience, where I participated as a speaker. The guys are very cool!:) This  year's program was indeed one of the most intense. I am very glad that the guys managed to transfer the event to online with such success!",
+    "nameEng": "Lubov Vozhakina",
+    "companyEng": "Sperasoft",
+    "positionEng": "Senior art-manager"
   },
   {
     "confImg": "https://it-events.com/system/attachments/files/000/001/988/original/HRAPI.svg",
@@ -15,7 +20,10 @@
     "avatar": "https://it-events.com/system/event_photos/imgs/000/013/237/original/photo_2020-11-20_00.18.27.jpeg",
     "name": "Ольга Конева",
     "company": "Xored",
-    "position": "HRD"
+    "position": "HRD",
+
+    "reviewTextEng": "I deal with the guys from IT-Events since 2014 when I first attended the HR API conference (ex. \"NayTie otvet\"). Back there, I appreciated how responsible they are for their work, for the participants, for the speakers, and how much attention and love they put into what they do.",
+    "nameEng": "Olga Koneva"
   },
   {
     "confImg": "https://it-events.com/system/attachments/files/000/002/033/original/ITC.svg",
@@ -24,7 +32,11 @@
     "avatar": "https://it-events.com/system/event_photos/imgs/000/013/233/original/Svetlichnaya.png",
     "name": "Анастасия Светличная",
     "company": "Selectel",
-    "position": "Руководитель отдела персонала"
+    "position": "Руководитель отдела персонала",
+
+    "reviewTextEng": "It is a pleasure to work with the guys from IT-Events: they managed to create a competitive but friendly atmosphere where enthusiastic people enjoy their hobbies. Tournaments are constantly being improved, new sports are being added, and more people are gathering - this is great!",
+    "nameEng": "Anastasia Svetlichnaya",
+    "positionEng": "Head of HR Department"
   },
   {
     "confImg": "https://it-events.com/system/attachments/files/000/002/033/original/ITC.svg",
@@ -33,7 +45,11 @@
     "avatar": "https://it-events.com/system/event_photos/imgs/000/013/228/original/photo_2020-11-18_17.04.20.jpeg",
     "name": "Наталья Бахмурнова",
     "company": "SEMrush",
-    "position": "HR Business Partner"
+    "position": "HR Business Partner",
+
+    "reviewTextEng": "SEMrush has been participating in IT-Events for many years, and we are always very happy with how everything goes! Guys inform in advance about upcoming tournaments, rules and regulations, at the day of the tournament everything runs smoothly and without unexpected occurrences. Even if we don't win, we always leave in a good mood, because participation in the tournament is always interesting, fun and driving!",
+    "nameEng": "Natalya Bakhmurnova",
+    "positionEng": "HR Business Partner"
   },
   {
     "confImg": "https://it-events.com/system/attachments/files/000/002/025/original/OST___unactive.svg",
@@ -60,7 +76,12 @@
     "avatar": "https://it-events.com/system/event_photos/imgs/000/013/238/original/sofia.png",
     "name": "Раханаева Софья",
     "company": "ТД \"АВТОграф\"",
-    "position": "HR менеджер"
+    "position": "HR менеджер",
+
+    "reviewTextEng": "Excellent course for recruiters with or without experience :) If you want to \"pump up\" not only in programming languages but also in the recruitment process in general, then this course is just for you!",
+    "nameEng": "Sofia Rakhnayeva",
+    "companyEng": "TD \"AVTOgraf\"",
+    "positionEng": "HR manager"
   },
   {
     "confImg": "https://it-events.com/system/attachments/files/000/002/033/original/ITC.svg",
@@ -69,6 +90,10 @@
     "avatar": "https://it-events.com/system/event_photos/imgs/000/013/239/original/Gromtseva.png",
     "name": "Юлия Громцева",
     "company": "DataArt",
-    "position": "PR-менеджер"
+    "position": "PR-менеджер",
+
+    "reviewTextEng": "DataArt teams have been participating in IT-Events sports events for many years and every time doing it with great pleasure. You create not just tournaments but gather like-minded people. I say with full confidence that IT-Events means more to us than just a tournament organizer. IT-Events helps build and support our sports communities, which are based on strong and emotional connections.",
+    "nameEng": "Julia Gromtseva",
+    "positionEng": "PR-manager"
   }
 ]

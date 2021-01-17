@@ -7,6 +7,15 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    width: 100%;
+  }
+  &__this {
+    display: flex;
+    width: 1280px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 60px;
   }
   &-section {
     padding: 0;
@@ -36,11 +45,12 @@
     }
   }
 
-  // &__inner {
+  &__inner {
+    width: 1280px;
   //   position: absolute;
   //   bottom: 100%;
   //   z-index: 20;
-  // }
+  }
   &__img {
     display: block;
     height: 238px;
@@ -136,7 +146,7 @@
     width: 10px;
     position: absolute;
     top: 50%;
-    right: 50px;
+    right: calc(50% - 640px);
     transform: translateY(-50%);
     bottom: auto;
   }

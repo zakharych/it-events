@@ -1,18 +1,18 @@
-///////    conf section     ////////
+/// ////    conf section     ////////
 
-const logo = document.querySelectorAll(".conf__logo"),
-  background = document.querySelector(".conf-section"),
-  itemElem = document.querySelectorAll(".conf__item-elem"),
-  item = document.querySelectorAll(".conf__item"),
-  btn = document.querySelectorAll(".conf__btn"),
-  confName = document.querySelectorAll(".conf__name"),
-  confDate = document.querySelectorAll(".conf__date"),
-  lineL = document.querySelectorAll(".conf__item-line-l"),
-  lineR = document.querySelectorAll(".conf__item-line-r"),
-  hiddenpic = document.querySelector(".hiddenpicOst"),
-  ostUnActive = logo[2].innerHTML,
-  ostActive = hiddenpic.innerHTML;
-  
+const logo = document.querySelectorAll(".conf__logo");
+const background = document.querySelector(".conf-section");
+const itemElem = document.querySelectorAll(".conf__item-elem");
+const item = document.querySelectorAll(".conf__item");
+const btn = document.querySelectorAll(".conf__btn");
+const confName = document.querySelectorAll(".conf__name");
+const confDate = document.querySelectorAll(".conf__date");
+const lineL = document.querySelectorAll(".conf__item-line-l");
+const lineR = document.querySelectorAll(".conf__item-line-r");
+const hiddenpic = document.querySelector(".hiddenpicOst");
+const ostUnActive = logo[2].innerHTML;
+const ostActive = hiddenpic.innerHTML;
+
 tempButtonText = "";
 tempButtonBg = "";
 tempButtoColor = "";
@@ -137,7 +137,7 @@ itemElem.forEach((element) => {
   };
 });
 
-////slider Partners
+/// /slider Partners
 
 const left = document.querySelector("#left");
 const right = document.querySelector("#right");

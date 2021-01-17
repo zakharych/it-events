@@ -5,7 +5,12 @@
     "imgProj": "./assets/img/IT_Cyber_Games_v2.png",
     "bg": "./assets/img/ICG.png",
     "link": "https://it-challenge.ru/events/19569",
-    "btnText": "СМОТРЕТЬ ТРАНСЛЯЦИИ ИГР"
+    "btnText": "СМОТРЕТЬ ТРАНСЛЯЦИИ ИГР",
+
+
+    "titleEng": "IT Cyber Games Russia 2020",    
+    "subtitleEng": "eSport tournament for IT companies. Disciplines: CS:GO and Dota 2. Tournament starts on November 15.",
+    "btnTextEng": "Watch live and upcoming matches"
   },
   {
     "title": "WORK SPORT BALANCE",
@@ -13,6 +18,11 @@
     "imgProj": "",
     "bg": "https://it-events.com/system/event_photos/imgs/000/013/197/original/hero__tournaments.png",
     "link": "https://it-events.com/system/attachments/files/000/001/963/original/ITE_%D1%81orp_sports_crop_3.pdf",
-    "btnText": "Перейти"
+    "btnText": "Перейти",
+
+
+    "titleEng": "IT Cyber Games Russia 2020",    
+    "subtitleEng": "Corporate sports tournaments \"on a turn-key basis\". Organization of eSport and chess tournaments.",
+    "btnTextEng": "Learn more"
   }
 ]

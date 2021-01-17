@@ -1,12 +1,13 @@
-const slider = document.querySelector(".hero__slider"),
-  bgSlider = document.querySelector(".sliderBg"),
-  rewiewsSlider = document.querySelector(".reviews__list");
+const slider = document.querySelector(".hero__slider");
+const bgSlider = document.querySelector(".sliderBg");
+const rewiewsSlider = document.querySelector(".reviews__list");
+const lang = document.querySelector(".language");
 
 (async () => {
   let DB = await (await fetch("./js/heroSlider.json")).json();
 
   DB.forEach((element) => {
-    //// создание элементов BG слайдера
+    /// / создание элементов BG слайдера
     bgSliderItem = document.createElement("li");
     bgSliderItem.className = "sliderBg__item";
     bgSlider.append(bgSliderItem);
@@ -16,17 +17,22 @@ const slider = document.querySelector(".hero__slider"),
     bgSliderItem.append(bgSliderPic);
     bgSliderPic.src = element.bg;
 
-    ///// создание элементов главного сладера
+    /// // создание элементов главного сладера
 
-    //создание элемента слайдера
+    // создание элемента слайдера
     sliderItem = document.createElement("li");
     sliderItem.className = "hero__item slick-slide";
     slider.append(sliderItem);
 
     // создание bg элемента
+
+    heroThis = document.createElement("div");
+    heroThis.className = "hero__this";
+    sliderItem.append(heroThis);
+
     heroBg = document.createElement("div");
     heroBg.className = "hero__bg";
-    sliderItem.append(heroBg);
+    heroThis.append(heroBg);
 
     heroBgPic = document.createElement("img");
     heroBgPic.className = "hero__bg-pic";
@@ -36,7 +42,7 @@ const slider = document.querySelector(".hero__slider"),
     // создание иконки события
     heroImg = document.createElement("div");
     heroImg.className = "hero__img";
-    sliderItem.append(heroImg);
+    heroThis.append(heroImg);
 
     if (element.imgProj !== "") {
       heroPic = document.createElement("img");
@@ -48,21 +54,35 @@ const slider = document.querySelector(".hero__slider"),
     // создание описания слайда
     heroDesc = document.createElement("div"); // контейнер для контента
     heroDesc.className = "hero__desc";
-    sliderItem.append(heroDesc);
+    heroThis.append(heroDesc);
 
     heroTitle = document.createElement("h1"); // заголовок события
     heroTitle.className = "hero__title";
-    heroTitle.innerText = element.title;
+    if (lang.innerText === "EN" || element.titleEng === undefined) {
+      heroTitle.innerText = element.title;
+    } else {
+      heroTitle.innerText = element.titleEng;
+    }
     heroDesc.append(heroTitle);
 
     heroSubTitle = document.createElement("span"); // Описание события
     heroSubTitle.className = "hero__subtitle";
-    heroSubTitle.innerText = element.subtitle;
+
+    if (lang.innerText === "EN" || element.subtitleEng === undefined) {
+      heroSubTitle.innerText = element.subtitle;
+    } else {
+      heroSubTitle.innerText = element.subtitleEng;
+    }
     heroDesc.append(heroSubTitle);
 
     heroButton = document.createElement("a"); // Кнопка перехода
     heroButton.className = "hero__btn btn";
-    heroButton.innerText = element.btnText;
+
+    if (lang.innerText === "EN" || element.btnTextEng === undefined) {
+      heroButton.innerText = element.btnText;
+    } else {
+      heroButton.innerText = element.btnTextEng;
+    }
     heroButton.href = element.link;
     heroDesc.append(heroButton);
   });
@@ -72,7 +92,7 @@ const slider = document.querySelector(".hero__slider"),
   let DB = await (await fetch("./js/rewiewsSlider.json")).json();
 
   DB.forEach((element) => {
-    //// создание элементов  слайдера
+    /// / создание элементов  слайдера
     SliderItem = document.createElement("li");
     SliderItem.className = "reviews__item";
     rewiewsSlider.append(SliderItem);
@@ -87,16 +107,16 @@ const slider = document.querySelector(".hero__slider"),
     slideConf.className = "review__conf";
     slideWrapper.append(slideConf);
 
-    сonfLogo = document.createElement("div"); //обертка картинки
+    сonfLogo = document.createElement("div"); // обертка картинки
     сonfLogo.className = "review__conf-logo";
     slideConf.append(сonfLogo);
 
-    сonfImg = document.createElement("img"); //лого конфы
+    сonfImg = document.createElement("img"); // лого конфы
     сonfImg.className = "review__conf-img";
     сonfImg.src = element.confImg;
     сonfLogo.append(сonfImg);
 
-    сonfDate = document.createElement("div"); //дата
+    сonfDate = document.createElement("div"); // дата
     сonfDate.className = "review__date";
     сonfDate.innerText = element.date;
     slideConf.append(сonfDate);
@@ -104,7 +124,11 @@ const slider = document.querySelector(".hero__slider"),
     // создание блока с текстом  отзыва
     reviewText = document.createElement("div"); // текст отзыва
     reviewText.className = "review__text";
-    reviewText.innerHTML = `“${element.reviewText}”` ;
+    if (lang.innerText === "EN" || element.reviewTextEng === undefined) {
+      reviewText.innerHTML = `“${element.reviewText}”`;
+    } else {
+      reviewText.innerHTML = `“${element.reviewTextEng}”`;
+    }
     slideWrapper.append(reviewText);
 
     // создание блока с автором
@@ -112,7 +136,7 @@ const slider = document.querySelector(".hero__slider"),
     reviewAuthor.className = "review__author";
     slideWrapper.append(reviewAuthor);
 
-    avatar = document.createElement("div"); //обертка автара
+    avatar = document.createElement("div"); // обертка автара
     avatar.className = "review__author-img";
     reviewAuthor.append(avatar);
 
@@ -122,30 +146,46 @@ const slider = document.querySelector(".hero__slider"),
     avatarImg.src = element.avatar;
     avatar.append(avatarImg);
 
-    authorAbout = document.createElement("div"); //обертка об авторе
+    authorAbout = document.createElement("div"); // обертка об авторе
     authorAbout.className = "review__text-content";
     reviewAuthor.append(authorAbout);
 
     authorName = document.createElement("span"); // Имя автора
     authorName.className = "review__name";
-    authorName.innerHTML = element.name;
+
+    if (lang.innerText === "EN" || element.nameEng === undefined) {
+      authorName.innerHTML = element.name;
+    } else {
+      authorName.innerHTML = element.nameEng;
+    }
     authorAbout.append(authorName);
 
     authorCompany = document.createElement("span"); // Компания автора
     authorCompany.className = "review__company";
-    authorCompany.innerHTML = element.company;
+
+    if (lang.innerText === "EN" || element.companyEng === undefined) {
+      authorCompany.innerHTML = element.company;
+    } else {
+      authorCompany.innerHTML = element.companyEng;
+    }
     authorAbout.append(authorCompany);
 
     authorPosition = document.createElement("span"); // должность автора
     authorPosition.className = "review__position";
     authorPosition.innerHTML = element.position;
+
+    if (lang.innerText === "EN" || element.positionEng === undefined) {
+      authorPosition.innerHTML = element.position;
+    } else {
+      authorPosition.innerHTML = element.positionEng;
+    }
     authorAbout.append(authorPosition);
   });
   runSliderRewiew();
 })();
 
 function runSlider() {
-  $(document).ready(function () {
+  $(document).ready(() => {
     $(".hero__slider").slick({
       arrows: true,
       autoplay: true,
@@ -164,14 +204,14 @@ function runSlider() {
       asNavFor: ".hero__slider",
       fade: true,
     });
-    $(".hero__inner").hover(function () {
+    $(".hero__inner").hover(() => {
       $(".btn__hero-slider-l").toggleClass("btn__hero-slider-l--disabled");
       $(".btn__hero-slider-r").toggleClass("btn__hero-slider-r--disabled");
     });
   });
 }
 function runSliderRewiew() {
-  $(document).ready(function () {
+  $(document).ready(() => {
     $(".reviews__list").slick({
       dots: true,
       prevArrow:
@@ -181,3 +221,12 @@ function runSliderRewiew() {
     });
   });
 }
+
+function findDots() {
+  const hero = document.querySelector(".slick-dots");
+
+  console.log(hero);
+}
+
+
+findDots();

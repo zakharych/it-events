@@ -807,6 +807,16 @@ h3 {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+  width: 100%;
+}
+
+.hero__this {
+  display: flex;
+  width: 1280px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 60px;
 }
 
 .hero-section {
@@ -829,6 +839,10 @@ h3 {
 
 .hero__item.slick-slide {
   display: flex;
+}
+
+.hero__inner {
+  width: 1280px;
 }
 
 .hero__img {
@@ -902,7 +916,7 @@ h3 {
   width: 10px;
   position: absolute;
   top: 50%;
-  right: 50px;
+  right: calc(50% - 640px);
   transform: translateY(-50%);
   bottom: auto;
 }
@@ -1430,9 +1444,9 @@ h3 {
 }
 
 .challenge {
-  background-image: url("../assets/img/Elements.png");
+  background-image: url("https://it-events.com/system/attachments/files/000/002/035/original/Elements.svg");
   background-repeat: no-repeat;
-  background-position: right 54px bottom 101px;
+  background-position: right 38px bottom 101px;
   background-size: 406px 255px;
 }
 

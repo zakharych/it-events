@@ -3,22 +3,56 @@
   &-section {
     background-color: #8e8e8e;
     color: #ffffff;
+    padding: 0;
   }
 
   display: flex;
   justify-content: space-between;
   &__list {
     display: flex;
+    white-space: nowrap;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    margin-right: 23px;
+    text-transform: uppercase;
   }
   &__item {
     padding: 24px 0;
-    margin-right: 33px;
+    margin-right: 10px;
     &:last-child {
       margin-right: 0;
     }
-  }
 
+    &--notactive {
+      font-weight: 700;
+      & a {
+        color: #000000;
+        cursor: default;
+        pointer-events: none;
+        &:hover {
+          transform: none;
+        }
+      }
+    }
+  }
+  &__link {
+    color: #ffffff;
+    display: block;
+    transition: 0.2s;
+    // font-size: 18px;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
   &__copy {
     padding: 24px 0;
+    align-self: flex-end;
+    color: black;
+    white-space: nowrap;
+
+    &--data {
+      display: inline-block;
+    }
   }
 }

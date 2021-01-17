@@ -7,16 +7,16 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
+    // width: 100%;
   }
-  &__this {
-    display: flex;
-    width: 1280px;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    padding: 0 60px;
-  }
+  // &__this {
+  //   display: flex;
+  //   width: 1280px;
+  //   justify-content: center;
+  //   align-items: center;
+  //   margin: 0 auto;
+  //   padding: 0 60px;
+  // }
   &-section {
     padding: 0;
     // background-image: url("./../assets/img/bg_hero-section_2.png");
@@ -40,17 +40,17 @@
     color: #ffffff;
     padding: 0 60px;
 
-    &.slick-slide  {
-      display: flex; 
+    &.slick-slide {
+      display: flex;
     }
   }
 
-  &__inner {
-    width: 1280px;
-  //   position: absolute;
-  //   bottom: 100%;
-  //   z-index: 20;
-  }
+  // &__inner {
+  //   width: 1280px;
+  // //   position: absolute;
+  // //   bottom: 100%;
+  // //   z-index: 20;
+  // }
   &__img {
     display: block;
     height: 238px;
@@ -146,7 +146,8 @@
     width: 10px;
     position: absolute;
     top: 50%;
-    right: calc(50% - 640px);
+    // right: calc(50% - 640px);
+    right: 50px;
     transform: translateY(-50%);
     bottom: auto;
   }

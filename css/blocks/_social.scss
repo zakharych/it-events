@@ -1,53 +1,63 @@
-
 .socials {
-    &__list {
-      display: flex;
-      justify-content: space-between;
-    }
-  
-    &__item {
-      display: block;
-      width: 40px;
-      height: 40px;
-      background-image: url(https://ostconf.com/i/blocks/social/twitter.svg);
-      background-color: #ed4963;
-      background-repeat: no-repeat;
-      background-position: 50%;
-      margin-right: 13px;
-    }
-  
-    &__item:last-child {
-      margin-right: 0;
-    }
-  
-    &__item:hover {
-      background-color: rgba(0, 0, 0, 0.7);
-    }
-  
-    &__link {
-      width: 100%;
-      height: 100%;
-      display: block;
-    }
-  
-    &__item-vk {
-      background-image: url(https://ostconf.com/i/blocks/social/vk.svg);
-    }
-  
-    &__item-fb {
-      background-image: url(https://ostconf.com/i/blocks/social/facebook.svg);
-    }
-  
-    &__item-yb {
-      background-image: url(https://ostconf.com/i/blocks/social/youtube.svg);
-    }
-  
-    &__item-tg {
-      background-image: url(https://ostconf.com/i/blocks/social/telegram.svg);
-    }
-    &__item-in {
-      background-image: url(https://it-events.com/system/event_photos/imgs/000/013/225/original/icon_Instagram.png);
-      background-size: 20px 20px;
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-image: url(https://ostconf.com/i/blocks/social/twitter.svg);
+    background-color: #ed4963;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    margin-right: 13px;
+  }
+
+  &__item:last-child {
+    margin-right: 0;
+  }
+
+  &__item:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  &__link {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  &__item-vk {
+    background-image: url(https://ostconf.com/i/blocks/social/vk.svg);
+  }
+
+  &__item-fb {
+    background-image: url(https://ostconf.com/i/blocks/social/facebook.svg);
+  }
+
+  &__item-yb {
+    background-image: url(https://ostconf.com/i/blocks/social/youtube.svg);
+  }
+
+  &__item-tg {
+    background-image: url(https://ostconf.com/i/blocks/social/telegram.svg);
+  }
+  &__item-in {
+    background-image: url(https://it-events.com/system/event_photos/imgs/000/013/225/original/icon_Instagram.png);
+    background-size: 20px 20px;
+  }
+}
+
+.contacts {
+  & .socials__item {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
-  
+}

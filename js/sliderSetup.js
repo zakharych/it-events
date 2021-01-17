@@ -25,14 +25,9 @@ const lang = document.querySelector(".language");
     slider.append(sliderItem);
 
     // создание bg элемента
-
-    heroThis = document.createElement("div");
-    heroThis.className = "hero__this";
-    sliderItem.append(heroThis);
-
     heroBg = document.createElement("div");
     heroBg.className = "hero__bg";
-    heroThis.append(heroBg);
+    sliderItem.append(heroBg);
 
     heroBgPic = document.createElement("img");
     heroBgPic.className = "hero__bg-pic";
@@ -42,7 +37,7 @@ const lang = document.querySelector(".language");
     // создание иконки события
     heroImg = document.createElement("div");
     heroImg.className = "hero__img";
-    heroThis.append(heroImg);
+    sliderItem.append(heroImg);
 
     if (element.imgProj !== "") {
       heroPic = document.createElement("img");
@@ -54,7 +49,7 @@ const lang = document.querySelector(".language");
     // создание описания слайда
     heroDesc = document.createElement("div"); // контейнер для контента
     heroDesc.className = "hero__desc";
-    heroThis.append(heroDesc);
+    sliderItem.append(heroDesc);
 
     heroTitle = document.createElement("h1"); // заголовок события
     heroTitle.className = "hero__title";
@@ -89,7 +84,7 @@ const lang = document.querySelector(".language");
   runSlider();
 })();
 (async () => {
-  let DB = await (await fetch("./js/rewiewsSlider.json")).json();
+  let  DB = await (await fetch("./js/rewiewsSlider.json")).json();
 
   DB.forEach((element) => {
     /// / создание элементов  слайдера
@@ -194,9 +189,9 @@ function runSlider() {
       appendArrows: ".arrows",
       appendDots: ".arrows",
       prevArrow:
-        '<div id="prev" class="btn__hero-slider-l btn__hero-slider-l--disabled  btn-juliet"><img src="https://it-events.com/system/attachments/files/000/002/012/original/left_arrow.svg" alt="<" class="arrow__img"></div>',
+        "<div id=\"prev\" class=\"btn__hero-slider-l btn__hero-slider-l--disabled  btn-juliet\"><img src=\"https://it-events.com/system/attachments/files/000/002/012/original/left_arrow.svg\" alt=\"<\" class=\"arrow__img\"></div>",
       nextArrow:
-        '<div id="next" class="btn__hero-slider-r btn__hero-slider-r--disabled btn-juliet"><img src="https://it-events.com/system/attachments/files/000/002/013/original/right_arrow.svg" alt=">" class="arrow__img"></div>',
+        "<div id=\"next\" class=\"btn__hero-slider-r btn__hero-slider-r--disabled btn-juliet\"><img src=\"https://it-events.com/system/attachments/files/000/002/013/original/right_arrow.svg\" alt=\">\" class=\"arrow__img\"></div>",
       asNavFor: ".sliderBg",
     });
     $(".sliderBg").slick({
@@ -215,18 +210,9 @@ function runSliderRewiew() {
     $(".reviews__list").slick({
       dots: true,
       prevArrow:
-        '<div id="prev" class=" reviews__arrow reviews__arrow-l"><img src="https://it-events.com/system/attachments/files/000/002/026/original/left_arrow_grey.svg" alt="<" class="arrow__img"></div>',
+        "<div id=\"prev\" class=\" reviews__arrow reviews__arrow-l\"><img src=\"https://it-events.com/system/attachments/files/000/002/026/original/left_arrow_grey.svg\" alt=\"<\" class=\"arrow__img\"></div>",
       nextArrow:
-        '<div id="next" class=" reviews__arrow reviews__arrow-r"><img src="https://it-events.com/system/attachments/files/000/002/027/original/right_arrow_grey.svg" alt=">" class="arrow__img"></div>',
+        "<div id=\"next\" class=\" reviews__arrow reviews__arrow-r\"><img src=\"https://it-events.com/system/attachments/files/000/002/027/original/right_arrow_grey.svg\" alt=\">\" class=\"arrow__img\"></div>",
     });
   });
 }
-
-function findDots() {
-  const hero = document.querySelector(".slick-dots");
-
-  console.log(hero);
-}
-
-
-findDots();

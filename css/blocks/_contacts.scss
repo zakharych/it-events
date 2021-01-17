@@ -1,36 +1,28 @@
-.contacts {
-  &-section {
-    color: #ffffff;
-    background-color: #070b11;
-  }
-  padding-bottom: 60px;
-  &__container {
-    display: flex;
-    justify-content: space-between;
-  }
+.contacts-section {
+  background-color: #070b11;
+  color: #ffffff;
+  padding: 74px 0;
   &__title {
-    margin-bottom: 32px;
-    text-align: left;
+    margin-bottom: 54px;
   }
-  &__content {
-    display: flex;
+  a {
+    color: #ffffff;
   }
-  &__col {
-    display: flex;
-    flex-direction: column;
-    font-size: 20px;
-    font-weight: 500;
-    margin-right: 58px;
-  }
+}
 
+.contacts {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 60px;
   &__social {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-self: stretch;
+    padding-top: 54px;
 
     .socials__item {
       margin-right: 0;
-
       background-color: #373735;
 
       &:hover {
@@ -38,4 +30,136 @@
       }
     }
   }
+  &__logo {
+    display: block;
+    width: 181px;
+    height: 46px;
+    overflow: hidden;
+    margin-bottom: 26px;
+  }
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
 }
+
+.contacts__list {
+  display: flex;
+  flex: 1;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 21px;
+  flex-wrap: wrap;
+
+  // @include tablets {
+  // justify-content: center;
+  // text-align: center;
+  // }
+}
+
+.contacts__item {
+  white-space: nowrap;
+  margin-right: 62px;
+  //   margin-bottom: 30px;
+  position: relative;
+  align-self: flex-end;
+ 
+&:last-child {
+  margin-right: 0;
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+  //   &--logo {
+  //     &::before {
+  //     //   position: absolute;
+  //       top: 10px;
+  //       content: url(../img/it-events__logo.png);
+  //     }
+  //   }
+
+  // @include tablets {
+  //     margin-right: 40px;
+  //     }
+  // }
+}
+
+.contact__desc {
+  font-weight: 700;
+  white-space: normal;
+  &--font-normal {
+    font-weight: normal;
+  }
+}
+
+.contact__tel,
+.contact__email {
+  display: block;
+}
+
+.socials__desc {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+
+// .socials__list {
+//   display: flex;
+//   justify-content: space-between;
+//   margin-bottom: 10px;
+// }
+// .socials {
+//   &__list {
+//     display: flex;
+//     justify-content: space-between;
+//   }
+
+//   &__item {
+//     display: block;
+//     width: 60px;
+//     height: 60px;
+//     background-image: url(https://ostconf.com/i/blocks/social/twitter.svg);
+//     background-color: #ed4963;
+//     background-repeat: no-repeat;
+//     background-position: 50%;
+//     margin-right: 13px;
+//     background-size: 30px 30px;
+//     margin-bottom: 20px;
+
+//     &:last-child {
+//       margin-bottom: 0;
+//       margin-right: 0;
+//     }
+//   }
+
+
+//   &__item:hover {
+//     background-color: rgba(0, 0, 0, 0.7);
+//   }
+
+//   &__link {
+//     width: 100%;
+//     height: 100%;
+//     display: block;
+//   }
+
+//   &__item-vk {
+//     background-image: url(https://ostconf.com/i/blocks/social/vk.svg);
+//   }
+
+//   &__item-fb {
+//     background-image: url(https://ostconf.com/i/blocks/social/facebook.svg);
+//   }
+
+//   &__item-yb {
+//     background-image: url(https://ostconf.com/i/blocks/social/youtube.svg);
+//   }
+
+//   &__item-tg {
+//     background-image: url(https://ostconf.com/i/blocks/social/telegram.svg);
+//   }
+//   &__item-in {
+//     background-image: url(https://it-events.com/system/event_photos/imgs/000/013/225/original/icon_Instagram.png);
+//   }
+// }

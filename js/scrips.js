@@ -1,5 +1,4 @@
-/// ////    conf section     ////////
-
+///////    conf section     ////////
 const logo = document.querySelectorAll(".conf__logo");
 const background = document.querySelector(".conf-section");
 const itemElem = document.querySelectorAll(".conf__item-elem");
@@ -24,7 +23,13 @@ btn.forEach((element) => {
     tempButtonBg = element.style.backgroundColor;
     tempButtoColor = element.style.color;
     tempButtonWidth = `${element.offsetWidth}px`;
-    element.innerText = "Перейти";
+
+    if (lang.innerText === "EN") {
+      element.innerText = "Перейти";
+    } else {
+      element.innerText = "Learn more";
+    }
+
     element.style.backgroundColor = "#00653a";
     element.style.color = "#ffffff";
     element.style.minWidth = tempButtonWidth;
@@ -46,7 +51,6 @@ itemElem.forEach((element) => {
     let togledClass = `conf__btn-${element.id}--active`;
     childs = element.childNodes;
 
-    // element.style.filter = "none";
     element.children[2].style.opacity = 1;
     element.children[3].style.opacity = 1;
     for (let i = 0; i < childs.length - 2; i++) {
@@ -137,7 +141,7 @@ itemElem.forEach((element) => {
   };
 });
 
-/// /slider Partners
+////slider Partners
 
 const left = document.querySelector("#left");
 const right = document.querySelector("#right");

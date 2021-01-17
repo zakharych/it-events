@@ -1,21 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <!-- <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-122843848-1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "UA-122843848-1");
-    </script> -->
-
     <meta charset="UTF-8" />
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
     <meta name="viewport" content="width=1280" />
@@ -59,6 +44,8 @@
       rel="stylesheet"
     />
 
+    <!-- <link rel="stylesheet" href="https://it-events.com/system/attachments/files/000/002/054/original/main.css" /> -->
+
     <link rel="stylesheet" href="./css/main.css" />
   </head>
 
@@ -99,7 +86,7 @@
     </header>
     <section class="hero-section">
       <ul class="sliderBg"></ul>
-      <div class="hero-wrapper">
+      <div class="wrapper hero-wrapper">
         <div class="hero">
           <div class="hero__inner">
             <ul class="hero__slider" id="hero__slider"></ul>
@@ -1214,51 +1201,82 @@
       </div>
     </section>
     <footer class="footer">
-      <section class="contacts-section" id="contacts">
+      <section class="contacts-section section" id="contacts">
         <div class="wrapper">
-          <div class="info-block contacts">
-            <h2 class="contacts__title">КОНТАКТЫ</h2>
-            <div class="contacts__container">
-              <div class="contacts__content">
-                <div class="contacts__col">
-                  <span>IT-Events, LTD</span>
-                  <span> 197342, Россия, Санкт-Петербург</span>
-                  <span> Торжковская улица, д.5, офис 37.</span>
-                  <a href="mailto:team@it-events.com"> team@it-events.com</a>
+          <div class="contacts">
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <div class="contacts__logo">
+                 <a href="https://it-events.com/company" class="contacts__link" 
+                 target=" _blank">
+                    <img
+                      src="https://it-events.com/system/attachments/files/000/002/048/original/it-events_white.svg"
+                      alt=""
+                      class="contacts__img"
+                    />
+                 </a>
                 </div>
-                <div class="contacts__col">
-                  <span> CEO</span>
-                  <span> Каланов Денис</span>
-                  <a href="tel:+79216457808">+7 921 645-78-08</a>
-                  <a href="mailto:denis@it-events.com"> denis@it-events.com</a>
-                </div>
-              </div>
-              <ul class="contacts__social">
-                <li class="socials__item socials__item-in">
-                  <a
-                    class="socials__link"
-                    href="https://www.instagram.com/itevents_team/"
-                    target="_blank"
-                    rel="noopener"
-                  ></a>
-                </li>
-                <li class="socials__item socials__item-yb">
-                  <a
-                    class="socials__link"
-                    href="https://www.youtube.com/itevents"
-                    target="_blank"
-                    rel="noopener"
-                  ></a>
-                </li>
-              </ul>
-            </div>
+                <p class="contact__desc contact__desc--font-normal">
+                  IT-Events, LTD
+                </p>
+                <p class="contact__name">197342, Россия, Санкт-Петербург</p>
+                <p class="contact__name">Торжковская улица, д.5, офис 37.</p>
+                <a href="mailto:team@it-events.com" class="contact__email"
+                  >team@it-events.com</a
+                >
+              </li>
+              <li class="contacts__item">
+                <p class="contact__desc">CEO</p>
+                <p class="contact__name">Каланов Денис</p>
+                <a href="tel:+79216457808" class="contact__tel"
+                  >+7 921 645-78-08</a
+                >
+                <a href="mailto:denis@it-events.com" class="contact__email"
+                  >denis@it-events.com</a
+                >
+              </li>
+              <li class="contacts__item">
+                <ul class="contacts__social">
+                  <li class="socials__item socials__item-in">
+                    <a
+                      class="socials__link"
+                      href="https://www.instagram.com/itevents_team/"
+                      target="_blank"
+                    ></a>
+                  </li>
+                  <li class="socials__item socials__item-yb">
+                    <a
+                      class="socials__link"
+                      href="https://www.youtube.com/itevents"
+                      target="_blank"
+                    ></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
-      <section class="footer-menu-section">
+      <section class="section footer-menu-section">
         <div class="wrapper">
           <div class="footer-menu">
             <ul class="footer-menu__list">
+              <li class="footer-menu__item  footer-menu__item--notactive">
+                <a
+                  href="https://it-events.com/company"
+                  class="footer-menu__link"
+                  target="_blank"
+                  >О НАС</a
+                >
+              </li>
+              <li class="footer-menu__item">
+                <a
+                  href="https://it-events.com"
+                  class="footer-menu__link"
+                  target="_blank"
+                  >IT-EVENTS.COM</a
+                >
+              </li>
               <li class="footer-menu__item">
                 <a
                   href="https://hrapiconf.com/"
@@ -1283,7 +1301,7 @@
                   class="footer-menu__link"
                   target="_blank"
                   rel="noopener"
-                  >OST</a
+                  >OST CONF</a
                 >
               </li>
               <li class="footer-menu__item">
@@ -1297,28 +1315,24 @@
               </li>
               <li class="footer-menu__item">
                 <a
-                  href="https://ithrmeetup.ru/"
-                  class="footer-menu__link"
-                  target="_blank"
-                  rel="noopener"
-                  >IT HR MEETUP</a
-                >
-              </li>
-
-              <li class="footer-menu__item">
-                <a
                   href="https://it-challenge.ru/"
                   class="footer-menu__link"
                   target="_blank"
                   rel="noopener"
-                  >IT-CHALLENGE</a
+                  >IT-CHАLLENGE CUP</a
                 >
               </li>
               <li class="footer-menu__item">
-                <a href="#WSB" class="footer-menu__link">WORK SPORT BALANCE</a>
+                <a
+                  href="https://it-events.com/company#WSB"
+                  class="footer-menu__link"
+                  target="_blank"
+                  rel="noopener"
+                  >WORK SPORT BALANCE</a
+                >
               </li>
             </ul>
-            <div class="footer-menu__copy">© 2020, IT-Events, LTD</div>
+            <div class="footer-menu__copy">© <p class="footer-menu__copy--data">2020</p>, IT-Events, LTD</div>
           </div>
         </div>
       </section>
@@ -1337,12 +1351,16 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="./js/scrips.js"></script>
+
     <script src="https://it-events.com/system/attachments/files/000/002/030/original/slick.min.js"></script>
+      <!-- <script src="https://it-events.com/system/attachments/files/000/002/056/original/sliderSetup.js"></script>
+      <script src="https://it-events.com/system/attachments/files/000/002/057/original/scrips.js"></script> -->
+
     <script src="./js/sliderSetup.js"></script>
+    <script src="./js/scrips.js"></script>
 
     <!-- Yandex.Metrika counter -->
-    <!-- <script type="text/javascript">
+    <script type="text/javascript">
       (function (m, e, t, r, i, k, a) {
         m[i] =
           m[i] ||
@@ -1376,7 +1394,25 @@
           style="position: absolute; left: -9999px"
           alt=""
         /></div
-    ></noscript> -->
+    ></noscript>
     <!-- /Yandex.Metrika counter -->
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-122843848-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-122843848-1");
+    </script>
+
+
   </body>
 </html>

@@ -1,6 +1,7 @@
 ///////    conf section     ////////
 const logo = document.querySelectorAll(".conf__logo");
 const background = document.querySelector(".conf-section");
+const section = document.querySelector(".conf-section");
 const itemElem = document.querySelectorAll(".conf__item-elem");
 const item = document.querySelectorAll(".conf__item");
 const btn = document.querySelectorAll(".conf__btn");
@@ -9,6 +10,7 @@ const confDate = document.querySelectorAll(".conf__date");
 const lineL = document.querySelectorAll(".conf__item-line-l");
 const lineR = document.querySelectorAll(".conf__item-line-r");
 const hiddenpic = document.querySelector(".hiddenpicOst");
+const date = Date.now();
 const ostUnActive = logo[2].innerHTML;
 const ostActive = hiddenpic.innerHTML;
 
@@ -16,6 +18,11 @@ tempButtonText = "";
 tempButtonBg = "";
 tempButtoColor = "";
 tempButtonWidth = 0;
+
+section.onmouseover = function(event) {
+  console.log(this);
+  console.log(event.target);
+};
 
 btn.forEach((element) => {
   element.onmouseover = function () {
@@ -46,60 +53,64 @@ btn.forEach((element) => {
 });
 
 itemElem.forEach((element) => {
+  let atrData = Date.parse(
+    element.lastElementChild.getAttribute("data-EndDate")
+  );
+  let activeClass = `conf__btn-${element.id}--active`;
+
+  if (atrData >= date) {
+    element.lastElementChild.classList.add(activeClass);
+  }
+
   element.onmouseover = function (event) {
+    // console.log(this.children);
     let target = event.target;
     let togledClass = `conf__btn-${element.id}--active`;
-    childs = element.childNodes;
 
-    element.children[2].style.opacity = 1;
-    element.children[3].style.opacity = 1;
-    for (let i = 0; i < childs.length - 2; i++) {
-      if (i % 2 !== 0) {
-        childs[i].style.filter = "none";
-      }
+    section.classList.add(`conf-section--${element.id}`);
+    element.children[2].classList.add('conf__logo--hover');
+    element.children[3].classList.add('conf__btn--hover');
+
+    if (!element.lastElementChild.classList.contains(togledClass)) {
+      element.lastElementChild.classList.add(togledClass);
     }
-    element.lastElementChild.classList.add(togledClass);
 
     lineL.forEach((element) => {
-      element.style.opacity = 0.5;
+      element.classList.add('conf__item-line-l--transparent');
     });
     lineR.forEach((element) => {
-      element.style.opacity = 0.5;
+      element.classList.add('conf__item-line-r--transparent');
     });
 
     if (element.id === "hr") {
-      background.style.backgroundColor = "#f24944";
       for (let i = 0; i < confName.length; i++) {
         if (i !== 0) {
-          confName[i].style.opacity = 0.5;
-          confDate[i].style.opacity = 0.5;
+          confName[i].classList.add("conf__name--transparent");
+          confDate[i].classList.add("conf__date--transparent");
         }
       }
     } else if (element.id === "py") {
-      background.style.backgroundColor = "#316696";
       for (let i = 0; i < confName.length; i++) {
         if (i !== 1) {
-          confName[i].style.opacity = 0.5;
-          confDate[i].style.opacity = 0.5;
+          confName[i].classList.add("conf__name--transparent");
+          confDate[i].classList.add("conf__date--transparent");
         }
       }
     } else if (element.id === "ost") {
       if (logo[2].innerHTML === ostUnActive) {
         logo[2].innerHTML = ostActive;
       }
-      background.style.backgroundColor = "#36a9e1";
       for (let i = 0; i < confName.length; i++) {
         if (i !== 2) {
-          confName[i].style.opacity = 0.5;
-          confDate[i].style.opacity = 0.5;
+          confName[i].classList.add("conf__name--transparent");
+          confDate[i].classList.add("conf__date--transparent");
         }
       }
     } else if (element.id === "go") {
-      background.style.backgroundColor = "#2d396b";
       for (let i = 0; i < confName.length; i++) {
         if (i !== 3) {
-          confName[i].style.opacity = 0.5;
-          confDate[i].style.opacity = 0.5;
+          confName[i].classList.add("conf__name--transparent");
+          confDate[i].classList.add("conf__date--transparent");
         }
       }
     }
@@ -107,36 +118,40 @@ itemElem.forEach((element) => {
 });
 
 itemElem.forEach((element) => {
+  let atrData = Date.parse(
+    element.lastElementChild.getAttribute("data-EndDate")
+  );
   element.onmouseout = function (event) {
     let target = event.target;
-    childs = element.childNodes;
-    for (let i = 0; i < childs.length - 2; i++) {
-      if (i % 2 !== 0) {
-        childs[i].style.filter = "grayscale(100%)";
-      }
-    }
-    background.style.backgroundColor = "#2f2f2f";
-    element.children[2].style.opacity = 0.5;
-    element.children[3].style.opacity = 0.5;
+    section.className = "conf-section";    
+    element.children[2].classList.remove('conf__logo--hover');
+    element.children[3].classList.remove('conf__btn--hover');
+    
     let togledClass = `conf__btn-${element.id}--active`;
-    element.lastElementChild.classList.toggle(togledClass);
+
+    if (
+      element.lastElementChild.classList.contains(togledClass) &&
+      atrData < date
+    ) {
+      element.lastElementChild.classList.remove(togledClass);
+    }
 
     if (logo[2].innerHTML === ostActive) {
       logo[2].innerHTML = ostUnActive;
     }
 
     lineL.forEach((element) => {
-      element.style.opacity = 1;
+      element.classList.remove('conf__item-line-l--transparent');
     });
     lineR.forEach((element) => {
-      element.style.opacity = 1;
+      element.classList.remove('conf__item-line-r--transparent');
     });
 
     confName.forEach((element) => {
-      element.style.opacity = 1;
+      element.className = "conf__name";
     });
     confDate.forEach((element) => {
-      element.style.opacity = 1;
+      element.className = "conf__date";
     });
   };
 });

@@ -1,7 +1,21 @@
 .conf {
   &-section {
     background-color: #2f2f2f;
+
+    &--hr {
+      background-color: #f24944;
+    }
+    &--py {
+      background-color: #316696;
+    }
+    &--ost {
+      background-color: #36a9e1;
+    }
+    &--go {
+      background-color: #2d396b;
+    }
   }
+
   padding: 0 60px;
   padding-top: 88px;
   padding-bottom: 170px;
@@ -30,6 +44,9 @@
       right: 0;
       top: 48px;
       transform: translate(60%, -50%);
+      &--transparent {
+        opacity: 0.5;
+      }
     }
     &-line-r {
       position: absolute;
@@ -41,6 +58,9 @@
       left: 0;
       top: 48px;
       transform: translate(-60%, -50%);
+      &--transparent {
+        opacity: 0.5;
+      }
     }
   }
   &__item-elem {
@@ -57,12 +77,18 @@
   &__name {
     font-size: 22px;
     font-weight: 500;
+    &--transparent {
+      opacity: 0.5;
+    }
   }
   &__date {
     font-size: 22px;
     font-weight: 500;
     text-transform: uppercase;
     margin-bottom: 70px;
+    &--transparent {
+      opacity: 0.5;
+    }
   }
 
   &__logo {
@@ -74,6 +100,11 @@
     overflow: hidden;
     margin-bottom: 32px;
     opacity: 0.5;
+    filter: grayscale(100%);
+    &--hover {      
+      opacity: 1;
+      filter: none;
+    }
   }
 
   &__img {
@@ -92,6 +123,9 @@
     filter: grayscale(0);
     text-align: center;
     opacity: 0.5;
+    &--hover {      
+      opacity: 1;
+    }
 
 
     &-hr:hover,

@@ -1136,6 +1136,22 @@ h3 {
   background-color: #2f2f2f;
 }
 
+.conf-section--hr {
+  background-color: #f24944;
+}
+
+.conf-section--py {
+  background-color: #316696;
+}
+
+.conf-section--ost {
+  background-color: #36a9e1;
+}
+
+.conf-section--go {
+  background-color: #2d396b;
+}
+
 .conf__title {
   font-size: 30px;
   font-weight: bold;
@@ -1165,6 +1181,10 @@ h3 {
   transform: translate(60%, -50%);
 }
 
+.conf__item-line-l--transparent {
+  opacity: 0.5;
+}
+
 .conf__item-line-r {
   position: absolute;
   content: "";
@@ -1175,6 +1195,10 @@ h3 {
   left: 0;
   top: 48px;
   transform: translate(-60%, -50%);
+}
+
+.conf__item-line-r--transparent {
+  opacity: 0.5;
 }
 
 .conf__item-elem {
@@ -1194,11 +1218,19 @@ h3 {
   font-weight: 500;
 }
 
+.conf__name--transparent {
+  opacity: 0.5;
+}
+
 .conf__date {
   font-size: 22px;
   font-weight: 500;
   text-transform: uppercase;
   margin-bottom: 70px;
+}
+
+.conf__date--transparent {
+  opacity: 0.5;
 }
 
 .conf__logo {
@@ -1210,6 +1242,12 @@ h3 {
   overflow: hidden;
   margin-bottom: 32px;
   opacity: 0.5;
+  filter: grayscale(100%);
+}
+
+.conf__logo--hover {
+  opacity: 1;
+  filter: none;
 }
 
 .conf__img {
@@ -1228,6 +1266,10 @@ h3 {
   filter: grayscale(0);
   text-align: center;
   opacity: 0.5;
+}
+
+.conf__btn--hover {
+  opacity: 1;
 }
 
 .conf__btn-hr:hover, .conf__btn-hr--active, .conf__btn-hr--prev {
@@ -2113,7 +2155,6 @@ details summary::-webkit-details-marker {
 }
 
 .contact__desc {
-  font-weight: 700;
   white-space: normal;
 }
 

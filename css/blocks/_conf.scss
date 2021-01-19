@@ -123,30 +123,36 @@
     filter: grayscale(0);
     text-align: center;
     opacity: 0.5;
-    &--hover {      
+
+    &:hover {
+      background-color: #00653a;
+      color: #ffffff;
+    }
+
+    &--hover-block {      
       opacity: 1;
     }
 
 
-    &-hr:hover,
+    // &-hr:hover,
     &-hr--active, 
     &-hr--prev {
       background-color: #080808;
       color: #ffffff;
     }
-    &-py:hover,
+    // &-py:hover,
     &-py--active, 
     &-py--prev {
       background-color: #fff000;
       color: #010812;
     }
-    &-ost:hover,
+    // &-ost:hover,
     &-ost--active, 
     &-ost--prev {
       background-color: #cb5b9e;
       color: #ffffff;
     }
-    &-go:hover,
+    // &-go:hover,
     &-go--active, 
     &-go--prev {
       background-color: #9bd4f0;

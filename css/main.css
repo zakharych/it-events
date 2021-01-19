@@ -782,18 +782,22 @@ h3 {
 
 .socials__item-vk {
   background-image: url(https://ostconf.com/i/blocks/social/vk.svg);
+  background-size: 20px 20px;
 }
 
 .socials__item-fb {
   background-image: url(https://ostconf.com/i/blocks/social/facebook.svg);
+  background-size: 20px 20px;
 }
 
 .socials__item-yb {
   background-image: url(https://ostconf.com/i/blocks/social/youtube.svg);
+  background-size: 20px 20px;
 }
 
 .socials__item-tg {
   background-image: url(https://ostconf.com/i/blocks/social/telegram.svg);
+  background-size: 20px 20px;
 }
 
 .socials__item-in {
@@ -1268,26 +1272,31 @@ h3 {
   opacity: 0.5;
 }
 
-.conf__btn--hover {
+.conf__btn:hover {
+  background-color: #00653a;
+  color: #ffffff;
+}
+
+.conf__btn--hover-block {
   opacity: 1;
 }
 
-.conf__btn-hr:hover, .conf__btn-hr--active, .conf__btn-hr--prev {
+.conf__btn-hr--active, .conf__btn-hr--prev {
   background-color: #080808;
   color: #ffffff;
 }
 
-.conf__btn-py:hover, .conf__btn-py--active, .conf__btn-py--prev {
+.conf__btn-py--active, .conf__btn-py--prev {
   background-color: #fff000;
   color: #010812;
 }
 
-.conf__btn-ost:hover, .conf__btn-ost--active, .conf__btn-ost--prev {
+.conf__btn-ost--active, .conf__btn-ost--prev {
   background-color: #cb5b9e;
   color: #ffffff;
 }
 
-.conf__btn-go:hover, .conf__btn-go--active, .conf__btn-go--prev {
+.conf__btn-go--active, .conf__btn-go--prev {
   background-color: #9bd4f0;
   color: #010812;
 }

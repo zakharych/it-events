@@ -3,23 +3,33 @@
 // const background = document.querySelector(".conf-section");
 // const btn = document.querySelectorAll(".conf__btn");
 
-const logo = document.querySelectorAll('.conf__logo');
+// const confList = document.querySelector('.conf__list');
+// const confBlocks2 = Array.from(confList.children);
+const confBlocks = document.querySelectorAll('.conf__item');
+
+const logo = document.querySelectorAll('.conf__img');
 const section = document.querySelector('.conf-section');
 const itemElem = document.querySelectorAll('.conf__item-elem');
 const confName = document.querySelectorAll('.conf__name');
 const confDate = document.querySelectorAll('.conf__date');
 const lineL = document.querySelectorAll('.conf__item-line-l');
 const lineR = document.querySelectorAll('.conf__item-line-r');
-const hiddenpic = document.querySelector('.hiddenpicOst');
 
-const date = Date.now();
-const ostUnActive = logo[2].innerHTML;
-const ostActive = hiddenpic.innerHTML;
+const todayDate = Date.now();
 
 let tempButtonText = '';
 let tempButtonBg = '';
 let tempButtoColor = '';
 let tempButtonWidth = 0;
+
+itemElem.forEach((element) => {
+  const confDate = Date.parse(element.lastElementChild.getAttribute('data-EndDate'));
+  const activeClass = `conf__btn-${element.id}--active`;
+
+  if (confDate >= todayDate) {
+    element.lastElementChild.classList.add(activeClass);
+  }
+});
 
 function transparentLines(position) {
   for (let i = 0; i < confName.length; i++) {
@@ -46,103 +56,105 @@ function returnBtnText(btnBlock) {
   btnBlock.innerText = tempButtonText;
   btnBlock.style.minWidth = '';
 }
+function confBlockManipulation(confBlock) {
+  const activeClass = `conf__btn-${confBlock.id}--active`;
+  section.classList.add(`conf-section--${confBlock.id}`);
+  confBlock.children[2].classList.add('conf__logo--hover');
+  confBlock.children[3].classList.add('conf__btn--hover-block');
+
+  if (!confBlock.lastElementChild.classList.contains(activeClass)) {
+    confBlock.lastElementChild.classList.add(activeClass);
+  }
+  if (confBlock.id === 'hr') {
+    transparentLines(0);
+  } else if (confBlock.id === 'py') {
+    transparentLines(1);
+  } else if (confBlock.id === 'ost') {
+    logo[2].classList.remove('conf__img--filter');
+    transparentLines(2);
+  } else if (confBlock.id === 'go') {
+    transparentLines(3);
+  }
+
+  lineL.forEach((element) => {
+    element.classList.add('conf__item-line-l--transparent');
+  });
+  lineR.forEach((element) => {
+    element.classList.add('conf__item-line-r--transparent');
+  });
+}
 
 section.onmouseover = function (event) {
-  // console.log(event.target);
+  const confBlock = event.target.closest('.conf__item-elem');
+  // const confBlockClass = event.target.closest('.conf__item');
   const conf = event.target.closest('.conf__item-elem');
-  if (event.target.id === 'confBtn') {
-    changeHoverBtnText(event.target);
-  } else if (event.target.classList.contains('conf__item-elem') || event.target.closest('.conf__item-elem')) {
-    console.log('блок');
-    
+  if (
+    event.target.classList.contains('.conf__item-elem') ||
+    event.target.closest('.conf__item-elem')
+  ) {
+    confBlockManipulation(confBlock);
+    // hoverBlock = new ConfElem(confBlockClass);
+    // hoverBlock.hoverElem();
+    if (event.target.id === 'confBtn') {
+      changeHoverBtnText(event.target);
+    }
   } else {
-    console.log('НЕ БЛОК');
   }
 };
 
 section.onmouseout = function (event) {
+  if (!event.fromElement.classList.contains('.conf__item')) {
+    confBlocks.forEach((element) => {
+      resetConfBlock(element);
+    });
+  }
   if (event.target.id === 'confBtn') {
     returnBtnText(event.target);
   }
 };
 
-itemElem.forEach((element) => {
-  let atrData = Date.parse(element.lastElementChild.getAttribute('data-EndDate'));
-  let activeClass = `conf__btn-${element.id}--active`;
+function resetConfBlock(confFullBlock) {
+  const confBlock = confFullBlock.children[2];
+  const lineL = confFullBlock.children[0];
+  const lineR = confFullBlock.children[1];
+  const confName = confBlock.querySelector('.conf__name');
+  const confDateTitle = confBlock.querySelector('.conf__date');
+  const confDate = Date.parse(confBlock.lastElementChild.getAttribute('data-EndDate'));
+  const activeClass = `conf__btn-${confBlock.id}--active`;
 
-  if (atrData >= date) {
-    element.lastElementChild.classList.add(activeClass);
+  section.className = 'conf-section';
+
+  if (todayDate > confDate) {
+    confBlock.lastElementChild.classList.remove(activeClass);
   }
 
-  element.onmouseover = function (event) {
-    let togledClass = `conf__btn-${element.id}--active`;
+  confBlock.children[2].classList.remove('conf__logo--hover');
+  confBlock.children[3].classList.remove('conf__btn--hover-block');
 
-    section.classList.add(`conf-section--${element.id}`);
-    element.children[2].classList.add('conf__logo--hover');
-    element.children[3].classList.add('conf__btn--hover-block');
+  logo[2].classList.add('conf__img--filter');
 
-    if (!element.lastElementChild.classList.contains(togledClass)) {
-      element.lastElementChild.classList.add(togledClass);
-    }
+  lineL.classList.remove('conf__item-line-l--transparent');
+  lineR.classList.remove('conf__item-line-r--transparent');
 
-    lineL.forEach((element) => {
-      element.classList.add('conf__item-line-l--transparent');
-    });
-    lineR.forEach((element) => {
-      element.classList.add('conf__item-line-r--transparent');
-    });
+  confName.className = 'conf__name';
+  confDateTitle.className = 'conf__date';
+}
 
-    if (element.id === 'hr') {
-      transparentLines(0);
-    } else if (element.id === 'py') {
-      transparentLines(1);
-    } else if (element.id === 'ost') {
-      if (logo[2].innerHTML === ostUnActive) {
-        logo[2].innerHTML = ostActive;
-      }
-      transparentLines(2);
-    } else if (element.id === 'go') {
-      transparentLines(3);
-    }
-  };
-});
+// class ConfElem {
+//   constructor(curentBlock) {
+//     this.curentBlock = curentBlock;
+//   }
 
-itemElem.forEach((element) => {
-  let atrData = Date.parse(element.lastElementChild.getAttribute('data-EndDate'));
-  element.onmouseout = function (event) {
-    let target = event.target;
-    section.className = 'conf-section';
-    element.children[2].classList.remove('conf__logo--hover');
-    element.children[3].classList.remove('conf__btn--hover-block');
-
-    let togledClass = `conf__btn-${element.id}--active`;
-
-    if (atrData < date) {
-      element.lastElementChild.classList.remove(togledClass);
-    }
-
-    if (logo[2].innerHTML === ostActive) {
-      logo[2].innerHTML = ostUnActive;
-    }
-
-    lineL.forEach((element) => {
-      element.classList.remove('conf__item-line-l--transparent');
-    });
-
-    lineR.forEach((element) => {
-      element.classList.remove('conf__item-line-r--transparent');
-    });
-
-    confName.forEach((element) => {
-      element.className = 'conf__name';
-    });
-    confDate.forEach((element) => {
-      element.className = 'conf__date';
-    });
-  };
-});
-
-////slider Partners
+//   hoverElem() {
+//     for (let i = 0; i < confBlocks.length; i++) {
+//       // console.log(confBlocks[i].id);
+//       // console.log(this.curentBlock.id);
+//       if (this.curentBlock.id === confBlocks[i].id) {
+//         // console.log(i.id);
+//       }
+//     }
+//   }
+// }
 
 const left = document.querySelector('#left');
 const right = document.querySelector('#right');

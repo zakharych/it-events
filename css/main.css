@@ -1261,6 +1261,10 @@ h3 {
   object-fit: contain;
 }
 
+.conf__img--filter {
+  filter: brightness(0) invert(1) opacity(0.5);
+}
+
 .conf__btn {
   transition: 0.4s;
   font-size: 16px;

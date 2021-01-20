@@ -112,6 +112,10 @@
     width: 100%;
     display: block;
     object-fit: contain;
+
+    &--filter {
+      filter: brightness(0) invert(1) opacity(0.5)
+    }
   }
 
   &__btn {

@@ -1,19 +1,13 @@
 ///////    conf section     ////////
-// const item = document.querySelectorAll(".conf__item");
-// const background = document.querySelector(".conf-section");
-// const btn = document.querySelectorAll(".conf__btn");
 
-// const confList = document.querySelector('.conf__list');
-// const confBlocks2 = Array.from(confList.children);
 const confBlocks = document.querySelectorAll('.conf__item');
-
 const logo = document.querySelectorAll('.conf__img');
 const section = document.querySelector('.conf-section');
 const itemElem = document.querySelectorAll('.conf__item-elem');
 const confName = document.querySelectorAll('.conf__name');
 const confDate = document.querySelectorAll('.conf__date');
-const lineL = document.querySelectorAll('.conf__item-line-l');
-const lineR = document.querySelectorAll('.conf__item-line-r');
+
+const lines = document.querySelectorAll('.conf__item-line');
 
 const todayDate = Date.now();
 
@@ -31,15 +25,6 @@ itemElem.forEach((element) => {
   }
 });
 
-function transparentLines(position) {
-  for (let i = 0; i < confName.length; i++) {
-    if (i !== position) {
-      confName[i].classList.add('conf__name--transparent');
-      confDate[i].classList.add('conf__date--transparent');
-    }
-  }
-}
-
 function changeHoverBtnText(btnBlock) {
   tempButtonText = btnBlock.innerText;
   tempButtonWidth = `${btnBlock.offsetWidth}px`;
@@ -56,54 +41,33 @@ function returnBtnText(btnBlock) {
   btnBlock.innerText = tempButtonText;
   btnBlock.style.minWidth = '';
 }
-function confBlockManipulation(confBlock) {
-  const activeClass = `conf__btn-${confBlock.id}--active`;
-  section.classList.add(`conf-section--${confBlock.id}`);
-  confBlock.children[2].classList.add('conf__logo--hover');
-  confBlock.children[3].classList.add('conf__btn--hover-block');
-
-  if (!confBlock.lastElementChild.classList.contains(activeClass)) {
-    confBlock.lastElementChild.classList.add(activeClass);
-  }
-  if (confBlock.id === 'hr') {
-    transparentLines(0);
-  } else if (confBlock.id === 'py') {
-    transparentLines(1);
-  } else if (confBlock.id === 'ost') {
-    logo[2].classList.remove('conf__img--filter');
-    transparentLines(2);
-  } else if (confBlock.id === 'go') {
-    transparentLines(3);
-  }
-
-  lineL.forEach((element) => {
-    element.classList.add('conf__item-line-l--transparent');
-  });
-  lineR.forEach((element) => {
-    element.classList.add('conf__item-line-r--transparent');
-  });
-}
 
 section.onmouseover = function (event) {
-  const confBlock = event.target.closest('.conf__item-elem');
-  // const confBlockClass = event.target.closest('.conf__item');
-  const conf = event.target.closest('.conf__item-elem');
+  const confBlockClass = event.target.closest('.conf__item');
   if (
     event.target.classList.contains('.conf__item-elem') ||
     event.target.closest('.conf__item-elem')
   ) {
-    confBlockManipulation(confBlock);
-    // hoverBlock = new ConfElem(confBlockClass);
-    // hoverBlock.hoverElem();
+    const hoverBlock = new ConfElem(confBlockClass);
+    hoverBlock.hoverElem();
     if (event.target.id === 'confBtn') {
       changeHoverBtnText(event.target);
     }
-  } else {
   }
 };
 
 section.onmouseout = function (event) {
   if (!event.fromElement.classList.contains('.conf__item')) {
+    const confBlockClass = event.fromElement.closest('.conf__item') || event.toElement;
+
+    if (confBlockClass === null) {
+      console.log(event);
+      console.log(confBlockClass);
+    }
+
+    // const unhoverBlock = new ResroreConfElem();
+    // unhoverBlock.hoverElem();
+
     confBlocks.forEach((element) => {
       resetConfBlock(element);
     });
@@ -115,8 +79,8 @@ section.onmouseout = function (event) {
 
 function resetConfBlock(confFullBlock) {
   const confBlock = confFullBlock.children[2];
-  const lineL = confFullBlock.children[0];
-  const lineR = confFullBlock.children[1];
+  // const lineL = confFullBlock.children[0];
+  // const lineR = confFullBlock.children[1];
   const confName = confBlock.querySelector('.conf__name');
   const confDateTitle = confBlock.querySelector('.conf__date');
   const confDate = Date.parse(confBlock.lastElementChild.getAttribute('data-EndDate'));
@@ -128,33 +92,73 @@ function resetConfBlock(confFullBlock) {
     confBlock.lastElementChild.classList.remove(activeClass);
   }
 
-  confBlock.children[2].classList.remove('conf__logo--hover');
-  confBlock.children[3].classList.remove('conf__btn--hover-block');
+  confBlock.children[2].classList.remove('conf--hover-block-elem');
+  confBlock.children[3].classList.remove('conf--hover-block-elem');
 
-  logo[2].classList.add('conf__img--filter');
+  // logo[2].classList.add('conf__logo--filter');
 
-  lineL.classList.remove('conf__item-line-l--transparent');
-  lineR.classList.remove('conf__item-line-r--transparent');
+  // lineL.classList.remove('conf--transparent-elem');
+  // lineR.classList.remove('conf--transparent-elem');
 
   confName.className = 'conf__name';
   confDateTitle.className = 'conf__date';
 }
 
-// class ConfElem {
-//   constructor(curentBlock) {
-//     this.curentBlock = curentBlock;
-//   }
+class ConfElem {
+  constructor(curentBlock) {
+    this.curentBlock = curentBlock;
+    this.activeBtnClass = `conf__btn-${curentBlock.id}--active` || null;
+    this.btn = this.curentBlock.querySelector('.conf__btn');
+    this.logo = this.curentBlock.querySelector('.conf__logo');
+  }
 
-//   hoverElem() {
-//     for (let i = 0; i < confBlocks.length; i++) {
-//       // console.log(confBlocks[i].id);
-//       // console.log(this.curentBlock.id);
-//       if (this.curentBlock.id === confBlocks[i].id) {
-//         // console.log(i.id);
-//       }
-//     }
-//   }
-// }
+  hoverElem() {
+    for (let i = 0; i < confBlocks.length; i++) {
+      let headcontTitle = [
+        confBlocks[i].querySelector('.conf__name'),
+        confBlocks[i].querySelector('.conf__date'),
+      ];
+      this.transparentElemnt(lines);
+      if (this.curentBlock.id === confBlocks[i].id) {
+        this.curentBlock.closest('section').classList.add(`conf-section--${this.curentBlock.id}`);
+
+        if (!this.btn.classList.contains(this.activeBtnClass)) {
+          this.btn.classList.add(this.activeBtnClass);
+        }
+        this.hoverBlockElem(this.btn, this.logo);
+        this.logo.classList.remove('conf__logo--filter');
+      } else {
+        this.transparentElemnt(headcontTitle);
+      }
+    }
+  }
+
+  unHoverElem() {
+    this.untransparentElemnt(lines);
+  }
+
+  transparentElemnt(element) {
+    element.forEach((element) => {
+      element.classList.add('conf--transparent-elem');
+    });
+  }
+
+  hoverBlockElem(...element) {
+    element.forEach((element) => {
+      element.classList.toggle('conf--hover-block-elem');
+    });
+  }
+
+  untransparentElemnt(element) {
+    element.forEach((element) => {
+      element.classList.remove('conf--transparent-elem');
+    });
+  }
+}
+
+class ResroreConfElem extends ConfElem {
+
+}
 
 const left = document.querySelector('#left');
 const right = document.querySelector('#right');

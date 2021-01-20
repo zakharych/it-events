@@ -1140,19 +1140,19 @@ h3 {
   background-color: #2f2f2f;
 }
 
-.conf-section--hr {
+.conf-section--hr, .conf-section--hr2 {
   background-color: #f24944;
 }
 
-.conf-section--py {
+.conf-section--py, .conf-section--py2 {
   background-color: #316696;
 }
 
-.conf-section--ost {
+.conf-section--ost, .conf-section--ost2 {
   background-color: #36a9e1;
 }
 
-.conf-section--go {
+.conf-section--go, .conf-section--go2 {
   background-color: #2d396b;
 }
 
@@ -1173,36 +1173,24 @@ h3 {
   position: relative;
 }
 
-.conf__item-line-l {
+.conf__item-line {
   position: absolute;
   content: "";
   display: block;
   width: 100px;
   height: 3px;
   background-color: #ffffff;
-  right: 0;
   top: 48px;
-  transform: translate(60%, -50%);
 }
 
-.conf__item-line-l--transparent {
-  opacity: 0.5;
+.conf__item-line-l {
+  transform: translate(60%, -50%);
+  right: 0;
 }
 
 .conf__item-line-r {
-  position: absolute;
-  content: "";
-  display: block;
-  width: 100px;
-  height: 3px;
-  background-color: #ffffff;
-  left: 0;
-  top: 48px;
   transform: translate(-60%, -50%);
-}
-
-.conf__item-line-r--transparent {
-  opacity: 0.5;
+  left: 0;
 }
 
 .conf__item-elem {
@@ -1222,19 +1210,11 @@ h3 {
   font-weight: 500;
 }
 
-.conf__name--transparent {
-  opacity: 0.5;
-}
-
 .conf__date {
   font-size: 22px;
   font-weight: 500;
   text-transform: uppercase;
   margin-bottom: 70px;
-}
-
-.conf__date--transparent {
-  opacity: 0.5;
 }
 
 .conf__logo {
@@ -1249,9 +1229,8 @@ h3 {
   filter: grayscale(100%);
 }
 
-.conf__logo--hover {
-  opacity: 1;
-  filter: none;
+.conf__logo--filter {
+  filter: brightness(0) invert(1) opacity(0.5);
 }
 
 .conf__img {
@@ -1259,10 +1238,6 @@ h3 {
   width: 100%;
   display: block;
   object-fit: contain;
-}
-
-.conf__img--filter {
-  filter: brightness(0) invert(1) opacity(0.5);
 }
 
 .conf__btn {
@@ -1281,28 +1256,33 @@ h3 {
   color: #ffffff;
 }
 
-.conf__btn--hover-block {
-  opacity: 1;
-}
-
-.conf__btn-hr--active, .conf__btn-hr--prev {
+.conf__btn-hr--active, .conf__btn-hr2--active, .conf__btn-hr--prev {
   background-color: #080808;
   color: #ffffff;
 }
 
-.conf__btn-py--active, .conf__btn-py--prev {
+.conf__btn-py--active, .conf__btn-py2--active, .conf__btn-py--prev {
   background-color: #fff000;
   color: #010812;
 }
 
-.conf__btn-ost--active, .conf__btn-ost--prev {
+.conf__btn-ost--active, .conf__btn-ost2--active, .conf__btn-ost--prev {
   background-color: #cb5b9e;
   color: #ffffff;
 }
 
-.conf__btn-go--active, .conf__btn-go--prev {
+.conf__btn-go--active, .conf__btn-go2--active, .conf__btn-go--prev {
   background-color: #9bd4f0;
   color: #010812;
+}
+
+.conf--transparent-elem {
+  opacity: 0.5;
+}
+
+.conf--hover-block-elem {
+  opacity: 1;
+  filter: none;
 }
 
 .hiddenpicOst {

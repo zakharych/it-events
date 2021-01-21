@@ -1,8 +1,9 @@
-///////    conf section     ////////
+///////    conf confList     ////////
 
 const confBlocks = document.querySelectorAll('.conf__item');
 const logo = document.querySelectorAll('.conf__img');
-const section = document.querySelector('.conf-section');
+const confList = document.querySelector('.conf__list');
+const itemElems = document.querySelectorAll('.conf__item');
 const itemElem = document.querySelectorAll('.conf__item-elem');
 const confName = document.querySelectorAll('.conf__name');
 const confDate = document.querySelectorAll('.conf__date');
@@ -15,6 +16,8 @@ let tempButtonText = '';
 let tempButtonBg = '';
 let tempButtoColor = '';
 let tempButtonWidth = 0;
+
+let currentElem = null;
 
 itemElem.forEach((element) => {
   const confDate = Date.parse(element.lastElementChild.getAttribute('data-EndDate'));
@@ -42,74 +45,50 @@ function returnBtnText(btnBlock) {
   btnBlock.style.minWidth = '';
 }
 
-section.onmouseover = function (event) {
-  const confBlockClass = event.target.closest('.conf__item');
-  if (
-    event.target.classList.contains('.conf__item-elem') ||
-    event.target.closest('.conf__item-elem')
-  ) {
-    const hoverBlock = new ConfElem(confBlockClass);
-    hoverBlock.hoverElem();
-    if (event.target.id === 'confBtn') {
-      changeHoverBtnText(event.target);
-    }
+confList.onmouseover = function (event) {
+  if (currentElem) return;
+  console.log(event.target);
+  if (event.target.id === 'confBtn') {
+    changeHoverBtnText(event.target);
   }
+  let target = event.target.closest('.conf__item');
+
+  if (!target) return;
+  if (!confList.contains(target)) return;
+
+  currentElem = target;
+  const hoverBlock = new ConfElem(target);
+  hoverBlock.hoverElem();
 };
 
-section.onmouseout = function (event) {
-  if (!event.fromElement.classList.contains('.conf__item')) {
-    const confBlockClass = event.fromElement.closest('.conf__item') || event.toElement;
-
-    if (confBlockClass === null) {
-      console.log(event);
-      console.log(confBlockClass);
-    }
-
-    // const unhoverBlock = new ResroreConfElem();
-    // unhoverBlock.hoverElem();
-
-    confBlocks.forEach((element) => {
-      resetConfBlock(element);
-    });
+confList.onmouseout = function (event) {
+  if (!currentElem) return;
+  console.log(event.relatedTarget);
+  if (event.relatedTarget.id === 'confBtn') {
+    changeHoverBtnText(event.relatedTarget);
   }
   if (event.target.id === 'confBtn') {
     returnBtnText(event.target);
   }
-};
+  let relatedTarget = event.relatedTarget;
 
-function resetConfBlock(confFullBlock) {
-  const confBlock = confFullBlock.children[2];
-  // const lineL = confFullBlock.children[0];
-  // const lineR = confFullBlock.children[1];
-  const confName = confBlock.querySelector('.conf__name');
-  const confDateTitle = confBlock.querySelector('.conf__date');
-  const confDate = Date.parse(confBlock.lastElementChild.getAttribute('data-EndDate'));
-  const activeClass = `conf__btn-${confBlock.id}--active`;
+  while (relatedTarget) {
+    if (relatedTarget == currentElem) return;
 
-  section.className = 'conf-section';
-
-  if (todayDate > confDate) {
-    confBlock.lastElementChild.classList.remove(activeClass);
+    relatedTarget = relatedTarget.parentNode;
   }
 
-  confBlock.children[2].classList.remove('conf--hover-block-elem');
-  confBlock.children[3].classList.remove('conf--hover-block-elem');
-
-  // logo[2].classList.add('conf__logo--filter');
-
-  // lineL.classList.remove('conf--transparent-elem');
-  // lineR.classList.remove('conf--transparent-elem');
-
-  confName.className = 'conf__name';
-  confDateTitle.className = 'conf__date';
-}
+  const hoverBlock = new ConfElem(currentElem);
+  hoverBlock.unhoverElem();
+};
 
 class ConfElem {
   constructor(curentBlock) {
     this.curentBlock = curentBlock;
-    this.activeBtnClass = `conf__btn-${curentBlock.id}--active` || null;
+    this.activeBtnClass = `conf__btn-${curentBlock.id}--active`;
     this.btn = this.curentBlock.querySelector('.conf__btn');
     this.logo = this.curentBlock.querySelector('.conf__logo');
+    this.confDate = Date.parse(this.btn.getAttribute('data-EndDate'));
   }
 
   hoverElem() {
@@ -133,8 +112,28 @@ class ConfElem {
     }
   }
 
-  unHoverElem() {
+  unhoverElem() {
+    this.curentBlock.closest('section').classList.remove(`conf-section--${this.curentBlock.id}`);
     this.untransparentElemnt(lines);
+    this.hoverBlockElem(this.btn, this.logo);
+    if (this.curentBlock.id === "ost2") {
+      this.logo.classList.add('conf__logo--filter');
+      
+    }
+    if (todayDate > this.confDate) {
+      this.btn.classList.remove(this.activeBtnClass);
+    }
+    itemElems.forEach((element) => {
+      if (this.curentBlock.id !== element.id) {
+        let headcontTitle = [
+          element.querySelector('.conf__name'),
+          element.querySelector('.conf__date'),
+        ];
+
+        this.untransparentElemnt(headcontTitle);
+      }
+    });
+    currentElem = null;
   }
 
   transparentElemnt(element) {
@@ -154,10 +153,6 @@ class ConfElem {
       element.classList.remove('conf--transparent-elem');
     });
   }
-}
-
-class ResroreConfElem extends ConfElem {
-
 }
 
 const left = document.querySelector('#left');

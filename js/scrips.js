@@ -1,86 +1,19 @@
-///////    conf confList     ////////
+//////*/    conf confList     ////////
 
 const confBlocks = document.querySelectorAll('.conf__item');
-const logo = document.querySelectorAll('.conf__img');
 const confList = document.querySelector('.conf__list');
 const itemElems = document.querySelectorAll('.conf__item');
-const itemElem = document.querySelectorAll('.conf__item-elem');
-const confName = document.querySelectorAll('.conf__name');
-const confDate = document.querySelectorAll('.conf__date');
-
 const lines = document.querySelectorAll('.conf__item-line');
-
 const todayDate = Date.now();
 
+const texBtnRu = 'Перейти';
+const texBtnEng = 'Learn more';
 let tempButtonText = '';
 let tempButtonBg = '';
 let tempButtoColor = '';
 let tempButtonWidth = 0;
 
 let currentElem = null;
-
-itemElem.forEach((element) => {
-  const confDate = Date.parse(element.lastElementChild.getAttribute('data-EndDate'));
-  const activeClass = `conf__btn-${element.id}--active`;
-
-  if (confDate >= todayDate) {
-    element.lastElementChild.classList.add(activeClass);
-  }
-});
-
-function changeHoverBtnText(btnBlock) {
-  tempButtonText = btnBlock.innerText;
-  tempButtonWidth = `${btnBlock.offsetWidth}px`;
-
-  if (lang.innerText === 'EN') {
-    btnBlock.innerText = 'Перейти';
-  } else {
-    btnBlock.innerText = 'Learn more';
-  }
-  btnBlock.style.minWidth = tempButtonWidth;
-}
-
-function returnBtnText(btnBlock) {
-  btnBlock.innerText = tempButtonText;
-  btnBlock.style.minWidth = '';
-}
-
-confList.onmouseover = function (event) {
-  if (currentElem) return;
-  console.log(event.target);
-  if (event.target.id === 'confBtn') {
-    changeHoverBtnText(event.target);
-  }
-  let target = event.target.closest('.conf__item');
-
-  if (!target) return;
-  if (!confList.contains(target)) return;
-
-  currentElem = target;
-  const hoverBlock = new ConfElem(target);
-  hoverBlock.hoverElem();
-};
-
-confList.onmouseout = function (event) {
-  if (!currentElem) return;
-  console.log(event.relatedTarget);
-  if (event.relatedTarget.id === 'confBtn') {
-    changeHoverBtnText(event.relatedTarget);
-  }
-  if (event.target.id === 'confBtn') {
-    returnBtnText(event.target);
-  }
-  let relatedTarget = event.relatedTarget;
-
-  while (relatedTarget) {
-    if (relatedTarget == currentElem) return;
-
-    relatedTarget = relatedTarget.parentNode;
-  }
-
-  const hoverBlock = new ConfElem(currentElem);
-  hoverBlock.unhoverElem();
-};
 
 class ConfElem {
   constructor(curentBlock) {
@@ -116,9 +49,8 @@ class ConfElem {
     this.curentBlock.closest('section').classList.remove(`conf-section--${this.curentBlock.id}`);
     this.untransparentElemnt(lines);
     this.hoverBlockElem(this.btn, this.logo);
-    if (this.curentBlock.id === "ost2") {
+    if (this.curentBlock.id === 'ost2') {
       this.logo.classList.add('conf__logo--filter');
-      
     }
     if (todayDate > this.confDate) {
       this.btn.classList.remove(this.activeBtnClass);
@@ -153,7 +85,75 @@ class ConfElem {
       element.classList.remove('conf--transparent-elem');
     });
   }
+
+  hilightBtn() {
+    if (this.confDate >= todayDate) {
+      this.btn.classList.add(this.activeBtnClass);
+    }
+  }
+
+  changeBtnText(bool) {
+    if (bool) {
+      tempButtonText = this.btn.innerText;
+      tempButtonWidth = `${this.btn.offsetWidth}px`;
+
+      if (lang.innerText === 'EN') {
+        this.btn.innerText = texBtnRu;
+      } else {
+        this.btn.innerText = texBtnEng;
+      }
+      this.btn.style.minWidth = tempButtonWidth;
+    } else {
+      this.btn.innerText = tempButtonText;
+      this.btn.style.minWidth = '';
+    }
+  } 
 }
+
+itemElems.forEach((element) => {
+  const hilightBtn = new ConfElem(element);
+  hilightBtn.hilightBtn();
+});
+
+confList.onmouseover = function (event) {
+  if (currentElem) return;
+  if (event.target.id === 'confBtn') {
+    const nearsetBlock = event.target.closest('.conf__item')
+    const hoverBlock = new ConfElem(nearsetBlock);
+    hoverBlock.changeBtnText("change");
+  }
+  let target = event.target.closest('.conf__item');
+
+  if (!target) return;
+  if (!confList.contains(target)) return;
+
+  currentElem = target;
+  const hoverBlock = new ConfElem(target);
+  hoverBlock.hoverElem();
+};
+
+confList.onmouseout = function (event) {
+  if (!currentElem) return;
+  if (event.relatedTarget.id === 'confBtn') {
+    const nearsetBlock = event.target.closest('.conf__item')
+    const hoverBlock = new ConfElem(nearsetBlock);
+    hoverBlock.changeBtnText("change");
+  }
+  if (event.target.id === 'confBtn') {
+    const nearsetBlock = event.target.closest('.conf__item')
+    const hoverBlock = new ConfElem(nearsetBlock);
+    hoverBlock.changeBtnText();
+  }
+  let relatedTarget = event.relatedTarget;
+
+  while (relatedTarget) {
+    if (relatedTarget == currentElem) return;
+    relatedTarget = relatedTarget.parentNode;
+  }
+
+  const hoverBlock = new ConfElem(currentElem);
+  hoverBlock.unhoverElem();
+};
 
 const left = document.querySelector('#left');
 const right = document.querySelector('#right');

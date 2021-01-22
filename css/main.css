@@ -1138,21 +1138,22 @@ h3 {
 
 .conf-section {
   background-color: #2f2f2f;
+  transition-duration: .8s;
 }
 
-.conf-section--hr, .conf-section--hr2 {
+.conf-section--hr {
   background-color: #f24944;
 }
 
-.conf-section--py, .conf-section--py2 {
+.conf-section--py {
   background-color: #316696;
 }
 
-.conf-section--ost, .conf-section--ost2 {
+.conf-section--ost {
   background-color: #36a9e1;
 }
 
-.conf-section--go, .conf-section--go2 {
+.conf-section--go {
   background-color: #2d396b;
 }
 
@@ -1256,22 +1257,22 @@ h3 {
   color: #ffffff;
 }
 
-.conf__btn-hr--active, .conf__btn-hr2--active, .conf__btn-hr--prev {
+.conf__btn-hr--active, .conf__btn-hr--prev {
   background-color: #080808;
   color: #ffffff;
 }
 
-.conf__btn-py--active, .conf__btn-py2--active, .conf__btn-py--prev {
+.conf__btn-py--active, .conf__btn-py--prev {
   background-color: #fff000;
   color: #010812;
 }
 
-.conf__btn-ost--active, .conf__btn-ost2--active, .conf__btn-ost--prev {
+.conf__btn-ost--active, .conf__btn-ost--prev {
   background-color: #cb5b9e;
   color: #ffffff;
 }
 
-.conf__btn-go--active, .conf__btn-go2--active, .conf__btn-go--prev {
+.conf__btn-go--active, .conf__btn-go--prev {
   background-color: #9bd4f0;
   color: #010812;
 }
@@ -1283,13 +1284,6 @@ h3 {
 .conf--hover-block-elem {
   opacity: 1;
   filter: none;
-}
-
-.hiddenpicOst {
-  position: absolute;
-  height: 0;
-  width: 0;
-  opacity: 0;
 }
 
 .project {

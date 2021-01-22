@@ -1,5 +1,5 @@
 const numberBlocks = document.querySelectorAll('.about__text');
-const lastAboutItem = document.querySelector('.about__content').lastElementChild;
+const lastAboutItem = document.querySelector('.about__subtitle').lastElementChild;
 
 let block_show = false;
 

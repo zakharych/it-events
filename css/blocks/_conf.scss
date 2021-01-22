@@ -1,7 +1,7 @@
 .conf {
   &-section {
     background-color: #2f2f2f;
-    transition-duration: .8s;
+    transition-duration: .4s;
 
     &--hr
      {
@@ -46,6 +46,7 @@
       height: 3px;
       background-color: #ffffff;
       top: 48px;
+      transition-duration: .4s;
     }
     &-line-l {
       transform: translate(60%, -50%);
@@ -70,12 +71,14 @@
   &__name {
     font-size: 22px;
     font-weight: 500;
+    transition-duration: .4s;
   }
   &__date {
     font-size: 22px;
     font-weight: 500;
     text-transform: uppercase;
     margin-bottom: 70px;
+    transition-duration: .4s;
   }
 
   &__logo {
@@ -88,6 +91,7 @@
     margin-bottom: 32px;
     opacity: 0.5;
     filter: grayscale(100%);
+    transition-duration: .4s;
     &--filter {
       filter: brightness(0) invert(1) opacity(0.5)
     }

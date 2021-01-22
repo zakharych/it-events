@@ -49,7 +49,7 @@ class ConfElem {
     this.curentBlock.closest('section').classList.remove(`conf-section--${this.curentBlock.id}`);
     this.untransparentElemnt(lines);
     this.hoverBlockElem(this.btn, this.logo);
-    if (this.curentBlock.id === 'ost2') {
+    if (this.curentBlock.id === 'ost') {
       this.logo.classList.add('conf__logo--filter');
     }
     if (todayDate > this.confDate) {

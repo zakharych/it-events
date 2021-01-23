@@ -120,24 +120,24 @@
       color: #000000;
     }
 
+    &--prev {
+      background-color: #ed4963;      
+      color: #ffffff;
+    }
 
-    &-hr--active, 
-    &-hr--prev {
+    &-hr--active {
       background-color: #080808;
       color: #ffffff;
     }
-    &-py--active, 
-    &-py--prev {
+    &-py--active {
       background-color: #ffffff;
       color: #010812;
     }
-    &-ost--active, 
-    &-ost--prev {
+    &-ost--active {
       background-color: #cb5b9e;
       color: #ffffff;
     }
-    &-go--active, 
-    &-go--prev {
+    &-go--active {
       background-color: #9bd4f0;
       color: #010812;
     }

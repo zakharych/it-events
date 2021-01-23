@@ -19,6 +19,7 @@ let currentElem = null;
 class ConfElem {
   constructor(curentBlock) {
     this.curentBlock = curentBlock;
+    this.revBtnClass = `conf__btn--prev`;
     this.activeBtnClass = `conf__btn-${curentBlock.id}--active`;
     this.btn = this.curentBlock.querySelector('.conf__btn');
     this.logo = this.curentBlock.querySelector('.conf__logo');
@@ -35,9 +36,9 @@ class ConfElem {
       if (this.curentBlock.id === confBlocks[i].id) {
         this.curentBlock.closest('section').classList.add(`conf-section--${this.curentBlock.id}`);
 
-        if (!this.btn.classList.contains(this.activeBtnClass)) {
+        // if (!this.btn.classList.contains(this.activeBtnClass)) {
           this.btn.classList.add(this.activeBtnClass);
-        }
+        // }
         this.hoverBlockElem(this.btn, this.logo);
         this.logo.classList.remove('conf__logo--filter');
       } else {
@@ -53,9 +54,9 @@ class ConfElem {
     if (this.curentBlock.id === filterConfId) {
       this.logo.classList.add('conf__logo--filter');
     }
-    if (todayDate > this.confDate) {
+    // if (todayDate > this.confDate) {
       this.btn.classList.remove(this.activeBtnClass);
-    }
+    // }
     itemElems.forEach((element) => {
       if (this.curentBlock.id !== element.id) {
         let headcontTitle = [
@@ -89,7 +90,7 @@ class ConfElem {
 
   hilightBtn() {
     if (this.confDate >= todayDate) {
-      this.btn.classList.add(this.activeBtnClass);
+      this.btn.classList.add(this.revBtnClass);
     }
   }
 

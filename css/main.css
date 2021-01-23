@@ -1261,22 +1261,27 @@ h3 {
   color: #000000;
 }
 
-.conf__btn-hr--active, .conf__btn-hr--prev {
+.conf__btn--prev {
+  background-color: #ed4963;
+  color: #ffffff;
+}
+
+.conf__btn-hr--active {
   background-color: #080808;
   color: #ffffff;
 }
 
-.conf__btn-py--active, .conf__btn-py--prev {
+.conf__btn-py--active {
   background-color: #ffffff;
   color: #010812;
 }
 
-.conf__btn-ost--active, .conf__btn-ost--prev {
+.conf__btn-ost--active {
   background-color: #cb5b9e;
   color: #ffffff;
 }
 
-.conf__btn-go--active, .conf__btn-go--prev {
+.conf__btn-go--active {
   background-color: #9bd4f0;
   color: #010812;
 }

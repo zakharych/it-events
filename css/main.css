@@ -1257,8 +1257,8 @@ h3 {
 }
 
 .conf__btn:hover {
-  background-color: #00653a;
-  color: #ffffff;
+  background-color: #fff000;
+  color: #000000;
 }
 
 .conf__btn-hr--active, .conf__btn-hr--prev {
@@ -1267,7 +1267,7 @@ h3 {
 }
 
 .conf__btn-py--active, .conf__btn-py--prev {
-  background-color: #fff000;
+  background-color: #ffffff;
   color: #010812;
 }
 

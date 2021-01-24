@@ -1272,12 +1272,12 @@ h3 {
 }
 
 .conf__btn-py--active {
-  background-color: #5C4B95;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #010812;
 }
 
 .conf__btn-ost--active {
-  background-color: #655799;
+  background-color: #5C4B95;
   color: #ffffff;
 }
 

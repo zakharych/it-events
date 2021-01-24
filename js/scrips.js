@@ -119,7 +119,7 @@ itemElems.forEach((element) => {
 
 confList.onmouseover = function (event) {
   if (currentElem) return;
-  if (event.relatedTarget.classList.contains('confBtn')) {
+  if (event.target.classList.contains('conf__btn')) {
     const nearsetBlock = event.target.closest('.conf__item')
     const hoverBlock = new ConfElem(nearsetBlock);
     hoverBlock.changeBtnText("change");
@@ -136,12 +136,12 @@ confList.onmouseover = function (event) {
 
 confList.onmouseout = function (event) {
   if (!currentElem) return;
-  if (event.relatedTarget.classList.contains('confBtn')) {
+  if (event.relatedTarget.classList.contains('conf__btn')) {
     const nearsetBlock = event.target.closest('.conf__item')
     const hoverBlock = new ConfElem(nearsetBlock);
     hoverBlock.changeBtnText("change");
   }
-  if (event.relatedTarget.classList.contains('confBtn')) {
+  if (event.target.classList.contains('conf__btn')) {
     const nearsetBlock = event.target.closest('.conf__item')
     const hoverBlock = new ConfElem(nearsetBlock);
     hoverBlock.changeBtnText();

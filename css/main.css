@@ -1272,12 +1272,12 @@ h3 {
 }
 
 .conf__btn-py--active {
-  background-color: #ffffff;
-  color: #010812;
+  background-color: #5C4B95;
+  color: #ffffff;
 }
 
 .conf__btn-ost--active {
-  background-color: #cb5b9e;
+  background-color: #655799;
   color: #ffffff;
 }
 
@@ -1691,6 +1691,7 @@ details summary::-webkit-details-marker {
   font-weight: bold;
   color: #ffffff;
   line-height: 1;
+  transition: 0,5s;
 }
 
 .about__subtitle {

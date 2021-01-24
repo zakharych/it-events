@@ -1,5 +1,6 @@
 const numberBlocks = document.querySelectorAll('.about__text');
 const lastAboutItem = document.querySelector('.about__subtitle').lastElementChild;
+const timeToSlide = 1000; // - 1с, время прокрутки цифр
 
 let block_show = false;
 
@@ -20,12 +21,11 @@ function scrollTracking() {
       const endCount = element.innerText;
     
       let curindex = 0;
-      let dillay = 100;
+      let dillay = timeToSlide/endCount;
       
       let timerId = setTimeout(function request() {
         element.innerText = curindex;
         curindex += 1;
-        dillay *= 0.96;
         if (curindex <= endCount) {
           timerId = setTimeout(request, dillay, curindex);
         }
